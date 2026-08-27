@@ -2,8 +2,6 @@
 
 Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal de la materia **Metodología de Sistemas I**. El objetivo del repositorio es centralizar lo que se va viendo en cada clase, dejar registro de las decisiones tomadas para el TP y servir de referencia rápida para repasar antes de las entregas.
 
-> 📌 Los apuntes están redactados en base a la transcripción de cada clase. Se omiten nombres propios de compañeros y docentes; las referencias a personas se hacen de forma genérica (“el profesor”, “un compañero”, etc.).
-
 ---
 
 ## 📅 Clase 24/8 — Presentación de la materia, el TP y primeros conceptos
