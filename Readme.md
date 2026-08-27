@@ -47,6 +47,26 @@ Lluvia de ideas propuesta en clase como punto de partida para elegir el proyecto
 - Venta de entradas
 - E-commerce de accesorios para mascotas
 
+#### 🎯 Candidatas propias (Grupo 5)
+
+De esa lluvia de ideas, las que quedaron como candidatas concretas para el proyecto del equipo:
+
+1. **BackOffice — Gestión de stock**
+2. **Sistema de venta de entradas** (estilo passline)
+3. **Gestión de turnos** en peluquería / consultorio médico particular
+4. **Sistema de gestión para e-commerce de accesorios de mascotas**
+
+Info útil de la clase para arrancar el desarrollo, aplicable a estas cuatro:
+
+- **La idea de “turnos” fue avalada explícitamente en clase**: se marcó como un clásico pero todavía muy necesario, porque “mucha gente no tiene sistema de turnos” — y se dio de ejemplo justamente una peluquería. Es un buen indicio de que el problema es real y acotado.
+- **Punto de partida metodológico para cualquiera de las cuatro** (mismo camino que se usó en clase con el sistema de ventas de ejemplo):
+  1. Identificar la **entrada / activador** del sistema: qué evento dispara todo (un pedido de stock que ingresa, una compra de entrada, un turno solicitado, una venta en el e-commerce).
+  2. Definir la **salida esperada**: qué se considera “resuelto” (stock actualizado, entrada emitida, turno confirmado, pedido despachado).
+  3. Recién ahí desglosar los **elementos internos** (los pasos/subsistemas que conectan la entrada con la salida) y armar el **happy path**.
+  4. Cerrar con el **alcance/límite**: dejar explícito qué queda afuera (cobros, logística, reposición de stock, etc., según corresponda a cada idea) para evitar diferencias de expectativas con el cliente.
+- **Antes de elegir una definitiva**, confirmar que haya un **cliente real y accesible** que pueda dedicarle tiempo al equipo (el requisito no negociable del TP) — vale tanto para la peluquería/consultorio como para el negocio de stock, entradas o e-commerce de mascotas.
+- **Mantenerla acotada**: mismo criterio que se remarcó con “gestión de gimnasio” — elegir una sola de estas cuatro y no ir sumándole funcionalidades de las otras tres a medida que avanza el diseño.
+
 ### Diferencia de expectativas
 
 Uno de los ejes centrales de la clase: cuando alguien da una orden o pide algo, tiene en la cabeza un resultado esperado que **no siempre coincide** con lo que la otra persona entiende o entrega. Esa brecha es la fuente más común de conflictos entre cliente y proveedor.
