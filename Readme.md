@@ -1,38 +1,38 @@
-# Metodología de Sistemas I
+# <font color="#1F6FEB">Metodología de Sistemas I</font>
 
 Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal de la materia **Metodología de Sistemas I**. El objetivo del repositorio es centralizar lo que se va viendo en cada clase, dejar registro de las decisiones tomadas para el TP y servir de referencia rápida para repasar antes de las entregas.
 
 ---
 
-## 🧭 Índice
+## <font color="#8250DF">🧭 Índice</font>
 
 <details>
-<summary><strong>📅 Clase 1 — 31/08 · Presentación de la materia, el TP y primeros conceptos</strong></summary>
+<summary><font color="#8250DF"><strong>📅 Clase 1 — 24/08 · Presentación de la materia, el TP y primeros conceptos</strong></font></summary>
 
-- [De qué se trata la materia](#clase-1-de-que-se-trata-la-materia)
-- [El Trabajo Práctico (TP)](#clase-1-el-trabajo-practico-tp)
-- [Ideas de proyecto (brainstorming)](#clase-1-ideas-de-proyecto-brainstorming)
-- [Candidatas propias (Grupo 5)](#clase-1-candidatas-propias-grupo-5)
-- [Diferencia de expectativas](#clase-1-diferencia-de-expectativas)
-- [Locación de servicio vs. Locación de obra](#clase-1-locacion-de-servicio-vs-locacion-de-obra)
-- [Alcance (límite) de un sistema](#clase-1-alcance-limite-de-un-sistema)
-- [Objetivos de corto, mediano y largo plazo](#clase-1-objetivos-de-corto-mediano-y-largo-plazo)
+- [<font color="#1A7F37">De qué se trata la materia</font>](#clase-1-de-que-se-trata-la-materia)
+- [<font color="#1A7F37">El Trabajo Práctico (TP)</font>](#clase-1-el-trabajo-practico-tp)
+- [<font color="#9A6700">Ideas de proyecto (brainstorming)</font>](#clase-1-ideas-de-proyecto-brainstorming)
+- [<font color="#9A6700">Candidatas propias (Grupo 5)</font>](#clase-1-candidatas-propias-grupo-5)
+- [<font color="#1A7F37">Diferencia de expectativas</font>](#clase-1-diferencia-de-expectativas)
+- [<font color="#1A7F37">Locación de servicio vs. Locación de obra</font>](#clase-1-locacion-de-servicio-vs-locacion-de-obra)
+- [<font color="#1A7F37">Alcance (límite) de un sistema</font>](#clase-1-alcance-limite-de-un-sistema)
+- [<font color="#1A7F37">Objetivos de corto, mediano y largo plazo</font>](#clase-1-objetivos-de-corto-mediano-y-largo-plazo)
 
 </details>
 
 <details>
-<summary><strong>🗓️ Fechas de entrega / revisión del TP</strong></summary>
+<summary><font color="#8250DF"><strong>🗓️ Fechas de entrega / revisión del TP</strong></font></summary>
 
 <details>
-<summary>Prototipo inicial</summary>
+<summary><font color="#1A7F37">Prototipo inicial</font></summary>
 
 **Se entrega:** conjunto de pantallas (HTML/JS) con datos estáticos que reflejen la información a procesar, resultado de aplicar Design Thinking sobre el proceso elegido.
-*(Fecha de la plantilla de cátedra: 20/4 — a confirmar para esta cursada.)*
+**Fecha confirmada: 31/08.**
 
 </details>
 
 <details>
-<summary>Análisis</summary>
+<summary><font color="#1A7F37">Análisis</font></summary>
 
 **Se entrega:** listado de requerimientos funcionales y no funcionales, vinculado a las interfaces de usuario diseñadas en el prototipo.
 *(Fecha de la plantilla de cátedra: 4/5 — a confirmar para esta cursada.)*
@@ -40,7 +40,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 </details>
 
 <details>
-<summary>Diseño</summary>
+<summary><font color="#1A7F37">Diseño</font></summary>
 
 **Se entrega:** detalle de casos de uso, modelo de clases y modelo de datos.
 *(Fecha de la plantilla de cátedra: 18/5 — a confirmar para esta cursada.)*
@@ -48,7 +48,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 </details>
 
 <details>
-<summary>Desarrollo</summary>
+<summary><font color="#1A7F37">Desarrollo</font></summary>
 
 **Se entrega:** detalle de las formas de trabajo grupal y su documentación (buenas prácticas de desarrollo).
 *(Fecha de la plantilla de cátedra: 1/6 — a confirmar para esta cursada.)*
@@ -56,7 +56,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 </details>
 
 <details>
-<summary>Pruebas</summary>
+<summary><font color="#1A7F37">Pruebas</font></summary>
 
 **Se entrega:** diseño de pruebas unitarias, funcionales, de regresión y de performance.
 *(Fecha de la plantilla de cátedra: 1/6 — a confirmar para esta cursada.)*
@@ -64,7 +64,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 </details>
 
 <details>
-<summary>Implementación</summary>
+<summary><font color="#1A7F37">Implementación</font></summary>
 
 **Se entrega:** configuración de ambientes (usuarios, recursos, seguridad y variables).
 *(Fecha de la plantilla de cátedra: 22/6 — a confirmar para esta cursada.)*
@@ -77,9 +77,9 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 
 ---
 
-## <a id="clase-1"></a>📅 Clase 1 — 31/08 · Presentación de la materia, el TP y primeros conceptos
+## <a id="clase-1"></a><font color="#8250DF">📅 Clase 1 — 24/08 · Presentación de la materia, el TP y primeros conceptos</font>
 
-### <a id="clase-1-de-que-se-trata-la-materia"></a>De qué se trata la materia
+### <a id="clase-1-de-que-se-trata-la-materia"></a><font color="#1A7F37">De qué se trata la materia</font>
 
 - La materia no es de programación: el objetivo es **diseñar** un sistema, no construirlo. Esa parte queda para las materias de programación del resto de la carrera.
 - Se busca que cada estudiante pueda sumar una experiencia real al currículum: haber relevado, analizado y diseñado un sistema para un cliente concreto, aunque sea de alcance chico.
@@ -88,7 +88,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
   - **GitHub Projects** para la planificación y el seguimiento de tareas del TP.
 - Cada clase se toma asistencia y se dedican un par de minutos a una dinámica de feedback (una especie de “retro”): qué gustó, qué no, y propuestas de mejora, para poder charlarlo durante la cursada y no recién al final del cuatrimestre.
 
-### <a id="clase-1-el-trabajo-practico-tp"></a>El Trabajo Práctico (TP)
+### <a id="clase-1-el-trabajo-practico-tp"></a><font color="#1A7F37">El Trabajo Práctico (TP)</font>
 
 **Consigna general:** diseñar un sistema informático para optimizar un proceso real de una empresa o persona, siguiendo la metodología vista en clase (no se llega a programar, sí a dejar un diseño que facilite la programación posterior).
 
@@ -104,7 +104,7 @@ Puntos clave para tener en cuenta a la hora de armarlo:
   - Se arman **vistas filtradas por grupo** para que cada equipo gestione solo lo suyo.
 - **Idea de proyecto**: tiene que ser algo chico y acotado. Se insistió varias veces en no abarcar demasiado (ej.: “gestión de gimnasio” es demasiado amplio si se le suman turnos, facturación, abonos, etc. — conviene quedarse con una sola funcionalidad concreta) para poder concentrarse en aplicar bien las técnicas de la materia y no perderse en el tamaño del problema.
 
-#### <a id="clase-1-ideas-de-proyecto-brainstorming"></a>💡 Ideas de proyecto (brainstorming — a desarrollar)
+#### <a id="clase-1-ideas-de-proyecto-brainstorming"></a><font color="#9A6700">💡 Ideas de proyecto (brainstorming — a desarrollar)</font>
 
 Lluvia de ideas propuesta en clase como punto de partida para elegir el proyecto de cada grupo. Son ideas abiertas, no compromisos definitivos:
 
@@ -120,7 +120,7 @@ Lluvia de ideas propuesta en clase como punto de partida para elegir el proyecto
 - Venta de entradas
 - E-commerce de accesorios para mascotas
 
-#### <a id="clase-1-candidatas-propias-grupo-5"></a>🎯 Candidatas propias (Grupo 5)
+#### <a id="clase-1-candidatas-propias-grupo-5"></a><font color="#9A6700">🎯 Candidatas propias (Grupo 5)</font>
 
 De esa lluvia de ideas, las que quedaron como candidatas concretas para el proyecto del equipo:
 
@@ -140,14 +140,14 @@ Info útil de la clase para arrancar el desarrollo, aplicable a estas cuatro:
 - **Antes de elegir una definitiva**, confirmar que haya un **cliente real y accesible** que pueda dedicarle tiempo al equipo (el requisito no negociable del TP) — vale tanto para la peluquería/consultorio como para el negocio de stock, entradas o e-commerce de mascotas.
 - **Mantenerla acotada**: mismo criterio que se remarcó con “gestión de gimnasio” — elegir una sola de estas cuatro y no ir sumándole funcionalidades de las otras tres a medida que avanza el diseño.
 
-### <a id="clase-1-diferencia-de-expectativas"></a>Diferencia de expectativas
+### <a id="clase-1-diferencia-de-expectativas"></a><font color="#1A7F37">Diferencia de expectativas</font>
 
 Uno de los ejes centrales de la clase: cuando alguien da una orden o pide algo, tiene en la cabeza un resultado esperado que **no siempre coincide** con lo que la otra persona entiende o entrega. Esa brecha es la fuente más común de conflictos entre cliente y proveedor.
 
 - Se ilustró con ejemplos cotidianos (una tarea doméstica mal especificada, un pedido en un local de comida rápida que no coincide con la publicidad, reclamos de clientes por el resultado de un trabajo) y con una escena de película donde un jefe corrige a un empleado sin explicitar nunca el estándar que esperaba, generando desgaste innecesario.
 - **Conclusión útil para el TP:** no asumir que el cliente “sabe” explicar lo que necesita ni que uno entiende automáticamente lo que pide. Hay que preguntar, confirmar y dejar explícito el alcance para minimizar diferencias de expectativas.
 
-### <a id="clase-1-locacion-de-servicio-vs-locacion-de-obra"></a>Tipos de contratación: Locación de servicio vs. Locación de obra
+### <a id="clase-1-locacion-de-servicio-vs-locacion-de-obra"></a><font color="#1A7F37">Tipos de contratación: Locación de servicio vs. Locación de obra</font>
 
 Dos formas de encuadrar la relación con un cliente, con implicancias distintas para el diseño del TP:
 
@@ -161,7 +161,7 @@ Se representó con un ejemplo dialogado (roleplay) donde un “cliente” va agr
 
 - **Conclusión útil para el TP:** en locación de obra, el proveedor es quien más necesita preguntar y dejar todo por escrito antes de arrancar, porque cualquier cosa no explicitada corre por su cuenta. En locación de servicio el riesgo de sobrecosto lo asume más el cliente, así que es este quien debería preguntar más para no pagar de más.
 
-### <a id="clase-1-alcance-limite-de-un-sistema"></a>Alcance (límite) de un sistema
+### <a id="clase-1-alcance-limite-de-un-sistema"></a><font color="#1A7F37">Alcance (límite) de un sistema</font>
 
 Se trabajó en vivo el diseño de un sistema de ventas de ejemplo, partiendo de un diagrama con los elementos: *recibir pedido → seleccionar forma de pago → cobrar (tarjeta) → preparar pedido → enviar mercadería*, con la pregunta “¿hay stock?” como bifurcación.
 
@@ -173,7 +173,7 @@ Se trabajó en vivo el diseño de un sistema de ventas de ejemplo, partiendo de 
 
 > **Idea clave repetida en clase:** si el límite de lo que uno se compromete a hacer no queda claro, se generan diferencias de expectativas → conflictos → pérdida de tiempo, dinero o clientes. Definir el alcance es, según se remarcó, una de las partes más importantes de la primera etapa del TP.
 
-### <a id="clase-1-objetivos-de-corto-mediano-y-largo-plazo"></a>Objetivos de corto, mediano y largo plazo
+### <a id="clase-1-objetivos-de-corto-mediano-y-largo-plazo"></a><font color="#1A7F37">Objetivos de corto, mediano y largo plazo</font>
 
 Se planteó un ejercicio (ejemplo cotidiano: “sacar la basura”) para mostrar cómo toda tarea puntual está enmarcada dentro de objetivos de distinto horizonte temporal, y que conviene pensarlos **de atrás para adelante** (ingeniería inversa): primero se define el objetivo de largo plazo, después el de mediano que lo sostiene, y recién ahí se entiende por qué la acción de corto plazo (la tarea concreta) importa.
 
@@ -182,11 +182,11 @@ Se planteó un ejercicio (ejemplo cotidiano: “sacar la basura”) para mostrar
 
 ---
 
-## 📎 Material de referencia
+## <font color="#8250DF">📎 Material de referencia</font>
 
 Presentaciones usadas como apoyo teórico durante la cursada. Se complementan con lo desarrollado en clase (ver secciones de arriba).
 
-### Teoría General de los Sistemas
+### <font color="#1A7F37">Teoría General de los Sistemas</font>
 
 Resumen de los conceptos centrales del PDF, base teórica que se usó en clase para analizar el ejemplo del sistema de ventas:
 
@@ -201,7 +201,7 @@ Resumen de los conceptos centrales del PDF, base teórica que se usó en clase p
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Teor%C3%ADa_General_de_los_Sistemas-0A66C2?style=for-the-badge)](./Material/2-TeoríaGeneraldelosSistemas.pdf)
 
-### Proyectos, Procesos, Productos, Personas (las 4 P del desarrollo de software)
+### <font color="#1A7F37">Proyectos, Procesos, Productos, Personas (las 4 P del desarrollo de software)</font>
 
 No se llegó a desarrollar en profundidad durante esta clase; queda como material de referencia para las próximas. Resumen del PDF:
 
@@ -212,13 +212,13 @@ No se llegó a desarrollar en profundidad durante esta clase; queda como materia
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](./Material/1-ProyectosProcesosProductosPersonas.pdf)
 
-### Guía del Trabajo Práctico grupal (etapas y entregables)
+### <font color="#1A7F37">Guía del Trabajo Práctico grupal (etapas y entregables)</font>
 
 Detalle completo de cada etapa disponible en el índice, sección [🗓️ Fechas de entrega / revisión del TP](#-fechas-de-entrega--revisión-del-tp).
 
 ---
 
-## 🗂️ Estructura del repositorio
+## <font color="#8250DF">🗂️ Estructura del repositorio</font>
 
 ```
 Metodología de Sistemas I
