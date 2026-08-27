@@ -126,7 +126,7 @@ Resumen de los conceptos centrales del PDF, base teórica que se usó en clase p
 - **Sistema de información:** conjunto de recursos (humanos, tecnológicos, materiales, financieros y metodológicos) que capturan, procesan, almacenan y distribuyen información. Sus etapas son captura → procesamiento → almacenamiento → distribución.
 - **Requisitos de la información eficiente:** exactitud, relevancia, oportunidad, integridad, claridad, consistencia, accesibilidad y confiabilidad.
 
-[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Teor%C3%ADa_General_de_los_Sistemas-0A66C2?style=for-the-badge)](./Material/2.Teoría%20General%20de%20los%20Sistemas.pptx.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Teor%C3%ADa_General_de_los_Sistemas-0A66C2?style=for-the-badge)](./Material/2-TeoríaGeneraldelosSistemas.pdf)
 
 ### Proyectos, Procesos, Productos, Personas (las 4 P del desarrollo de software)
 
@@ -137,7 +137,7 @@ No se llegó a desarrollar en profundidad durante esta clase; queda como materia
 - **Productos:** resultado tangible del trabajo (software, sistema, app). Características clave: funcionalidad, calidad y mantenibilidad. Ciclo de vida: concepción → desarrollo → implementación → mantenimiento → retirada.
 - **Personas:** recurso clave del proyecto. Roles típicos: desarrolladores, analistas, testers y gestores de proyecto. Factores clave: competencia, colaboración y cultura organizacional.
 
-[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](./Material/1.Proyectos%2C%20Procesos%2C%20Productos%2C%20Personas.pptx.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](./Material/1-ProyectosProcesosProductosPersonas.pdf)
 
 ### Guía del Trabajo Práctico grupal (etapas y entregables)
 
@@ -161,7 +161,7 @@ Se usa GitHub Projects como herramienta de seguimiento de estas etapas y sus tar
 ```
 Metodología de Sistemas I
 ├── Material
-│   ├── 1.Proyectos, Procesos, Productos, Personas.pptx.pdf
-│   └── 2.Teoría General de los Sistemas.pptx.pdf
+│   ├── 1-ProyectosProcesosProductosPersonas.pdf
+│   └── 2-TeoríaGeneraldelosSistemas.pdf
 └── Readme.md
 ```
