@@ -7,7 +7,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 ## 🧭 Índice
 
 <details>
-<summary><strong>📅 Clase 1 — 24/08 · Presentación de la materia, el TP y primeros conceptos</strong></summary>
+<summary><strong>📅 Clase 1 — 31/08 · Presentación de la materia, el TP y primeros conceptos</strong></summary>
 
 - [De qué se trata la materia](#clase-1-de-que-se-trata-la-materia)
 - [El Trabajo Práctico (TP)](#clase-1-el-trabajo-practico-tp)
@@ -77,7 +77,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 
 ---
 
-## <a id="clase-1"></a>📅 Clase 1 — 24/08 · Presentación de la materia, el TP y primeros conceptos
+## <a id="clase-1"></a>📅 Clase 1 — 31/08 · Presentación de la materia, el TP y primeros conceptos
 
 ### <a id="clase-1-de-que-se-trata-la-materia"></a>De qué se trata la materia
 
