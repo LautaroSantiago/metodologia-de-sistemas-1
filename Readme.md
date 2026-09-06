@@ -13,6 +13,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
   - [<font color="#1A7F37">Herramientas</font>](#funcionamiento-herramientas)
   - [<font color="#1A7F37">Etapas y entrega del TP</font>](#funcionamiento-etapas)
 - [<font color="#8250DF"><strong>Clase 1 — 24/8 · Presentación de la materia y primeros conceptos</strong></font>](#clase-1)
+- [<font color="#8250DF"><strong>Clase 2 — 31/8 · SMART, toma de decisiones y cronograma del TP</strong></font>](#clase-2)
 
 ---
 
@@ -45,8 +46,8 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 <details>
 <summary><font color="#1A7F37">Prototipo inicial</font></summary>
 
-**Se entrega:** conjunto de pantallas (HTML/JS) con datos estáticos que reflejen la información a procesar, resultado de aplicar Design Thinking sobre el proceso elegido.
-**Fecha confirmada:** 31/08.
+**Se entrega:** conjunto de pantallas que reflejen la información a procesar — puede hacerse con Figma, HTML directo o incluso con herramientas de IA generativa; no se pide programar, solo mostrarle al cliente la parte visual del sistema.
+**Fecha confirmada:** 7/9.
 
 </details>
 
@@ -54,7 +55,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 <summary><font color="#1A7F37">Análisis</font></summary>
 
 **Se entrega:** listado de requerimientos funcionales y no funcionales, vinculado a las interfaces de usuario diseñadas en el prototipo.
-**Fecha:** 4/5 según la plantilla de cátedra — a confirmar para esta cursada.
+**Fecha confirmada:** 21/9.
 
 </details>
 
@@ -62,7 +63,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 <summary><font color="#1A7F37">Diseño</font></summary>
 
 **Se entrega:** detalle de casos de uso, modelo de clases y modelo de datos.
-**Fecha:** 18/5 según la plantilla de cátedra — a confirmar para esta cursada.
+**Fecha confirmada:** 12/10.
 
 </details>
 
@@ -70,7 +71,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 <summary><font color="#1A7F37">Desarrollo</font></summary>
 
 **Se entrega:** detalle de las formas de trabajo grupal y su documentación (buenas prácticas de desarrollo).
-**Fecha:** 1/6 según la plantilla de cátedra — a confirmar para esta cursada.
+**Fecha confirmada:** 19/10.
 
 </details>
 
@@ -78,7 +79,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 <summary><font color="#1A7F37">Pruebas</font></summary>
 
 **Se entrega:** diseño de pruebas unitarias, funcionales, de regresión y de performance.
-**Fecha:** 1/6 según la plantilla de cátedra — a confirmar para esta cursada.
+**Fecha confirmada:** 9/11.
 
 </details>
 
@@ -86,11 +87,11 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 <summary><font color="#1A7F37">Implementación</font></summary>
 
 **Se entrega:** configuración de ambientes (usuarios, recursos, seguridad y variables).
-**Fecha:** 22/6 según la plantilla de cátedra — a confirmar para esta cursada.
+**Fecha confirmada:** 23/11.
 
 </details>
 
-**Corrección:** las entregas se revisan en el tablero de GitHub Projects. Una tarea pasa de *In Progress* a *Resol* cuando el grupo la da por terminada; si queda bien resuelta pasa a *Done*, y si no, vuelve a *In Progress* con comentarios para corregir.
+**Corrección:** las entregas se revisan en el tablero de GitHub Projects. Una tarea pasa de *In Progress* a *Resol* cuando el grupo la da por terminada; si queda bien resuelta pasa a *Done*, y si no, vuelve a *In Progress* con comentarios para corregir. Además, llegar tarde a una entrega no solo penaliza esa nota puntual: baja el techo máximo alcanzable en las entregas siguientes, aunque el contenido de esas próximas esté perfecto.
 
 ---
 
@@ -152,6 +153,7 @@ Info útil de la clase para arrancar el desarrollo, aplicable a estas cuatro:
   4. Cerrar con el **alcance/límite**: dejar explícito qué queda afuera (cobros, logística, reposición de stock, etc., según corresponda a cada idea) para evitar diferencias de expectativas con el cliente.
 - **Antes de elegir una definitiva**, confirmar que haya un **cliente real y accesible** que pueda dedicarle tiempo al equipo — el requisito no negociable del TP, ya sea para la peluquería/consultorio o para el negocio de stock, entradas o e-commerce de mascotas.
 - **Mantenerla acotada**: mismo criterio que se remarcó con "gestión de gimnasio" — elegir una sola de estas cuatro y no ir sumándole funcionalidades de las otras tres a medida que avanza el diseño.
+- **Ojo con que "turnos" quede demasiado chico**: en la clase 2, al revisar en vivo la idea de otro grupo para una peluquería/estética, se marcó que un negocio que es puramente de turnos ("turnario y listo") puede quedarse corto de contenido para el TP, porque no suma control de stock ni maneja presupuestos — es un servicio sin producto de por medio. Si se elige esta candidata, conviene explorar si hay algo más para modelar (por ejemplo, gestión de insumos del local) antes de darla por buena.
 
 #### Diferencia de expectativas
 
@@ -200,6 +202,60 @@ Se planteó un ejercicio (ejemplo cotidiano: sacar la basura) para mostrar cómo
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Teor%C3%ADa_General_de_los_Sistemas-0A66C2?style=for-the-badge)](./Material/2-TeoríaGeneraldelosSistemas.pdf)
 
 **Proyectos, Procesos, Productos, Personas** (las 4 P del desarrollo de software) — no se llegó a desarrollar en profundidad en esta clase, queda como referencia: proyectos (objetivo SMART, ciclo de vida), procesos (Scrum, PMBOK, Agile, Waterfall), productos (ciclo de vida) y personas (roles, competencia, colaboración).
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](./Material/1-ProyectosProcesosProductosPersonas.pdf)
+
+</details>
+
+<details>
+<summary><a id="clase-2"></a><font color="#1A7F37"><strong>Clase 2 — 31/8 · SMART, toma de decisiones y cronograma del TP</strong></font></summary>
+
+### Temas vistos
+
+- Repaso de la teoría de proyectos (ciclo de vida de producto, atributos de un sistema) vista la clase anterior
+- Objetivos SMART: qué significa cada letra y cómo aplicarlo a un objetivo de proyecto
+- Toma de decisiones dentro de un proceso: cómo se apoya en datos e información
+- Fechas oficiales confirmadas del cronograma del TP
+- Aclaración sobre qué implica la entrega del "Prototipo inicial"
+- Trabajo en salas por grupo, con revisión en vivo de un objetivo SMART de cada equipo
+
+#### Objetivos SMART
+
+Repaso en profundidad del acrónimo que ya había aparecido en el material de "Proyectos, Procesos, Productos, Personas": todo objetivo de proyecto tiene que ser **S**pecific (específico), **M**easurable (medible), **A**chievable (alcanzable), **R**elevant (relevante) y **T**ime-bound (con tiempo definido).
+
+- **Specific / Measurable:** se trabajó armando objetivos en clase a partir de frases vagas. Ejemplo: "mejorar tiempos de producción" (ligado a la idea de venta de fotos de eventos deportivos) no dice nada por sí solo — hay que precisar de qué proceso puntual se habla (por ejemplo, el tiempo que tarda un cliente en seleccionar sus fotos, no todo el circuito de venta) y con qué número se lo mide (ej.: "mejorar los tiempos de selección de imágenes en un 30%, en 6 meses, con una aplicación web").
+- **Achievable:** a diferencia de una tarea repetida muchas veces (donde ya hay una marca personal de referencia), un proyecto es algo nuevo y no hay forma de estar 100% seguro de que algo es alcanzable antes de hacerlo. Lo que se puede hacer es estimar en base al tiempo real disponible — por ejemplo, la carga horaria de la materia (unas pocas horas por semana) marca un techo realista de dedicación, no ocho horas por día.
+- **Relevant:** un objetivo tiene que estar conectado a algo que le importe a quien lo pide. Se usó el ejemplo de "mejorar la condición física" — solo cobra sentido si se conecta con un motivo concreto (una competencia, poder hacer determinada actividad), no como fin en sí mismo.
+- **Time-bound:** tiene que tener una fecha límite. Se usó como ejemplo el propio TP: sin una fecha de entrega, "aprobar la materia" no sería time-bound.
+- **Conclusión útil para el TP:** cuanto más ambiguo queda un objetivo, más lugar hay para que cada uno lo entienda distinto — y esa ambigüedad es la que después genera conflictos de expectativas con el cliente (mismo tema que ya había aparecido en la clase 1).
+
+#### Toma de decisiones y datos
+
+- Se retomó la relación entre dato e información (ya vista en la Teoría General de los Sistemas): una decisión solo puede tomarse bien si el sistema cuenta con los datos necesarios; si falta algo, la decisión termina siendo intuición y no una decisión informada.
+- Ejemplo de clase: para decidir "qué ropa ponerse" hace falta información concreta (clima, agenda del día, código de vestimenta si corresponde) — y esa información tiene que estar completa y detallada. Un sistema no puede apoyarse en un "etcétera": si un dato no está identificado explícitamente, el sistema no lo va a tener disponible para decidir.
+- Aplicado a un sistema de pedidos: una decisión típica es si mandar o no un recordatorio por email a un cliente, en función del estado en que quedó su pedido (por ejemplo, si la selección de imágenes quedó en borrador). Ese tipo de reglas de decisión conviene dejarlas escritas, no solo pensadas.
+- **Conclusión útil para el TP:** al relevar el proceso del cliente, conviene identificar los puntos donde el sistema tiene que decidir algo, y para cada uno preguntar qué información hace falta para decidir bien — sin dejar nada bajo un "etcétera".
+
+#### Fechas oficiales del cronograma del TP
+
+Se confirmaron las fechas reales de entrega para esta cursada (ya actualizadas en la sección [Etapas y entrega del TP](#funcionamiento-etapas) del índice). También se aclaró cómo funciona la penalización: si un grupo entrega tarde, no solo se resiente la nota de esa entrega puntual — el atraso baja el techo máximo de nota que ese grupo puede alcanzar en las entregas siguientes, aunque después presenten todo perfecto.
+
+#### Aclaración sobre el "Prototipo inicial"
+
+Surgió la duda de si la primera entrega implicaba programar (por ejemplo, en JavaScript). Se aclaró que no: el "prototipo inicial" se refiere a mostrarle al cliente la parte visual del sistema, del mismo modo que se hace en desarrollo web antes de programar. Se puede resolver con Figma, con HTML directo (sin lógica de programación), o incluso con herramientas de generación de interfaces por IA — lo que importa es tener pantallas para mostrar, no código funcionando.
+
+- **Conclusión útil para el TP:** no hace falta saber programar para esta primera entrega. Alcanza con maquetar las pantallas que reflejen el proceso que se va a resolver.
+
+#### Feedback general sobre el armado de los objetivos
+
+Al revisar en vivo los objetivos que armó cada grupo, se remarcaron dos criterios que aplican a cualquier proyecto (incluido el de este equipo):
+
+- **Evitar títulos demasiado abarcativos.** Un nombre de proyecto muy general (por ejemplo, algo tipo "centralizar información de socios") deja lugar a interpretaciones distintas — conviene ser específico desde el título para evitar zonas grises.
+- **No perder tiempo diseñando pantallas estándar.** Todo sistema va a tener registro, login y asignación de permisos por rol — son pantallas que no aportan valor diferencial al proyecto, así que no hace falta detenerse en su diseño.
+
+### Material de la clase
+
+Esta clase profundizó sobre el mismo PDF de la clase anterior, sin material nuevo:
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](./Material/1-ProyectosProcesosProductosPersonas.pdf)
 
