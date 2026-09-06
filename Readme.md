@@ -49,6 +49,10 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 **Se entrega:** conjunto de pantallas que reflejen la información a procesar — puede hacerse con Figma, HTML directo o incluso con herramientas de IA generativa; no se pide programar, solo mostrarle al cliente la parte visual del sistema.
 **Fecha confirmada:** 7/9.
 
+Se resuelve aplicando **Design Thinking**, en sus 5 etapas: Empatizar → Definir → Idear → Prototipar → Evaluar (las dos primeras y las dos últimas son de pensamiento convergente; Idear es la etapa divergente, de generación de opciones).
+
+⭐ **Lo que el material marca como importante:** al diseñar algo nuevo, el principal riesgo a evitar es *construir algo que nadie quiere o usa*. Por eso todo el proceso arranca en **Empatizar** — entender necesidades y motivaciones reales del cliente (mapa de actores, mapa de empatía) — antes de pasar a idear o prototipar soluciones.
+
 </details>
 
 <details>
@@ -57,6 +61,8 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 **Se entrega:** listado de requerimientos funcionales y no funcionales, vinculado a las interfaces de usuario diseñadas en el prototipo.
 **Fecha confirmada:** 21/9.
 
+⭐ Esta entrega se apoya directamente en el material de **Unidad 2 — Análisis de Sistemas** (ver "Material de la clase" dentro de la Clase 1): la definición de requerimiento funcional (comportamiento del sistema ante un evento) vs. no funcional (performance, seguridad, tecnología, legales, documentación), y las herramientas para comunicarlos (casos de uso UML o historias de usuario).
+
 </details>
 
 <details>
@@ -64,6 +70,8 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 
 **Se entrega:** detalle de casos de uso, modelo de clases y modelo de datos.
 **Fecha confirmada:** 12/10.
+
+⭐ El formato de caso de uso que pide esta entrega (título descriptivo, actor, escenario) y su notación UML (asociación, extends, include, límite del sistema) están detallados en el material de **Unidad 2 — Análisis de Sistemas**.
 
 </details>
 
@@ -197,13 +205,19 @@ Se planteó un ejercicio (ejemplo cotidiano: sacar la basura) para mostrar cómo
 
 ### Material de la clase
 
-**Teoría General de los Sistemas** — base teórica usada en clase para analizar el ejemplo del sistema de ventas: concepto de sistema, atributos (elementos, relaciones, objetivo, límite), clasificaciones, cualidades (entropía, homeostasis, sinergia, retroalimentación, equifinalidad), dato vs. información, y sistema de información (captura → procesamiento → almacenamiento → distribución).
+**Teoría General de los Sistemas** — base teórica usada en clase para analizar el ejemplo del sistema de ventas: concepto de sistema (conjunto de elementos interrelacionados que trabajan para un objetivo; ejemplos citados: un ecosistema, una organización, un tren de carga, el cuerpo humano), atributos (elementos, relaciones, objetivo, límite), clasificaciones (abiertos/cerrados/aislados, naturales/artificiales, concretos/abstractos, estáticos/dinámicos, simples/complejos), cualidades (entropía, homeostasis, sinergia, retroalimentación positiva/negativa, equifinalidad, permeabilidad, adaptabilidad, emergencia), dato vs. información, y sistema de información (captura → procesamiento → almacenamiento → distribución).
+
+⭐ El material remarca los **requisitos de la información eficiente** — exactitud, relevancia, oportunidad, integridad, claridad, consistencia, accesibilidad y confiabilidad — con un ejemplo por requisito (ej.: relevancia = un examen de sangre sirve para el diagnóstico puntual que se pide, no para cualquier otro).
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Teor%C3%ADa_General_de_los_Sistemas-0A66C2?style=for-the-badge)](./Material/2-TeoríaGeneraldelosSistemas.pdf)
 
-**Proyectos, Procesos, Productos, Personas** (las 4 P del desarrollo de software) — no se llegó a desarrollar en profundidad en esta clase, queda como referencia: proyectos (objetivo SMART, ciclo de vida), procesos (Scrum, PMBOK, Agile, Waterfall), productos (ciclo de vida) y personas (roles, competencia, colaboración).
+**Proyectos, Procesos, Productos, Personas** (las 4 P del desarrollo de software) — no se llegó a desarrollar en profundidad en esta clase, queda como referencia: proyectos (objetivo SMART, alcance, restricciones, recursos; ciclo de vida: iniciación → planificación → ejecución → monitoreo y control → cierre), procesos (gestión de proyectos como Scrum/PMBOK vs. técnicos como Agile/Waterfall), productos (funcionalidad, calidad, mantenibilidad; ciclo de vida: concepción → desarrollo → implementación → mantenimiento → retirada) y personas (roles: desarrolladores, analistas, testers, gestores de proyecto; factores clave: competencia, colaboración, cultura organizacional).
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](./Material/1-ProyectosProcesosProductosPersonas.pdf)
+
+**Unidad 2 — Análisis de Sistemas** *(material subido, aún no desarrollado en clase)* — cubre: **Marco Cynefin** (modelo para elegir cómo actuar según el tipo de problema: Simple, Complicado, Complejo, Caótico o Desorden); **enfoques de gestión de proyectos** (Predictivo, Ágil e Híbrido) y la mentalidad ágil (co-creación de valor, aceptar la incertidumbre); **ciclo de vida del desarrollo de software** en cascada vs. iterativo e incremental (análisis → diseño → codificación → pruebas → implementación); **requerimientos funcionales** (comportamiento esperado del sistema) vs. **no funcionales** (performance, seguridad, tecnología, legales, documentación); **UML: casos de uso** (título, actor, escenario); y **documentación en agilidad** (épicas → features → historias de usuario, con criterio "Como \[usuario], quiero \[algo], para \[objetivo]" y sus criterios de aceptación).
+
+⭐ Directamente relacionado con las entregas de **Análisis** y **Diseño** del TP — ver notas en [Etapas y entrega del TP](#funcionamiento-etapas).
 
 </details>
 
