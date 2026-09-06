@@ -4,6 +4,9 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 
 **Cursada:** 2do. cuatrimestre 2026
 
+[![Ver en Figma](https://img.shields.io/badge/🎨_Ver_en_Figma-Pizarra_de_la_materia-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/board/25UDE2ECBBLU19Vzs7cfEb/Met-I---132?node-id=0-1&p=f)
+[![Ver documento del TP](https://img.shields.io/badge/📝_Documento_del_TP-Grupo_5-4285F4?style=for-the-badge&logo=googledocs&logoColor=white)](https://docs.google.com/document/d/1_fh0JCqxTOB4g7RQvXyYY3_fwekXTQJEdVI5M4X70cM/edit?tab=t.0)
+
 ---
 
 ## <font color="#8250DF">🧭 Índice</font>
@@ -14,6 +17,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
   - [<font color="#1A7F37">Etapas y entrega del TP</font>](#funcionamiento-etapas)
 - [<font color="#8250DF"><strong>Clase 1 — 24/8 · Presentación de la materia y primeros conceptos</strong></font>](#clase-1)
 - [<font color="#8250DF"><strong>Clase 2 — 31/8 · SMART, toma de decisiones y cronograma del TP</strong></font>](#clase-2)
+- [<font color="#8250DF"><strong>Material de referencia</strong></font>](#material-de-referencia)
 
 ---
 
@@ -33,13 +37,13 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 
 `Figma` · `GitHub Projects` · `Google Docs`
 
-- **Figma** — pizarrón virtual compartido para dinámicas de grupo, brainstorming y diagramas en clase.
+- **Figma** — pizarrón virtual compartido para dinámicas de grupo, brainstorming y diagramas en clase (botón de acceso arriba, en el encabezado del repo).
 - **GitHub Projects** — planificación y seguimiento de tareas del TP (tablero tipo Kanban):
   - Columnas: *To Do* → *In Progress* → *Resol* (a revisión) → *Done*. Si una tarea entregada no está a la altura, vuelve a *In Progress* con comentarios.
   - Cada tarea (issue) lleva un **label con el número de grupo**, imprescindible para que después funcionen los filtros por grupo.
   - Cada tarea tiene **un único responsable asignado** (ni todos, ni nadie).
   - Se arman **vistas filtradas por grupo** para que cada equipo gestione solo lo suyo.
-- **Google Docs** — documentación del TP centralizada en un documento de solo lectura, donde se va agregando todo lo producido durante la cursada.
+- **Google Docs** — documentación del TP centralizada en un documento de solo lectura, donde se va agregando todo lo producido durante la cursada (botón de acceso arriba, en el encabezado del repo).
 
 ### <a id="funcionamiento-etapas"></a><font color="#1A7F37">Etapas y entrega del TP</font>
 
@@ -61,7 +65,7 @@ Se resuelve aplicando **Design Thinking**, en sus 5 etapas: Empatizar → Defini
 **Se entrega:** listado de requerimientos funcionales y no funcionales, vinculado a las interfaces de usuario diseñadas en el prototipo.
 **Fecha confirmada:** 21/9.
 
-⭐ Esta entrega se apoya directamente en el material de **Unidad 2 — Análisis de Sistemas** (ver "Material de la clase" dentro de la Clase 1): la definición de requerimiento funcional (comportamiento del sistema ante un evento) vs. no funcional (performance, seguridad, tecnología, legales, documentación), y las herramientas para comunicarlos (casos de uso UML o historias de usuario).
+⭐ Esta entrega se apoya directamente en el material de **Unidad 2** (ver [Material de referencia](#material-de-referencia)): la definición de requerimiento funcional (comportamiento del sistema ante un evento) vs. no funcional (performance, seguridad, tecnología, legales, documentación), y las herramientas para comunicarlos (casos de uso UML o historias de usuario).
 
 </details>
 
@@ -71,7 +75,7 @@ Se resuelve aplicando **Design Thinking**, en sus 5 etapas: Empatizar → Defini
 **Se entrega:** detalle de casos de uso, modelo de clases y modelo de datos.
 **Fecha confirmada:** 12/10.
 
-⭐ El formato de caso de uso que pide esta entrega (título descriptivo, actor, escenario) y su notación UML (asociación, extends, include, límite del sistema) están detallados en el material de **Unidad 2 — Análisis de Sistemas**.
+⭐ El formato de caso de uso que pide esta entrega (título descriptivo, actor, escenario) y su notación UML (asociación, extends, include, límite del sistema) están detallados en el material de **Unidad 2**.
 
 </details>
 
@@ -205,19 +209,7 @@ Se planteó un ejercicio (ejemplo cotidiano: sacar la basura) para mostrar cómo
 
 ### Material de la clase
 
-**Teoría General de los Sistemas** — base teórica usada en clase para analizar el ejemplo del sistema de ventas: concepto de sistema (conjunto de elementos interrelacionados que trabajan para un objetivo; ejemplos citados: un ecosistema, una organización, un tren de carga, el cuerpo humano), atributos (elementos, relaciones, objetivo, límite), clasificaciones (abiertos/cerrados/aislados, naturales/artificiales, concretos/abstractos, estáticos/dinámicos, simples/complejos), cualidades (entropía, homeostasis, sinergia, retroalimentación positiva/negativa, equifinalidad, permeabilidad, adaptabilidad, emergencia), dato vs. información, y sistema de información (captura → procesamiento → almacenamiento → distribución).
-
-⭐ El material remarca los **requisitos de la información eficiente** — exactitud, relevancia, oportunidad, integridad, claridad, consistencia, accesibilidad y confiabilidad — con un ejemplo por requisito (ej.: relevancia = un examen de sangre sirve para el diagnóstico puntual que se pide, no para cualquier otro).
-
-[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Teor%C3%ADa_General_de_los_Sistemas-0A66C2?style=for-the-badge)](./Material/2-TeoríaGeneraldelosSistemas.pdf)
-
-**Proyectos, Procesos, Productos, Personas** (las 4 P del desarrollo de software) — no se llegó a desarrollar en profundidad en esta clase, queda como referencia: proyectos (objetivo SMART, alcance, restricciones, recursos; ciclo de vida: iniciación → planificación → ejecución → monitoreo y control → cierre), procesos (gestión de proyectos como Scrum/PMBOK vs. técnicos como Agile/Waterfall), productos (funcionalidad, calidad, mantenibilidad; ciclo de vida: concepción → desarrollo → implementación → mantenimiento → retirada) y personas (roles: desarrolladores, analistas, testers, gestores de proyecto; factores clave: competencia, colaboración, cultura organizacional).
-
-[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](./Material/1-ProyectosProcesosProductosPersonas.pdf)
-
-**Unidad 2 — Análisis de Sistemas** *(material subido, aún no desarrollado en clase)* — cubre: **Marco Cynefin** (modelo para elegir cómo actuar según el tipo de problema: Simple, Complicado, Complejo, Caótico o Desorden); **enfoques de gestión de proyectos** (Predictivo, Ágil e Híbrido) y la mentalidad ágil (co-creación de valor, aceptar la incertidumbre); **ciclo de vida del desarrollo de software** en cascada vs. iterativo e incremental (análisis → diseño → codificación → pruebas → implementación); **requerimientos funcionales** (comportamiento esperado del sistema) vs. **no funcionales** (performance, seguridad, tecnología, legales, documentación); **UML: casos de uso** (título, actor, escenario); y **documentación en agilidad** (épicas → features → historias de usuario, con criterio "Como \[usuario], quiero \[algo], para \[objetivo]" y sus criterios de aceptación).
-
-⭐ Directamente relacionado con las entregas de **Análisis** y **Diseño** del TP — ver notas en [Etapas y entrega del TP](#funcionamiento-etapas).
+Repaso en base a **Unidad 1** — ver detalle y descarga en [Material de referencia](#material-de-referencia).
 
 </details>
 
@@ -269,11 +261,49 @@ Al revisar en vivo los objetivos que armó cada grupo, se remarcaron dos criteri
 
 ### Material de la clase
 
-Esta clase profundizó sobre el mismo PDF de la clase anterior, sin material nuevo:
-
-[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](./Material/1-ProyectosProcesosProductosPersonas.pdf)
+Profundización sobre **Unidad 1**, sin material nuevo — ver [Material de referencia](#material-de-referencia).
 
 </details>
+
+---
+
+## <a id="material-de-referencia"></a><font color="#8250DF">📎 Material de referencia</font>
+
+### Generales
+
+[![Ver PDF](https://img.shields.io/badge/📄_Guía_TP_grupal-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/00%20-%20Guria%20TP%20grupal.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Planificación_de_la_materia-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/Planificaci%C3%B3n%20Metodolog%C3%ADa%20de%20Sistemas%20I.pdf)
+
+La guía detalla el objetivo, la metodología y las etapas del TP grupal (ver resumen en [Etapas y entrega del TP](#funcionamiento-etapas)).
+
+### UNIDAD 1
+
+Base teórica usada en las clases 1 y 2.
+
+**Teoría General de los Sistemas** — concepto de sistema (conjunto de elementos interrelacionados que trabajan para un objetivo; ejemplos citados: un ecosistema, una organización, un tren de carga, el cuerpo humano), atributos (elementos, relaciones, objetivo, límite), clasificaciones (abiertos/cerrados/aislados, naturales/artificiales, concretos/abstractos, estáticos/dinámicos, simples/complejos), cualidades (entropía, homeostasis, sinergia, retroalimentación positiva/negativa, equifinalidad, permeabilidad, adaptabilidad, emergencia), dato vs. información, y sistema de información (captura → procesamiento → almacenamiento → distribución).
+
+⭐ El material remarca los **requisitos de la información eficiente** — exactitud, relevancia, oportunidad, integridad, claridad, consistencia, accesibilidad y confiabilidad — con un ejemplo por requisito (ej.: relevancia = un examen de sangre sirve para el diagnóstico puntual que se pide, no para cualquier otro).
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Teor%C3%ADa_General_de_los_Sistemas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/02%20-%20Teor%C3%ADa%20General%20de%20los%20Sistemas.pptx.pdf)
+
+**Proyectos, Procesos, Productos, Personas** (las 4 P del desarrollo de software) — proyectos (objetivo SMART, alcance, restricciones, recursos; ciclo de vida: iniciación → planificación → ejecución → monitoreo y control → cierre), procesos (gestión de proyectos como Scrum/PMBOK vs. técnicos como Agile/Waterfall), productos (funcionalidad, calidad, mantenibilidad; ciclo de vida: concepción → desarrollo → implementación → mantenimiento → retirada) y personas (roles: desarrolladores, analistas, testers, gestores de proyecto; factores clave: competencia, colaboración, cultura organizacional).
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20Proyectos%2C%20Procesos%2C%20Productos%2C%20Personas.pptx.pdf)
+
+### UNIDAD 2
+
+*Material subido, aún no desarrollado en clase.*
+
+Cubre: **Marco Cynefin** (modelo para elegir cómo actuar según el tipo de problema: Simple, Complicado, Complejo, Caótico o Desorden); **enfoques de gestión de proyectos** (Predictivo, Ágil e Híbrido) y la mentalidad ágil (co-creación de valor, aceptar la incertidumbre); **ciclo de vida del desarrollo de software** en cascada vs. iterativo e incremental (análisis → diseño → codificación → pruebas → implementación); **requerimientos funcionales** (comportamiento esperado del sistema) vs. **no funcionales** (performance, seguridad, tecnología, legales, documentación); **UML: casos de uso** (título, actor, escenario); y **documentación en agilidad** (épicas → features → historias de usuario, con criterio "Como \[usuario], quiero \[algo], para \[objetivo]" y sus criterios de aceptación).
+
+⭐ Directamente relacionado con las entregas de **Análisis** y **Diseño** del TP — ver notas en [Etapas y entrega del TP](#funcionamiento-etapas).
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_2_(parte_1)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_1.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_2_(parte_2)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf)
+
+### UNIDAD 3
+
+Todavía sin material cargado.
 
 ---
 
@@ -282,7 +312,14 @@ Esta clase profundizó sobre el mismo PDF de la clase anterior, sin material nue
 ```
 Metodología de Sistemas I
 ├── Material
-│   ├── 1-ProyectosProcesosProductosPersonas.pdf
-│   └── 2-TeoríaGeneraldelosSistemas.pdf
+│   ├── 00 - Guria TP grupal.pdf
+│   ├── Planificación Metodología de Sistemas I.pdf
+│   ├── UNIDAD 1
+│   │   ├── 01 - Proyectos, Procesos, Productos, Personas.pptx.pdf
+│   │   └── 02 - Teoría General de los Sistemas.pptx.pdf
+│   ├── UNIDAD 2
+│   │   ├── 02 - MetSis_I_U2_1.pdf
+│   │   └── 02 - MetSis_I_U2_2.pdf
+│   └── UNIDAD 3
 └── Readme.md
 ```
