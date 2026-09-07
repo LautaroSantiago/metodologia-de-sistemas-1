@@ -506,7 +506,7 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
 - Mucho tiempo del personal respondiendo mensajes.
 - Los alumnos no tienen una forma rápida de consultar sus próximos turnos.
 
-**Solución propuesta — el alumno podría:**
+**Solución propuesta:**
 1. Ver los días disponibles.
 2. Consultar los horarios.
 3. Elegir una clase.
@@ -515,7 +515,7 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
 6. Ver sus turnos reservados.
 7. Cancelar un turno si lo necesita.
 
-Y del lado del centro: ver una agenda con los turnos ocupados.
+Del lado del centro: ver una agenda con los turnos ocupados.
 
 **Aplicando Design Thinking:**
 1. **Empatizar** — identificar las necesidades de los dos tipos de usuario: alumnos y personal del centro.
