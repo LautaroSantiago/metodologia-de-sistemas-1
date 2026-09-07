@@ -419,7 +419,9 @@ Todavía sin material cargado.
 
 Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tema visto en clase, dónde buscarlo en el material, qué diagrama o herramienta corresponde, qué preguntas genéricas hacerse para cualquier caso, y cómo quedó (o falta) aplicado a nuestro caso elegido (**PilatesFlow — Sistema de Gestión de Turnos**, Grupo 5). Se completa clase a clase, a medida que se van dando los temas.
 
-#### Diferencia de expectativas (Clase 1)
+Cada tema arranca marcado con ❌ (pendiente de resolver para el TP). Se cambia a ✅ a mano en este archivo cuando ya quedó resuelto de verdad en el documento del grupo.
+
+#### Diferencia de expectativas (Clase 1) ❌
 
 - **Preguntas genéricas:**
   - ¿Hay palabras o frases en la conversación con el cliente que cada uno podría interpretar distinto?
@@ -427,7 +429,7 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
 - **Aplicado a PilatesFlow:**
   - Chequear con la clienta, por escrito, que "gestión de turnos" signifique lo mismo para ella que para el equipo (reserva + cancelación + agenda), antes de avanzar con el prototipo.
 
-#### Locación de servicio vs. locación de obra (Clase 1)
+#### Locación de servicio vs. locación de obra (Clase 1) ❌
 
 - **Preguntas genéricas:**
   - ¿Nuestro compromiso con el cliente es por tiempo (servicio) o por un resultado entregado (obra)?
@@ -435,7 +437,7 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
 - **Aplicado a PilatesFlow:**
   - El TP se plantea como locación de obra: se compromete un sistema funcionando, no horas sueltas. Falta dejar por escrito qué queda **fuera** de esta primera versión (por ejemplo, cobros online, notificaciones automáticas) para no ir sumando pedidos sin fin.
 
-#### Alcance (límite) de un sistema (Clase 1)
+#### Alcance (límite) de un sistema (Clase 1) ❌
 
 - **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/02%20-%20Teor%C3%ADa%20General%20de%20los%20Sistemas.pptx.pdf" target="_blank" rel="noopener">Teoría General de los Sistemas — Atributos y Comportamiento (límite/frontera)</a> — Unidad 1.
 - **Diagrama / herramienta:** diagrama simple de frontera del sistema (qué entra, qué queda afuera, qué es "ambiente").
@@ -446,7 +448,7 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
   - **Dentro del alcance:** ver disponibilidad, reservar, cancelar, ver agenda del centro.
   - **Fuera del alcance (a confirmar en grupo):** cobros y facturación, envío de recordatorios automáticos, altas/bajas de instructoras (la clienta trabaja sola).
 
-#### Objetivos de corto, mediano y largo plazo (Clase 1)
+#### Objetivos de corto, mediano y largo plazo (Clase 1) ❌
 
 - **Preguntas genéricas:**
   - ¿Cuál es el objetivo de corto plazo (la tarea puntual)?
@@ -455,7 +457,7 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
   - Corto plazo: dejar de perder turnos por WhatsApp.
   - Mediano/largo plazo: ¿quiere sumar más alumnos, más horarios, o simplemente reducir el tiempo que le saca la gestión manual? Falta preguntárselo.
 
-#### Objetivos SMART (Clase 2)
+#### Objetivos SMART (Clase 2) ❌
 
 - **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20ProyectosProcesosProductosPersonas.pptx.pdf" target="_blank" rel="noopener">Proyectos, Procesos, Productos, Personas — sección "1. Proyectos", Componentes</a> — Unidad 1.
 - **Preguntas genéricas:**
@@ -465,7 +467,7 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
 - **Aplicado a PilatesFlow (a redactar en el documento del TP):**
   - Falta convertir "gestionar mejor los turnos" en un objetivo SMART, por ejemplo: *"reducir a cero los errores de superposición de turnos, con una plataforma web entregada antes del 7/9"* — ajustar el número y la fecha real que definan como equipo.
 
-#### Toma de decisiones y datos (Clase 2)
+#### Toma de decisiones y datos (Clase 2) ❌
 
 - **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/02%20-%20Teor%C3%ADa%20General%20de%20los%20Sistemas.pptx.pdf" target="_blank" rel="noopener">Teoría General de los Sistemas — Dato e Información</a> — Unidad 1.
 - **Preguntas genéricas:**
@@ -475,7 +477,7 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
   - Decisión: si un turno se puede reservar o no → dato necesario: cupo ya ocupado en esa clase (máximo 3 alumnos).
   - Decisión: si mostrar un horario como disponible → dato necesario: franja horaria de la clienta (8 a 12 hs y 15 a 18 hs) cruzada con los turnos ya tomados.
 
-#### Ciclo de vida del producto, prototipo vs. MVP y Design Thinking (Clase 3)
+#### Ciclo de vida del producto, prototipo vs. MVP y Design Thinking (Clase 3) ❌
 
 - **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf" target="_blank" rel="noopener">Unidad 2 (parte 2) — Ciclo de vida del Producto y Pensamiento de diseño</a>.
 - **Diagrama / herramienta por sub-etapa:** mapa de actores y mapa de empatía (Empatizar) → mapa de causa raíz (Definir) → brainstorming (Idear) → wireframe o prototipo de alta fidelidad (Prototipar) → elevator pitch (Evaluar).
@@ -534,7 +536,7 @@ Del lado del centro: ver una agenda con los turnos ocupados.
 - Opción de cancelar un turno desde esa misma pantalla.
 - Pantalla de agenda con los turnos ocupados (vista del centro).
 
-#### Gestión de riesgos (Clase 3)
+#### Gestión de riesgos (Clase 3) ❌
 
 - **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf" target="_blank" rel="noopener">Unidad 2 (parte 2) — Ciclo de vida del Producto, Planeamiento estratégico</a>.
 - **Diagrama / herramienta:** matriz de probabilidad de ocurrencia × impacto.
@@ -545,7 +547,7 @@ Del lado del centro: ver una agenda con los turnos ocupados.
   - Riesgo: la clienta se olvida de actualizar el sistema con turnos tomados fuera de la app (por ejemplo, por WhatsApp de emergencia) → probabilidad media, impacto medio (genera doble reserva).
   - Riesgo: pérdida de datos si no hay backup → probabilidad baja, impacto alto.
 
-#### Marco Cynefin: cascada vs. iterativo (Clase 3)
+#### Marco Cynefin: cascada vs. iterativo (Clase 3) ❌
 
 - **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_1.pdf" target="_blank" rel="noopener">Unidad 2 (parte 1) — Marco Cynefin y Ciclo de vida del desarrollo de software</a>.
 - **Preguntas genéricas:**
@@ -554,7 +556,7 @@ Del lado del centro: ver una agenda con los turnos ocupados.
 - **Aplicado a PilatesFlow:**
   - Si el equipo ya maneja HTML/CSS/JS de la cursada de Programación III, el caso tiende a **Simple/Complicado** → conviene ir en cascada (pantallas → lógica → pruebas). Si aparece algo nuevo (por ejemplo, un calendario interactivo complejo), esa parte puntual conviene tratarla como **Compleja** y resolverla en iteraciones chicas.
 
-#### Gestión de stakeholders (Clase 3)
+#### Gestión de stakeholders (Clase 3) ❌
 
 - **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf" target="_blank" rel="noopener">Unidad 2 (parte 2) — Ciclo de vida del Producto, Planeamiento estratégico</a>.
 - **Diagrama / herramienta:** matriz de interés × influencia.
@@ -567,7 +569,7 @@ Del lado del centro: ver una agenda con los turnos ocupados.
   - **Usuarios externos:** los alumnos que reservan turnos.
   - A tener en cuenta: los alumnos acostumbrados a reservar por WhatsApp pueden tener resistencia al cambio aunque el sistema les convenga — conviene que el prototipo sea bien simple de usar para bajar esa resistencia.
 
-#### Requerimientos funcionales/no funcionales y casos de uso (Clase 3 / Unidad 2)
+#### Requerimientos funcionales/no funcionales y casos de uso (Clase 3 / Unidad 2) ❌
 
 - **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_1.pdf" target="_blank" rel="noopener">Unidad 2 (parte 1) — Requerimientos y UML: Casos de Uso</a>.
 - **Diagrama / herramienta:** diagrama de casos de uso UML (actor, caso de uso, límite del sistema, relaciones de include/extends) — o, como alternativa, historias de usuario con criterios de aceptación.
@@ -591,7 +593,7 @@ Del lado del centro: ver una agenda con los turnos ocupados.
 
 **A definir como restricciones / reglas de negocio (no funcionales o de alcance):** cupo máximo de 3 alumnos por clase, y cómo se registra la forma de cobro (clase suelta, bono o mensual) — esto último conviene discutirlo en grupo para decidir si entra en el alcance de esta primera versión o queda fuera.
 
-#### Etapas 3 a 6 — Diseño, Desarrollo, Pruebas e Implementación
+#### Etapas 3 a 6 — Diseño, Desarrollo, Pruebas e Implementación ❌
 
 Todavía no se desarrollaron en clase. Cuando se den, esta sección se completa con el mismo formato: tema (con link al PDF), diagrama/herramienta, preguntas genéricas y la aplicación concreta a PilatesFlow.
 
