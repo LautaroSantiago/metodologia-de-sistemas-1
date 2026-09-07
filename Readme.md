@@ -6,7 +6,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 
 [![Ver en Figma](https://img.shields.io/badge/🎨_Ver_en_Figma-Pizarra_de_la_materia-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/board/25UDE2ECBBLU19Vzs7cfEb/Met-I---132?node-id=0-1&p=f)
 [![Ver documento del TP](https://img.shields.io/badge/📝_Documento_del_TP-Grupo_5-4285F4?style=for-the-badge&logo=googledocs&logoColor=white)](https://docs.google.com/document/d/1_fh0JCqxTOB4g7RQvXyYY3_fwekXTQJEdVI5M4X70cM/edit?tab=t.0)
-[![Ver cronograma](https://img.shields.io/badge/📆_Cronograma_de_la_cursada-Curso_132--2-1A7F37?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/cronograma-2026-c2-132.pdf)
+[![Ver cronograma](https://img.shields.io/badge/📆_Cronograma_de_la_cursada-2026-1A7F37?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/cronograma-2026-c2-132.pdf)
 
 ---
 
