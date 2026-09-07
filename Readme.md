@@ -17,6 +17,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
   - [<font color="#1A7F37">Etapas y entrega del TP</font>](#funcionamiento-etapas)
 - [<font color="#8250DF"><strong>Clase 1 — 24/8 · Presentación de la materia y primeros conceptos</strong></font>](#clase-1)
 - [<font color="#8250DF"><strong>Clase 2 — 31/8 · SMART, toma de decisiones y cronograma del TP</strong></font>](#clase-2)
+- [<font color="#8250DF"><strong>Clase 3 — 7/9 · Ciclo de vida del producto, MVP y gestión de stakeholders</strong></font>](#clase-3)
 - [<font color="#8250DF"><strong>Material de referencia</strong></font>](#material-de-referencia)
 
 ---
@@ -265,9 +266,85 @@ Profundización sobre **Unidad 1**, sin material nuevo — ver [Material de refe
 
 </details>
 
+<details>
+<summary><a id="clase-3"></a><font color="#1A7F37"><strong>Clase 3 — 7/9 · Ciclo de vida del producto, MVP y gestión de stakeholders</strong></font></summary>
+
+### Temas vistos
+
+- Repaso rápido de proyectos: objetivo, alcance, restricciones
+- Ciclo de vida del producto aplicado paso a paso, con foco en la etapa de Introducción
+- Diferencia entre prototipo y MVP (producto mínimo viable)
+- Fidelidad de prototipos: baja fidelidad (wireframes) vs. alta fidelidad
+- Planeamiento estratégico: gestión de riesgos y gestión de stakeholders
+- Marco Cynefin aplicado para elegir entre metodología en cascada o iterativa/incremental
+- Ambigüedad del lenguaje entre cliente y proveedor (mismo tema que diferencia de expectativas)
+- Priorización de iteraciones según riesgo y complejidad
+
+#### Ciclo de vida del producto, en profundidad
+
+Se retomó el ciclo de vida del producto (Introducción → Crecimiento → Madurez → Declive) y se abrió la etapa de **Introducción** en sus sub-etapas: Ideación → Validación → Planeamiento → Construcción → Lanzamiento. La etapa de Introducción termina justo cuando se lanza el **MVP**; de ahí en adelante el producto entra en Crecimiento (más funcionalidades, corrección de errores, ya se piensa en la segunda versión).
+
+- **Ideación y Validación** se resuelven con **Design Thinking** (Empatizar → Definir → Idear → Prototipar → Evaluar), que termina en un **prototipo validado**.
+- **Planeamiento** se resuelve con técnicas de planeamiento estratégico (se vieron solo de forma introductoria): análisis de mercado, prueba de concepto, gestión de riesgos, selección del MVP y gestión de stakeholders.
+- **Construcción** se resuelve con el ciclo de vida del desarrollo de software (análisis → diseño → codificación → pruebas → implementación), en cascada o iterativo según el caso.
+
+⭐ **El prototipo validado que resulta de Design Thinking hay que incorporarlo al documento del TP.**
+
+#### Prototipo vs. MVP
+
+- **Prototipo**: versión reducida y mínima que solo busca mostrar el valor central de la solución, para validarla con el cliente antes de invertir en construirla en serio. Puede ser de **baja fidelidad** (wireframes, cuadraditos sin texto ni color, rápido de hacer) o de **alta fidelidad** (pantallas con colores, textos y navegación simulada).
+- **MVP (Minimum Viable Product)**: versión mínima pero real del producto, lista para salir al mercado. Para pasar de un prototipo validado a un MVP hace falta sumarle piezas que el prototipo no necesitaba (ejemplo dado en clase: login, segundo factor de autenticación, algún reporte) — son requisitos para que el producto pueda sostenerse en producción, no para demostrar la idea.
+- **Conclusión útil para el TP:** el "Prototipo inicial" que pide la guía del TP se queda en la etapa de prototipo — no hace falta llegar a nivel MVP para esa entrega.
+
+#### Gestión de riesgos
+
+- Se trabajó con una matriz de **probabilidad de ocurrencia** vs. **impacto** para ubicar los riesgos de un proyecto (ejemplo extremo usado en clase: la caída de un meteorito sobre la base de datos — probabilidad bajísima, pero impacto muy alto si no hay backup).
+- El impacto de un riesgo depende del **FODA** propio de cada proyecto: si la base de datos ya está descentralizada, ese mismo riesgo pesa menos que si está centralizada.
+- Aplicado a decisiones técnicas: la tolerancia a estar offline (por ejemplo, 10 minutos) determina qué mitigación conviene — desde un backup simple hasta un esquema de redundancia con failover automático, que cuesta más pero da mayor disponibilidad.
+
+#### Marco Cynefin aplicado: cómo elegir la metodología
+
+Se retomó el Marco Cynefin (Simple / Complicado / Complejo / Caótico / Desorden) para decidir entre desarrollo en **cascada** o **iterativo e incremental**:
+
+- **Simple o Complicado** (ya se hizo muchas veces, hay expertos, se conocen los riesgos — ejemplo: construir una casa) → conviene **cascada**: plan secuencial, más eficiente en costos porque cada especialista entra en su etapa sin necesidad de supervisión extra.
+- **Complejo** (no hay experiencia previa, se interactúa con componentes desconocidos — ejemplo: una app de fitness que usa acelerómetro y cámara sin haber trabajado antes con esos sensores) → conviene **iterativo e incremental**: ir paso a paso (conectar cámara → primera iteración, conectar acelerómetro → segunda iteración, etc.), aprendiendo en cada entrega.
+- **Conclusión útil para el TP:** conviene evaluar con qué parte del proyecto el equipo tiene menos experiencia, y a esa tratarla como "compleja" (resolverla de a poco, en iteraciones chicas) en vez de plantearla toda de una.
+
+#### Gestión de stakeholders
+
+- **Stakeholders** = interesados en el proyecto. Además del propio equipo, hay que identificar al menos: **cliente** (quien decide y paga, o autoriza la compra), **sponsor** (quien pone la plata, puede no ser la misma persona que el cliente) y **usuario** (quien va a usar el sistema, puede ser interno o externo — ejemplo dado: en una app de tipo Uber/Cabify, el conductor es un usuario interno del lado operativo y el pasajero es un usuario externo).
+- Se usa una matriz de **interés vs. influencia** para ubicar a cada stakeholder y decidir cómo gestionarlo.
+- **Resistencia al cambio:** en general, un usuario que ya tiene una forma de hacer las cosas (limpiar, estudiar, usar una pantalla) no tiene interés espontáneo en que se la cambien, aunque tenga mucha influencia sobre si el proyecto se adopta o no — salvo que lo actual esté funcionando muy mal.
+
+#### Ambigüedad del lenguaje (ejemplo del "amigo")
+
+Se retomó la diferencia de expectativas (vista en la Clase 1) con un ejemplo del propio grupo: la palabra "amigo" significa cosas distintas para cada persona. Si esa ambigüedad aparece en una conversación con el cliente, cada uno interpreta un compromiso distinto — un cliente puede esperar que el sistema haga diez cosas mientras el equipo cotizó pensando en dos, y ese desajuste sale caro recién cuando ya se cerró el trato.
+
+- **Conclusión útil para el TP:** las palabras clave de la conversación con el cliente conviene chequearlas explícitamente, no darlas por entendidas.
+
+#### Mapa de causa raíz (los "por qué")
+
+Herramienta para no quedarse en el síntoma que pide el cliente. Ejemplo usado en clase: si alguien dice "me duele el zapato, comprame otro zapato" sin indagar más, comprar otro zapato del mismo tipo no resuelve nada — el problema real puede ser otro (por ejemplo, un pie con una forma particular que necesita un zapato a medida). Preguntar "por qué" varias veces seguidas ayuda a llegar a la causa real, aunque haya que hacerlo con cuidado para que no se sienta como un interrogatorio.
+
+⭐ **El mapa de causa raíz es la herramienta puntual que hay que incluir en el documento del TP**, dentro de la etapa "Definir" de Design Thinking.
+
+### Material de la clase
+
+Contenido de **Unidad 2** (ciclo de vida del producto, pensamiento de diseño, Marco Cynefin):
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_2_(parte_1)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_1.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_2_(parte_2)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf)
+
+Con un breve repaso de **Unidad 1** (objetivo, alcance y restricciones de un proyecto):
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20Proyectos%2C%20Procesos%2C%20Productos%2C%20Personas.pptx.pdf)
+
+</details>
+
 ---
 
 ## <a id="material-de-referencia"></a><font color="#8250DF">📎 Material de referencia</font>
+
 
 ### Generales
 
@@ -292,9 +369,7 @@ Base teórica usada en las clases 1 y 2.
 
 ### UNIDAD 2
 
-*Material subido, aún no desarrollado en clase.*
-
-Cubre: **Marco Cynefin** (modelo para elegir cómo actuar según el tipo de problema: Simple, Complicado, Complejo, Caótico o Desorden); **enfoques de gestión de proyectos** (Predictivo, Ágil e Híbrido) y la mentalidad ágil (co-creación de valor, aceptar la incertidumbre); **ciclo de vida del desarrollo de software** en cascada vs. iterativo e incremental (análisis → diseño → codificación → pruebas → implementación); **requerimientos funcionales** (comportamiento esperado del sistema) vs. **no funcionales** (performance, seguridad, tecnología, legales, documentación); **UML: casos de uso** (título, actor, escenario); y **documentación en agilidad** (épicas → features → historias de usuario, con criterio "Como \[usuario], quiero \[algo], para \[objetivo]" y sus criterios de aceptación).
+Desarrollada parcialmente en la Clase 3 (ciclo de vida del producto, pensamiento de diseño, Marco Cynefin). Cubre además: **enfoques de gestión de proyectos** (Predictivo, Ágil e Híbrido) y la mentalidad ágil (co-creación de valor, aceptar la incertidumbre); **ciclo de vida del desarrollo de software** en cascada vs. iterativo e incremental (análisis → diseño → codificación → pruebas → implementación); **requerimientos funcionales** (comportamiento esperado del sistema) vs. **no funcionales** (performance, seguridad, tecnología, legales, documentación); **UML: casos de uso** (título, actor, escenario); y **documentación en agilidad** (épicas → features → historias de usuario, con criterio "Como \[usuario], quiero \[algo], para \[objetivo]" y sus criterios de aceptación) — estos últimos puntos, aún no vistos en clase.
 
 ⭐ Directamente relacionado con las entregas de **Análisis** y **Diseño** del TP — ver notas en [Etapas y entrega del TP](#funcionamiento-etapas).
 
