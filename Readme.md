@@ -392,20 +392,79 @@ Todavía sin material cargado.
 <details>
 <summary><a id="aplicar-al-tp"></a><font color="#8250DF"><strong>🧩 Aplicar al Trabajo Práctico</strong></font></summary>
 
-Guía paso a paso para usar este repo mientras se avanza con el TP: para cada etapa, qué tema buscar en el material, qué diagrama o herramienta corresponde, qué preguntas genéricas hacerse para cualquier caso, y cómo quedó aplicado a nuestro caso elegido (**PilatesFlow — Sistema de Gestión de Turnos**, Grupo 5).
+Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tema visto en clase, dónde buscarlo en el material, qué diagrama o herramienta corresponde, qué preguntas genéricas hacerse para cualquier caso, y cómo quedó (o falta) aplicado a nuestro caso elegido (**PilatesFlow — Sistema de Gestión de Turnos**, Grupo 5). Se completa clase a clase, a medida que se van dando los temas.
 
-#### Etapa 1 — Prototipo inicial (Design Thinking)
+#### Diferencia de expectativas (Clase 1)
 
-- **Tema a buscar en el PDF:** "Pensamiento de diseño" — Unidad 2, parte 2.
+- **Tema:** visto solo en la transcripción de la Clase 1, sin PDF asociado.
+- **Preguntas genéricas:**
+  - ¿Hay palabras o frases en la conversación con el cliente que cada uno podría interpretar distinto?
+  - ¿Confirmé por escrito lo que entendí, o quedó solo verbal?
+- **Aplicado a PilatesFlow:**
+  - Chequear con la clienta, por escrito, que "gestión de turnos" signifique lo mismo para ella que para el equipo (reserva + cancelación + agenda), antes de avanzar con el prototipo.
+
+#### Locación de servicio vs. locación de obra (Clase 1)
+
+- **Tema:** visto solo en la transcripción de la Clase 1, sin PDF asociado.
+- **Preguntas genéricas:**
+  - ¿Nuestro compromiso con el cliente es por tiempo (servicio) o por un resultado entregado (obra)?
+  - Si es por obra, ¿qué queda explícitamente fuera del alcance para evitar *scope creep*?
+- **Aplicado a PilatesFlow:**
+  - El TP se plantea como locación de obra: se compromete un sistema funcionando, no horas sueltas. Falta dejar por escrito qué queda **fuera** de esta primera versión (por ejemplo, cobros online, notificaciones automáticas) para no ir sumando pedidos sin fin.
+
+#### Alcance (límite) de un sistema (Clase 1)
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/02%20-%20Teor%C3%ADa%20General%20de%20los%20Sistemas.pptx.pdf" target="_blank" rel="noopener">Teoría General de los Sistemas — Atributos y Comportamiento (límite/frontera)</a> — Unidad 1.
+- **Diagrama / herramienta:** diagrama simple de frontera del sistema (qué entra, qué queda afuera, qué es "ambiente").
+- **Preguntas genéricas:**
+  - ¿Cuál es el objetivo y el happy path del sistema?
+  - ¿Qué queda explícitamente fuera (procesos que el cliente maneja aparte)?
+- **Aplicado a PilatesFlow:**
+  - **Dentro del alcance:** ver disponibilidad, reservar, cancelar, ver agenda del centro.
+  - **Fuera del alcance (a confirmar en grupo):** cobros y facturación, envío de recordatorios automáticos, altas/bajas de instructoras (la clienta trabaja sola).
+
+#### Objetivos de corto, mediano y largo plazo (Clase 1)
+
+- **Tema:** visto solo en la transcripción de la Clase 1, sin PDF asociado.
+- **Preguntas genéricas:**
+  - ¿Cuál es el objetivo de corto plazo (la tarea puntual)?
+  - ¿A qué objetivo de mediano/largo plazo del cliente responde?
+- **Aplicado a PilatesFlow (pendiente de confirmar con la clienta):**
+  - Corto plazo: dejar de perder turnos por WhatsApp.
+  - Mediano/largo plazo: ¿quiere sumar más alumnos, más horarios, o simplemente reducir el tiempo que le saca la gestión manual? Falta preguntárselo.
+
+#### Objetivos SMART (Clase 2)
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20Proyectos%2C%20Procesos%2C%20Productos%2C%20Personas.pptx.pdf" target="_blank" rel="noopener">Proyectos, Procesos, Productos, Personas — sección "1. Proyectos", Componentes</a> — Unidad 1.
+- **Preguntas genéricas:**
+  - ¿El objetivo del proyecto es específico y medible, o queda en una frase vaga tipo "mejorar la gestión"?
+  - ¿Es alcanzable con el tiempo real que le puede dedicar el equipo?
+  - ¿Tiene una fecha límite?
+- **Aplicado a PilatesFlow (a redactar en el documento del TP):**
+  - Falta convertir "gestionar mejor los turnos" en un objetivo SMART, por ejemplo: *"reducir a cero los errores de superposición de turnos, con una plataforma web entregada antes del 7/9"* — ajustar el número y la fecha real que definan como equipo.
+
+#### Toma de decisiones y datos (Clase 2)
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/02%20-%20Teor%C3%ADa%20General%20de%20los%20Sistemas.pptx.pdf" target="_blank" rel="noopener">Teoría General de los Sistemas — Dato e Información</a> — Unidad 1.
+- **Preguntas genéricas:**
+  - ¿En qué puntos del proceso el sistema tiene que decidir algo (mandar un aviso, bloquear un cupo, etc.)?
+  - Para cada decisión, ¿qué dato exacto hace falta? (nada de "etcétera")
+- **Aplicado a PilatesFlow:**
+  - Decisión: si un turno se puede reservar o no → dato necesario: cupo ya ocupado en esa clase (máximo 3 alumnos).
+  - Decisión: si mostrar un horario como disponible → dato necesario: franja horaria de la clienta (8 a 12 hs y 15 a 18 hs) cruzada con los turnos ya tomados.
+
+#### Ciclo de vida del producto, prototipo vs. MVP y Design Thinking (Clase 3)
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf" target="_blank" rel="noopener">Unidad 2 (parte 2) — Ciclo de vida del Producto y Pensamiento de diseño</a>.
 - **Diagrama / herramienta por sub-etapa:** mapa de actores y mapa de empatía (Empatizar) → mapa de causa raíz (Definir) → brainstorming (Idear) → wireframe o prototipo de alta fidelidad (Prototipar) → elevator pitch (Evaluar).
-- **Preguntas genéricas para cualquier caso:**
+- **Preguntas genéricas:**
   - ¿Quiénes son los actores involucrados (cliente, usuarios internos, usuarios externos)?
   - ¿Cómo funciona el proceso hoy, sin ningún sistema de por medio?
   - ¿Cuál es el problema que más dolor de cabeza le genera al cliente?
   - ¿Qué alternativas de solución existen, además de la más obvia?
-  - ¿Cuál de esas alternativas conviene prototipar primero?
+  - ¿El prototipo alcanza para validar la idea, o ya le estoy agregando cosas de nivel MVP (login, reportes)?
 
-**Aplicado a nuestro caso — entrevista con la clienta:**
+**Aplicado a PilatesFlow — entrevista con la clienta:**
 
 | Pregunta | Respuesta |
 |---|---|
@@ -418,28 +477,85 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: para cada et
 | ¿Trabaja sola o hay más instructoras? | Sola |
 | ¿En qué días/horarios da clase? | De 8 a 12 hs y de 15 a 18 hs |
 
-**Problema identificado:** hoy los turnos se gestionan por WhatsApp, llamadas o anotaciones manuales, lo que genera confusión con los horarios disponibles, sobreturnos o errores al asignar una clase, dificultad para cancelar o cambiar un turno, y mucho tiempo del personal respondiendo mensajes — además los alumnos no tienen forma rápida de consultar sus próximos turnos.
+**Problema identificado:**
+- Confusión con los horarios disponibles.
+- Sobreturnos o errores al asignar una clase.
+- Dificultad para cancelar o cambiar un turno.
+- Mucho tiempo del personal respondiendo mensajes.
+- Los alumnos no tienen una forma rápida de consultar sus próximos turnos.
 
-**Solución propuesta:** una plataforma web de gestión de turnos donde el alumno pueda (1) ver los días disponibles, (2) consultar los horarios, (3) elegir una clase, (4) seleccionar un turno, (5) confirmar la reserva, (6) ver sus turnos reservados y (7) cancelar un turno si lo necesita; y donde el centro pueda ver una agenda con los turnos ocupados.
+**Solución propuesta — el alumno podría:**
+1. Ver los días disponibles.
+2. Consultar los horarios.
+3. Elegir una clase.
+4. Seleccionar un turno.
+5. Confirmar la reserva.
+6. Ver sus turnos reservados.
+7. Cancelar un turno si lo necesita.
 
-**Aplicando Design Thinking a nuestro caso:**
+Y del lado del centro: ver una agenda con los turnos ocupados.
+
+**Aplicando Design Thinking:**
 1. **Empatizar** — identificar las necesidades de los dos tipos de usuario: alumnos y personal del centro.
 2. **Definir** — el problema principal es que los alumnos tienen dificultades para conocer y reservar turnos disponibles, mientras que el personal debe gestionar las reservas a mano.
 3. **Idear** — alternativas consideradas: agenda digital, aplicación móvil, sistema de reservas web, bot de WhatsApp, calendario online.
 4. **Prototipar** — se elige la alternativa más conveniente: una página web de gestión de turnos, desarrollada con HTML, CSS y JavaScript.
 5. **Testear/Evaluar** — probar el prototipo con usuarios reales y observar si pueden reservar, consultar y cancelar un turno fácilmente.
 
-#### Etapa 2 — Análisis (requerimientos y casos de uso)
+**⚠️ Pendiente — esto es lo que todavía falta construir para la entrega del 7/9:** la guía pide un *"conjunto de pantallas a desarrollar junto con datos estáticos que reflejen la información necesaria para procesar"*, en HTML/JS. Para PilatesFlow, eso significa armar (con datos de ejemplo, sin lógica real todavía) al menos estas pantallas:
+- Pantalla con los días disponibles.
+- Pantalla con los horarios de un día elegido.
+- Pantalla para elegir una clase dentro de ese horario.
+- Pantalla para seleccionar un turno dentro de la clase.
+- Pantalla de confirmación de la reserva.
+- Pantalla "Mis turnos reservados" (vista del alumno).
+- Opción de cancelar un turno desde esa misma pantalla.
+- Pantalla de agenda con los turnos ocupados (vista del centro).
 
-- **Tema a buscar en el PDF:** "Requerimientos" y "UML: Casos de Uso" — Unidad 2, parte 1.
+#### Gestión de riesgos (Clase 3)
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf" target="_blank" rel="noopener">Unidad 2 (parte 2) — Ciclo de vida del Producto, Planeamiento estratégico</a>.
+- **Diagrama / herramienta:** matriz de probabilidad de ocurrencia × impacto.
+- **Preguntas genéricas:**
+  - ¿Qué podría hacer fallar el proyecto o el sistema una vez en uso?
+  - Para cada riesgo, ¿qué tan probable es y qué tan grave sería si pasa?
+- **Aplicado a PilatesFlow (a completar en grupo):**
+  - Riesgo: la clienta se olvida de actualizar el sistema con turnos tomados fuera de la app (por ejemplo, por WhatsApp de emergencia) → probabilidad media, impacto medio (genera doble reserva).
+  - Riesgo: pérdida de datos si no hay backup → probabilidad baja, impacto alto.
+
+#### Marco Cynefin: cascada vs. iterativo (Clase 3)
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_1.pdf" target="_blank" rel="noopener">Unidad 2 (parte 1) — Marco Cynefin y Ciclo de vida del desarrollo de software</a>.
+- **Preguntas genéricas:**
+  - ¿El equipo ya construyó algo parecido antes, o es la primera vez con estas tecnologías?
+  - Si hay partes desconocidas, ¿cuáles son las más riesgosas para resolver primero?
+- **Aplicado a PilatesFlow:**
+  - Si el equipo ya maneja HTML/CSS/JS de la cursada de Programación III, el caso tiende a **Simple/Complicado** → conviene ir en cascada (pantallas → lógica → pruebas). Si aparece algo nuevo (por ejemplo, un calendario interactivo complejo), esa parte puntual conviene tratarla como **Compleja** y resolverla en iteraciones chicas.
+
+#### Gestión de stakeholders (Clase 3)
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf" target="_blank" rel="noopener">Unidad 2 (parte 2) — Ciclo de vida del Producto, Planeamiento estratégico</a>.
+- **Diagrama / herramienta:** matriz de interés × influencia.
+- **Preguntas genéricas:**
+  - ¿Quién es el cliente, quién el sponsor (si son distintos) y quiénes los usuarios internos/externos?
+  - ¿Qué tanto interés tiene cada uno en que el proyecto salga, y qué tanta influencia tiene sobre si se usa o no?
+- **Aplicado a PilatesFlow:**
+  - **Cliente y sponsor:** la clienta (dueña del estudio), es la misma persona en este caso.
+  - **Usuario interno:** la propia clienta al gestionar la agenda.
+  - **Usuarios externos:** los alumnos que reservan turnos.
+  - A tener en cuenta: los alumnos acostumbrados a reservar por WhatsApp pueden tener resistencia al cambio aunque el sistema les convenga — conviene que el prototipo sea bien simple de usar para bajar esa resistencia.
+
+#### Requerimientos funcionales/no funcionales y casos de uso (Clase 3 / Unidad 2)
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_1.pdf" target="_blank" rel="noopener">Unidad 2 (parte 1) — Requerimientos y UML: Casos de Uso</a>.
 - **Diagrama / herramienta:** diagrama de casos de uso UML (actor, caso de uso, límite del sistema, relaciones de include/extends) — o, como alternativa, historias de usuario con criterios de aceptación.
-- **Preguntas genéricas para cualquier caso:**
+- **Preguntas genéricas:**
   - Para cada pantalla del prototipo, ¿qué funcionalidad concreta representa? (eso es un requerimiento funcional)
   - ¿Qué restricciones no funcionales aplican? (performance, seguridad, tecnología a usar, cuestiones legales, documentación)
   - ¿Quiénes son los actores de cada caso de uso?
   - ¿Hay casos de uso que incluyen o extienden a otros?
 
-**Aplicado a nuestro caso — requerimientos funcionales que salen directo de los 7 pasos de la solución:**
+**Aplicado a PilatesFlow — requerimientos funcionales que salen directo de los 7 pasos de la solución:**
 - El alumno puede ver los días disponibles.
 - El alumno puede consultar los horarios de cada día.
 - El alumno puede elegir una clase.
@@ -455,7 +571,7 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: para cada et
 
 #### Etapas 3 a 6 — Diseño, Desarrollo, Pruebas e Implementación
 
-Todavía no se desarrollaron en clase. Cuando se den, esta sección se completa con el mismo formato: tema a buscar, diagrama/herramienta, preguntas genéricas y la aplicación concreta a PilatesFlow.
+Todavía no se desarrollaron en clase. Cuando se den, esta sección se completa con el mismo formato: tema (con link al PDF), diagrama/herramienta, preguntas genéricas y la aplicación concreta a PilatesFlow.
 
 </details>
 
