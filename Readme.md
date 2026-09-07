@@ -6,6 +6,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 
 [![Ver en Figma](https://img.shields.io/badge/🎨_Ver_en_Figma-Pizarra_de_la_materia-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/board/25UDE2ECBBLU19Vzs7cfEb/Met-I---132?node-id=0-1&p=f)
 [![Ver documento del TP](https://img.shields.io/badge/📝_Documento_del_TP-Grupo_5-4285F4?style=for-the-badge&logo=googledocs&logoColor=white)](https://docs.google.com/document/d/1_fh0JCqxTOB4g7RQvXyYY3_fwekXTQJEdVI5M4X70cM/edit?tab=t.0)
+[![Ver cronograma](https://img.shields.io/badge/📆_Cronograma_de_la_cursada-Curso_132--2-1A7F37?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/cronograma-2026-c2-132.pdf)
 
 ---
 
@@ -14,6 +15,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 - [<font color="#8250DF"><strong>Funcionamiento de la materia</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#funcionamiento)
   - [<font color="#1A7F37">Modalidad</font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#funcionamiento-modalidad)
   - [<font color="#1A7F37">Herramientas</font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#funcionamiento-herramientas)
+  - [<font color="#1A7F37">Cronograma de la cursada</font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#funcionamiento-cronograma)
   - [<font color="#1A7F37">Etapas y entrega del TP</font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#funcionamiento-etapas)
 - [<font color="#8250DF"><strong>Clase 1 — 24/8 · Presentación de la materia y primeros conceptos</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-1)
 - [<font color="#8250DF"><strong>Clase 2 — 31/8 · SMART, toma de decisiones y cronograma del TP</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-2)
@@ -52,6 +54,29 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
   - Cada tarea tiene **un único responsable asignado** (ni todos, ni nadie).
   - Se arman **vistas filtradas por grupo** para que cada equipo gestione solo lo suyo.
 - **Google Docs** — documentación del TP centralizada en un documento de solo lectura, donde se va agregando todo lo producido durante la cursada (botón de acceso arriba, en el encabezado del repo).
+
+### <a id="funcionamiento-cronograma"></a><font color="#1A7F37">Cronograma de la cursada</font>
+
+Planificación oficial de la cátedra para el curso 132-2 (botón de acceso arriba, en el encabezado del repo):
+
+| Nro | Fecha | Unidad | Tema |
+|---|---|---|---|
+| 1 | 17/08 | — | Feriado |
+| 2 | 24/08 | 1 | Presentación de la materia. TGS. Las organizaciones y los sistemas de información. Enfoque sistémico. |
+| 3 | 31/08 | 1 y 2 | — |
+| 4 | 07/09 | 2 | Requerimientos funcionales y no funcionales. UML: Casos de Uso. |
+| 5 | 14/09 | 3 | Diseño estructurado vs. Iterativo e incremental. UML - Diagrama de clases. |
+| 6 | 21/09 | — | Feriado |
+| 7 | 28/09 | 3 | Modelo de datos y su relación con el diagrama de clases. |
+| 8 | 05/10 | — | 1er Parcial |
+| 9 | 12/10 | — | Feriado |
+| 10 | 19/10 | 4 | — |
+| 11 | 26/10 | 5 | Qué es DevOps y cómo se vincula con las distintas etapas del ciclo de desarrollo. / Recuperatorio 1er Parcial |
+| 12 | 02/11 | 5 | Exámenes UTN |
+| 13 | 09/11 | 6 | Servicios en la Nube: principales herramientas. PMI vs. Ágiles. Roles y responsabilidades. / Presentación preliminar TPs |
+| 14 | 16/11 | — | Parcial 2 / Corrección |
+| 15 | 23/11 | — | Feriado |
+| 16 | 30/11 | — | Recuperatorio / Presentación de TPs y cierre de notas |
 
 ### <a id="funcionamiento-etapas"></a><font color="#1A7F37">Etapas y entrega del TP</font>
 
@@ -396,7 +421,6 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
 
 #### Diferencia de expectativas (Clase 1)
 
-- **Tema:** visto solo en la transcripción de la Clase 1, sin PDF asociado.
 - **Preguntas genéricas:**
   - ¿Hay palabras o frases en la conversación con el cliente que cada uno podría interpretar distinto?
   - ¿Confirmé por escrito lo que entendí, o quedó solo verbal?
@@ -405,7 +429,6 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
 
 #### Locación de servicio vs. locación de obra (Clase 1)
 
-- **Tema:** visto solo en la transcripción de la Clase 1, sin PDF asociado.
 - **Preguntas genéricas:**
   - ¿Nuestro compromiso con el cliente es por tiempo (servicio) o por un resultado entregado (obra)?
   - Si es por obra, ¿qué queda explícitamente fuera del alcance para evitar *scope creep*?
@@ -425,7 +448,6 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
 
 #### Objetivos de corto, mediano y largo plazo (Clase 1)
 
-- **Tema:** visto solo en la transcripción de la Clase 1, sin PDF asociado.
 - **Preguntas genéricas:**
   - ¿Cuál es el objetivo de corto plazo (la tarea puntual)?
   - ¿A qué objetivo de mediano/largo plazo del cliente responde?
@@ -584,6 +606,7 @@ Todavía no se desarrollaron en clase. Cuando se den, esta sección se completa 
 Metodología de Sistemas I
 ├── Material
 │   ├── 00 - Guria TP grupal.pdf
+│   ├── cronograma-2026-c2-132.pdf
 │   ├── Planificación Metodología de Sistemas I.pdf
 │   ├── UNIDAD 1
 │   │   ├── 01 - ProyectosProcesosProductosPersonas.pptx.pdf
