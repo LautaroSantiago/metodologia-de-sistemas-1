@@ -22,7 +22,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
   - [<font color="#1A7F37">Guía TP grupal</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/00%20-%20Guria%20TP%20grupal.pdf)
   - [<font color="#1A7F37">Planificación de la materia</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/Planificaci%C3%B3n%20Metodolog%C3%ADa%20de%20Sistemas%20I.pdf)
   - [<font color="#1A7F37">Unidad 1 — Teoría General de los Sistemas</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/02%20-%20Teor%C3%ADa%20General%20de%20los%20Sistemas.pptx.pdf)
-  - [<font color="#1A7F37">Unidad 1 — Proyectos, Procesos, Productos, Personas</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20Proyectos%2C%20Procesos%2C%20Productos%2C%20Personas.pptx.pdf)
+  - [<font color="#1A7F37">Unidad 1 — Proyectos, Procesos, Productos, Personas</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20ProyectosProcesosProductosPersonas.pptx.pdf)
   - [<font color="#1A7F37">Unidad 2 (parte 1)</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_1.pdf)
   - [<font color="#1A7F37">Unidad 2 (parte 2)</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf)
 - [<font color="#8250DF"><strong>🧩 Aplicar al Trabajo Práctico</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#aplicar-al-tp)
@@ -344,7 +344,7 @@ Contenido de **Unidad 2** (ciclo de vida del producto, pensamiento de diseño, M
 
 Con un breve repaso de **Unidad 1** (objetivo, alcance y restricciones de un proyecto):
 
-[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20Proyectos%2C%20Procesos%2C%20Productos%2C%20Personas.pptx.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20ProyectosProcesosProductosPersonas.pptx.pdf)
 
 </details>
 
@@ -372,7 +372,7 @@ Base teórica usada en las clases 1 y 2.
 
 **Proyectos, Procesos, Productos, Personas** (las 4 P del desarrollo de software) — proyectos (objetivo SMART, alcance, restricciones, recursos; ciclo de vida: iniciación → planificación → ejecución → monitoreo y control → cierre), procesos (gestión de proyectos como Scrum/PMBOK vs. técnicos como Agile/Waterfall), productos (funcionalidad, calidad, mantenibilidad; ciclo de vida: concepción → desarrollo → implementación → mantenimiento → retirada) y personas (roles: desarrolladores, analistas, testers, gestores de proyecto; factores clave: competencia, colaboración, cultura organizacional).
 
-[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20Proyectos%2C%20Procesos%2C%20Productos%2C%20Personas.pptx.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20ProyectosProcesosProductosPersonas.pptx.pdf)
 
 ### UNIDAD 2
 
@@ -435,7 +435,7 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
 
 #### Objetivos SMART (Clase 2)
 
-- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20Proyectos%2C%20Procesos%2C%20Productos%2C%20Personas.pptx.pdf" target="_blank" rel="noopener">Proyectos, Procesos, Productos, Personas — sección "1. Proyectos", Componentes</a> — Unidad 1.
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20ProyectosProcesosProductosPersonas.pptx.pdf" target="_blank" rel="noopener">Proyectos, Procesos, Productos, Personas — sección "1. Proyectos", Componentes</a> — Unidad 1.
 - **Preguntas genéricas:**
   - ¿El objetivo del proyecto es específico y medible, o queda en una frase vaga tipo "mejorar la gestión"?
   - ¿Es alcanzable con el tiempo real que le puede dedicar el equipo?
@@ -586,7 +586,7 @@ Metodología de Sistemas I
 │   ├── 00 - Guria TP grupal.pdf
 │   ├── Planificación Metodología de Sistemas I.pdf
 │   ├── UNIDAD 1
-│   │   ├── 01 - Proyectos, Procesos, Productos, Personas.pptx.pdf
+│   │   ├── 01 - ProyectosProcesosProductosPersonas.pptx.pdf
 │   │   └── 02 - Teoría General de los Sistemas.pptx.pdf
 │   ├── UNIDAD 2
 │   │   ├── 02 - MetSis_I_U2_1.pdf
