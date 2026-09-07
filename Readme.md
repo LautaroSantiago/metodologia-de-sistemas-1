@@ -11,15 +11,21 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 
 ## <font color="#8250DF">🧭 Índice</font>
 
-- [<font color="#8250DF"><strong>Funcionamiento de la materia</strong></font>](#funcionamiento)
-  - [<font color="#1A7F37">Modalidad</font>](#funcionamiento-modalidad)
-  - [<font color="#1A7F37">Herramientas</font>](#funcionamiento-herramientas)
-  - [<font color="#1A7F37">Etapas y entrega del TP</font>](#funcionamiento-etapas)
-- [<font color="#8250DF"><strong>Clase 1 — 24/8 · Presentación de la materia y primeros conceptos</strong></font>](#clase-1)
-- [<font color="#8250DF"><strong>Clase 2 — 31/8 · SMART, toma de decisiones y cronograma del TP</strong></font>](#clase-2)
-- [<font color="#8250DF"><strong>Clase 3 — 7/9 · Ciclo de vida del producto, MVP y gestión de stakeholders</strong></font>](#clase-3)
-- [<font color="#8250DF"><strong>Material de referencia</strong></font>](#material-de-referencia)
-- [<font color="#8250DF"><strong>🧩 Aplicar al Trabajo Práctico</strong></font>](#aplicar-al-tp)
+- [<font color="#8250DF"><strong>Funcionamiento de la materia</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#funcionamiento)
+  - [<font color="#1A7F37">Modalidad</font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#funcionamiento-modalidad)
+  - [<font color="#1A7F37">Herramientas</font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#funcionamiento-herramientas)
+  - [<font color="#1A7F37">Etapas y entrega del TP</font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#funcionamiento-etapas)
+- [<font color="#8250DF"><strong>Clase 1 — 24/8 · Presentación de la materia y primeros conceptos</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-1)
+- [<font color="#8250DF"><strong>Clase 2 — 31/8 · SMART, toma de decisiones y cronograma del TP</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-2)
+- [<font color="#8250DF"><strong>Clase 3 — 7/9 · Ciclo de vida del producto, MVP y gestión de stakeholders</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-3)
+- [<font color="#8250DF"><strong>Material de referencia</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#material-de-referencia)
+  - [<font color="#1A7F37">Guía TP grupal</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/00%20-%20Guria%20TP%20grupal.pdf)
+  - [<font color="#1A7F37">Planificación de la materia</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/Planificaci%C3%B3n%20Metodolog%C3%ADa%20de%20Sistemas%20I.pdf)
+  - [<font color="#1A7F37">Unidad 1 — Teoría General de los Sistemas</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/02%20-%20Teor%C3%ADa%20General%20de%20los%20Sistemas.pptx.pdf)
+  - [<font color="#1A7F37">Unidad 1 — Proyectos, Procesos, Productos, Personas</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20Proyectos%2C%20Procesos%2C%20Productos%2C%20Personas.pptx.pdf)
+  - [<font color="#1A7F37">Unidad 2 (parte 1)</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_1.pdf)
+  - [<font color="#1A7F37">Unidad 2 (parte 2)</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf)
+- [<font color="#8250DF"><strong>🧩 Aplicar al Trabajo Práctico</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#aplicar-al-tp)
 
 ---
 
