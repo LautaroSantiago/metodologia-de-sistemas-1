@@ -19,6 +19,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 - [<font color="#8250DF"><strong>Clase 2 — 31/8 · SMART, toma de decisiones y cronograma del TP</strong></font>](#clase-2)
 - [<font color="#8250DF"><strong>Clase 3 — 7/9 · Ciclo de vida del producto, MVP y gestión de stakeholders</strong></font>](#clase-3)
 - [<font color="#8250DF"><strong>Material de referencia</strong></font>](#material-de-referencia)
+- [<font color="#8250DF"><strong>🧩 Aplicar al Trabajo Práctico</strong></font>](#aplicar-al-tp)
 
 ---
 
@@ -382,7 +383,80 @@ Todavía sin material cargado.
 
 ---
 
+<details>
+<summary><a id="aplicar-al-tp"></a><font color="#8250DF"><strong>🧩 Aplicar al Trabajo Práctico</strong></font></summary>
+
+Guía paso a paso para usar este repo mientras se avanza con el TP: para cada etapa, qué tema buscar en el material, qué diagrama o herramienta corresponde, qué preguntas genéricas hacerse para cualquier caso, y cómo quedó aplicado a nuestro caso elegido (**PilatesFlow — Sistema de Gestión de Turnos**, Grupo 5).
+
+#### Etapa 1 — Prototipo inicial (Design Thinking)
+
+- **Tema a buscar en el PDF:** "Pensamiento de diseño" — Unidad 2, parte 2.
+- **Diagrama / herramienta por sub-etapa:** mapa de actores y mapa de empatía (Empatizar) → mapa de causa raíz (Definir) → brainstorming (Idear) → wireframe o prototipo de alta fidelidad (Prototipar) → elevator pitch (Evaluar).
+- **Preguntas genéricas para cualquier caso:**
+  - ¿Quiénes son los actores involucrados (cliente, usuarios internos, usuarios externos)?
+  - ¿Cómo funciona el proceso hoy, sin ningún sistema de por medio?
+  - ¿Cuál es el problema que más dolor de cabeza le genera al cliente?
+  - ¿Qué alternativas de solución existen, además de la más obvia?
+  - ¿Cuál de esas alternativas conviene prototipar primero?
+
+**Aplicado a nuestro caso — entrevista con la clienta:**
+
+| Pregunta | Respuesta |
+|---|---|
+| ¿Da clases individuales, grupales, o ambas? | Grupales |
+| ¿Cuántos alumnos entran por clase (cupo)? | 3 |
+| ¿Usa reformer, mat, o los dos? | Ninguno de los dos (no aplica al sistema) |
+| ¿Cómo gestiona los turnos hoy por hoy? | WhatsApp → este es el **proceso actual** que va directo al documento del TP |
+| ¿Qué problema le genera más dolor de cabeza? | Olvidarse quién tiene reservado cada día y horario → esta es la **oportunidad de mejora** que pide la guía |
+| ¿Cobra por clase suelta, bono de clases, o mensual? | Las tres modalidades |
+| ¿Trabaja sola o hay más instructoras? | Sola |
+| ¿En qué días/horarios da clase? | De 8 a 12 hs y de 15 a 18 hs |
+
+**Problema identificado:** hoy los turnos se gestionan por WhatsApp, llamadas o anotaciones manuales, lo que genera confusión con los horarios disponibles, sobreturnos o errores al asignar una clase, dificultad para cancelar o cambiar un turno, y mucho tiempo del personal respondiendo mensajes — además los alumnos no tienen forma rápida de consultar sus próximos turnos.
+
+**Solución propuesta:** una plataforma web de gestión de turnos donde el alumno pueda (1) ver los días disponibles, (2) consultar los horarios, (3) elegir una clase, (4) seleccionar un turno, (5) confirmar la reserva, (6) ver sus turnos reservados y (7) cancelar un turno si lo necesita; y donde el centro pueda ver una agenda con los turnos ocupados.
+
+**Aplicando Design Thinking a nuestro caso:**
+1. **Empatizar** — identificar las necesidades de los dos tipos de usuario: alumnos y personal del centro.
+2. **Definir** — el problema principal es que los alumnos tienen dificultades para conocer y reservar turnos disponibles, mientras que el personal debe gestionar las reservas a mano.
+3. **Idear** — alternativas consideradas: agenda digital, aplicación móvil, sistema de reservas web, bot de WhatsApp, calendario online.
+4. **Prototipar** — se elige la alternativa más conveniente: una página web de gestión de turnos, desarrollada con HTML, CSS y JavaScript.
+5. **Testear/Evaluar** — probar el prototipo con usuarios reales y observar si pueden reservar, consultar y cancelar un turno fácilmente.
+
+#### Etapa 2 — Análisis (requerimientos y casos de uso)
+
+- **Tema a buscar en el PDF:** "Requerimientos" y "UML: Casos de Uso" — Unidad 2, parte 1.
+- **Diagrama / herramienta:** diagrama de casos de uso UML (actor, caso de uso, límite del sistema, relaciones de include/extends) — o, como alternativa, historias de usuario con criterios de aceptación.
+- **Preguntas genéricas para cualquier caso:**
+  - Para cada pantalla del prototipo, ¿qué funcionalidad concreta representa? (eso es un requerimiento funcional)
+  - ¿Qué restricciones no funcionales aplican? (performance, seguridad, tecnología a usar, cuestiones legales, documentación)
+  - ¿Quiénes son los actores de cada caso de uso?
+  - ¿Hay casos de uso que incluyen o extienden a otros?
+
+**Aplicado a nuestro caso — requerimientos funcionales que salen directo de los 7 pasos de la solución:**
+- El alumno puede ver los días disponibles.
+- El alumno puede consultar los horarios de cada día.
+- El alumno puede elegir una clase.
+- El alumno puede seleccionar un turno dentro de esa clase.
+- El alumno puede confirmar la reserva.
+- El alumno puede ver sus turnos reservados.
+- El alumno puede cancelar un turno.
+- El personal del centro puede ver una agenda con los turnos ocupados.
+
+**Actores:** alumno, personal del centro (instructora).
+
+**A definir como restricciones / reglas de negocio (no funcionales o de alcance):** cupo máximo de 3 alumnos por clase, y cómo se registra la forma de cobro (clase suelta, bono o mensual) — esto último conviene discutirlo en grupo para decidir si entra en el alcance de esta primera versión o queda fuera.
+
+#### Etapas 3 a 6 — Diseño, Desarrollo, Pruebas e Implementación
+
+Todavía no se desarrollaron en clase. Cuando se den, esta sección se completa con el mismo formato: tema a buscar, diagrama/herramienta, preguntas genéricas y la aplicación concreta a PilatesFlow.
+
+</details>
+
+---
+
 ## <font color="#8250DF">🗂️ Estructura del repositorio</font>
+
 
 ```
 Metodología de Sistemas I
