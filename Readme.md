@@ -345,7 +345,7 @@ Se retomó el Marco Cynefin (Simple / Complicado / Complejo / Caótico / Desorde
 #### Gestión de stakeholders
 
 - **Stakeholders** = interesados en el proyecto. Además del propio equipo, hay que identificar al menos: **cliente** (quien decide y paga, o autoriza la compra), **sponsor** (quien pone la plata, puede no ser la misma persona que el cliente) y **usuario** (quien va a usar el sistema, puede ser interno o externo — ejemplo dado: en una app de tipo Uber/Cabify, el conductor es un usuario interno del lado operativo y el pasajero es un usuario externo).
-- Se usa una matriz de **interés vs. influencia** para ubicar a cada stakeholder y decidir cómo gestionarlo.
+- Se usa una matriz de **interés vs. influencia** para ubicar a cada stakeholder y decidir cómo gestionarlo. En el ejemplo de la app de transporte trabajado en clase, la matriz también ubicó al **Gobierno** (por las regulaciones que le puede imponer al proyecto) y a la **Competencia** (otros stakeholders a tener en cuenta aunque no participen directamente), además de cliente, sponsor y usuarios interno/externo.
 - **Resistencia al cambio:** en general, un usuario que ya tiene una forma de hacer las cosas (limpiar, estudiar, usar una pantalla) no tiene interés espontáneo en que se la cambien, aunque tenga mucha influencia sobre si el proyecto se adopta o no — salvo que lo actual esté funcionando muy mal.
 
 #### Ambigüedad del lenguaje (ejemplo del "amigo")
@@ -356,7 +356,7 @@ Se retomó la diferencia de expectativas (vista en la Clase 1) con un ejemplo de
 
 #### Mapa de causa raíz (los "por qué")
 
-Herramienta para no quedarse en el síntoma que pide el cliente. Ejemplo usado en clase: si alguien dice "me duele el zapato, comprame otro zapato" sin indagar más, comprar otro zapato del mismo tipo no resuelve nada — el problema real puede ser otro (por ejemplo, un pie con una forma particular que necesita un zapato a medida). Preguntar "por qué" varias veces seguidas ayuda a llegar a la causa real, aunque haya que hacerlo con cuidado para que no se sienta como un interrogatorio.
+Herramienta para no quedarse en el síntoma que pide el cliente. Se representa como un **diagrama de Ishikawa** (o "espina de pescado"): varias ramas de "Causa" van confluyendo sobre una línea central que termina apuntando al "Problema o efecto" final. Ejemplo usado en clase: si alguien dice "me duele el zapato, comprame otro zapato" sin indagar más, comprar otro zapato del mismo tipo no resuelve nada — el problema real puede ser otro (por ejemplo, un pie con una forma particular que necesita un zapato a medida). Preguntar "por qué" varias veces seguidas ayuda a llegar a la causa real, aunque haya que hacerlo con cuidado para que no se sienta como un interrogatorio.
 
 ⭐ **El mapa de causa raíz es la herramienta puntual que hay que incluir en el documento del TP**, dentro de la etapa "Definir" de Design Thinking.
 
@@ -480,7 +480,7 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
 #### Ciclo de vida del producto, prototipo vs. MVP y Design Thinking (Clase 3) ❌
 
 - **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf" target="_blank" rel="noopener">Unidad 2 (parte 2) — Ciclo de vida del Producto y Pensamiento de diseño</a>.
-- **Diagrama / herramienta por sub-etapa:** mapa de actores y mapa de empatía (Empatizar) → mapa de causa raíz (Definir) → brainstorming (Idear) → wireframe o prototipo de alta fidelidad (Prototipar) → elevator pitch (Evaluar).
+- **Diagrama / herramienta por sub-etapa:** mapa de actores y mapa de empatía (Empatizar) → mapa de causa raíz, con forma de diagrama de Ishikawa o "espina de pescado" (Definir) → brainstorming (Idear) → wireframe o prototipo de alta fidelidad (Prototipar) → elevator pitch (Evaluar).
 - **Preguntas genéricas:**
   - ¿Quiénes son los actores involucrados (cliente, usuarios internos, usuarios externos)?
   - ¿Cómo funciona el proceso hoy, sin ningún sistema de por medio?
@@ -559,7 +559,7 @@ Del lado del centro: ver una agenda con los turnos ocupados.
 #### Gestión de stakeholders (Clase 3) ❌
 
 - **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf" target="_blank" rel="noopener">Unidad 2 (parte 2) — Ciclo de vida del Producto, Planeamiento estratégico</a>.
-- **Diagrama / herramienta:** matriz de interés × influencia.
+- **Diagrama / herramienta:** matriz de interés × influencia. En el ejemplo trabajado en clase (una app de transporte), la matriz incluyó también al **Gobierno** (por regulaciones) y a la **Competencia**, además de cliente, sponsor y usuarios interno/externo.
 - **Preguntas genéricas:**
   - ¿Quién es el cliente, quién el sponsor (si son distintos) y quiénes los usuarios internos/externos?
   - ¿Qué tanto interés tiene cada uno en que el proyecto salga, y qué tanta influencia tiene sobre si se usa o no?
