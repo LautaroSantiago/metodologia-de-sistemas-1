@@ -316,7 +316,7 @@ Profundización sobre **Unidad 1**, sin material nuevo — ver [Material de refe
 
 Se retomó el ciclo de vida del producto (Introducción → Crecimiento → Madurez → Declive) y se abrió la etapa de **Introducción** en sus sub-etapas: Ideación → Validación → Planeamiento → Construcción → Lanzamiento. La etapa de Introducción termina justo cuando se lanza el **MVP**; de ahí en adelante el producto entra en Crecimiento (más funcionalidades, corrección de errores, ya se piensa en la segunda versión).
 
-- **Ideación y Validación** se resuelven con **Design Thinking** (Empatizar → Definir → Idear → Prototipar → Evaluar), que termina en un **prototipo validado**.
+- **Ideación y Validación** se resuelven con **Design Thinking** (Empatizar → Definir → Idear → Prototipar → Evaluar), que termina en un **prototipo validado**. El Design Thinking se apoya en dos pilares: **centrado en lo humano** (entender necesidades y motivaciones reales de las personas) y **experimental** (hay espacio real para probar cosas nuevas, permitiéndose fallar y aprender del error).
 - **Planeamiento** se resuelve con técnicas de planeamiento estratégico (se vieron solo de forma introductoria): análisis de mercado, prueba de concepto, gestión de riesgos, selección del MVP y gestión de stakeholders.
 - **Construcción** se resuelve con el ciclo de vida del desarrollo de software (análisis → diseño → codificación → pruebas → implementación), en cascada o iterativo según el caso.
 
@@ -401,7 +401,9 @@ Base teórica usada en las clases 1 y 2.
 
 ### UNIDAD 2
 
-Desarrollada parcialmente en la Clase 3 (ciclo de vida del producto, pensamiento de diseño, Marco Cynefin). Cubre además: **enfoques de gestión de proyectos** (Predictivo, Ágil e Híbrido) y la mentalidad ágil (co-creación de valor, aceptar la incertidumbre); **ciclo de vida del desarrollo de software** en cascada vs. iterativo e incremental (análisis → diseño → codificación → pruebas → implementación); **requerimientos funcionales** (comportamiento esperado del sistema) vs. **no funcionales** (performance, seguridad, tecnología, legales, documentación); **UML: casos de uso** (título, actor, escenario); y **documentación en agilidad** (épicas → features → historias de usuario, con criterio "Como \[usuario], quiero \[algo], para \[objetivo]" y sus criterios de aceptación) — estos últimos puntos, aún no vistos en clase.
+Desarrollada parcialmente en la Clase 3 (ciclo de vida del producto, pensamiento de diseño, Marco Cynefin). El pensamiento de diseño se apoya en dos pilares: **centrado en lo humano** (comprender necesidades y motivaciones reales de las personas) y **experimental** (hay espacio real para probar cosas nuevas, permitiéndose fallar y aprender del error). Dentro del planeamiento estratégico se menciona también la **prueba de concepto** (validar que la idea técnica es factible) junto con el análisis de mercado, la gestión de riesgos, la selección del MVP y la gestión de stakeholders.
+
+Cubre además: **enfoques de gestión de proyectos** (Predictivo, Ágil e Híbrido) y la mentalidad ágil (co-creación de valor, aceptar la incertidumbre); **ciclo de vida del desarrollo de software** en cascada vs. iterativo e incremental (análisis → diseño → codificación → pruebas → implementación); **requerimientos funcionales** (comportamiento esperado del sistema) vs. **no funcionales** (performance, seguridad, tecnología, legales, documentación); **UML: casos de uso** (título, actor, escenario); **documentación en agilidad** (épicas → features → historias de usuario, con criterio "Como \[usuario], quiero \[algo], para \[objetivo]" y sus criterios de aceptación); y **gestión visual del trabajo** con un tablero Kanban de ejemplo, con columnas Backlog → Activo → QA → En revisión → Terminado, organizado en carriles ("swimlanes") por equipo — estos últimos puntos, aún no vistos en clase.
 
 ⭐ Directamente relacionado con las entregas de **Análisis** y **Diseño** del TP — ver notas en [Etapas y entrega del TP](#funcionamiento-etapas).
 
@@ -418,8 +420,6 @@ Todavía sin material cargado.
 <summary><a id="aplicar-al-tp"></a><font color="#8250DF"><strong>🧩 Aplicar al Trabajo Práctico</strong></font></summary>
 
 Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tema visto en clase, dónde buscarlo en el material, qué diagrama o herramienta corresponde, qué preguntas genéricas hacerse para cualquier caso, y cómo quedó (o falta) aplicado a nuestro caso elegido (**PilatesFlow — Sistema de Gestión de Turnos**, Grupo 5). Se completa clase a clase, a medida que se van dando los temas.
-
-Cada tema arranca marcado con ❌ (pendiente de resolver para el TP). Se cambia a ✅ a mano en este archivo cuando ya quedó resuelto de verdad en el documento del grupo.
 
 #### Diferencia de expectativas (Clase 1) ❌
 
