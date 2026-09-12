@@ -595,7 +595,7 @@ Del lado del centro: ver una agenda con los turnos ocupados.
 
 #### Etapas 3 a 6 — Diseño, Desarrollo, Pruebas e Implementación ❌
 
-Todavía no se desarrollaron en clase. Cuando se den, esta sección se completa con el mismo formato: tema (con link al PDF), diagrama/herramienta, preguntas genéricas y la aplicación concreta a PilatesFlow.
+Todavía no se dio en clase.
 
 </details>
 
