@@ -7,6 +7,8 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 [![Ver en Figma](https://img.shields.io/badge/🎨_Ver_en_Figma-Pizarra_de_la_materia-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/board/25UDE2ECBBLU19Vzs7cfEb/Met-I---132?node-id=0-1&p=f)
 [![Ver documento del TP](https://img.shields.io/badge/📝_Documento_del_TP-Grupo_5-4285F4?style=for-the-badge&logo=googledocs&logoColor=white)](https://docs.google.com/document/d/1_fh0JCqxTOB4g7RQvXyYY3_fwekXTQJEdVI5M4X70cM/edit?tab=t.0)
 [![Ver cronograma](https://img.shields.io/badge/📆_Cronograma_de_la_cursada-2026-1A7F37?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/CRONOGRAMA%202026.pdf)
+[![Ver funcionamiento del sistema](https://img.shields.io/badge/🎨_Funcionamiento_del_Sistema-PilatesFlow-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/board/rzkhBlpPRQdhLmGuPYUSMO/FUNCIONAMIENTO-DEL-SISTEMA?node-id=0-1&t=MElwaXhDXPaWeIRO-1)
+[![Ver prototipo inicial](https://img.shields.io/badge/🖼️_Prototipo_Inicial-PilatesFlow-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/make/8byR1nzp40oFZ4IBhHPRX2/PilatesFlow-Mobile-Prototipo-Inicial?p=f&t=1xPRShplhbPhI3nW-0&fullscreen=1)
 
 ---
 
@@ -477,64 +479,48 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
   - Decisión: si un turno se puede reservar o no → dato necesario: cupo ya ocupado en esa clase (máximo 3 alumnos).
   - Decisión: si mostrar un horario como disponible → dato necesario: franja horaria de la clienta (8 a 12 hs y 15 a 18 hs) cruzada con los turnos ya tomados.
 
-#### Ciclo de vida del producto, prototipo vs. MVP y Design Thinking (Clase 3) ❌
+#### Ciclo de vida del producto, prototipo vs. MVP y Design Thinking (Clase 3) ✅
 
 - **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf" target="_blank" rel="noopener">Unidad 2 (parte 2) — Ciclo de vida del Producto y Pensamiento de diseño</a>.
 - **Diagrama / herramienta por sub-etapa:** mapa de actores y mapa de empatía (Empatizar) → mapa de causa raíz, con forma de diagrama de Ishikawa o "espina de pescado" (Definir) → brainstorming (Idear) → wireframe o prototipo de alta fidelidad (Prototipar) → elevator pitch (Evaluar).
-- **Preguntas genéricas:**
-  - ¿Quiénes son los actores involucrados (cliente, usuarios internos, usuarios externos)?
-  - ¿Cómo funciona el proceso hoy, sin ningún sistema de por medio?
-  - ¿Cuál es el problema que más dolor de cabeza le genera al cliente?
-  - ¿Qué alternativas de solución existen, además de la más obvia?
-  - ¿El prototipo alcanza para validar la idea, o ya le estoy agregando cosas de nivel MVP (login, reportes)?
 
-**Aplicado a PilatesFlow — entrevista con la clienta:**
+**Contexto del cliente:** PilatesFlow, espacio de una instructora independiente. Clases grupales sin equipamiento (ni reformer ni mat), cupo estricto de 3 alumnos por clase, dos turnos diarios (8 a 12 hs y 15 a 18 hs). Cobra por clase suelta, bono o abono mensual, gestionado aparte (fuera del alcance del sistema). Proceso actual: reserva y administración 100% manual por WhatsApp.
 
-| Pregunta | Respuesta |
-|---|---|
-| ¿Da clases individuales, grupales, o ambas? | Grupales |
-| ¿Cuántos alumnos entran por clase (cupo)? | 3 |
-| ¿Usa reformer, mat, o los dos? | Ninguno de los dos (no aplica al sistema) |
-| ¿Cómo gestiona los turnos hoy por hoy? | WhatsApp → este es el **proceso actual** que va directo al documento del TP |
-| ¿Qué problema le genera más dolor de cabeza? | Olvidarse quién tiene reservado cada día y horario → esta es la **oportunidad de mejora** que pide la guía |
-| ¿Cobra por clase suelta, bono de clases, o mensual? | Las tres modalidades |
-| ¿Trabaja sola o hay más instructoras? | Sola |
-| ¿En qué días/horarios da clase? | De 8 a 12 hs y de 15 a 18 hs |
+**Problema (oportunidad de mejora):**
+- Desorganización y pérdida de información — no recordar qué alumno está anotado en cada día y horario (el mayor punto de dolor).
+- Confusión en la disponibilidad — los alumnos no saben qué horarios están libres sin preguntar antes.
+- Riesgo de sobreturnos — probabilidad de superar el límite de 3 personas por error humano.
+- Fricción en las cancelaciones — dificultad para gestionar cambios o bajas de forma dinámica.
+- Sobrecarga laboral — mucho tiempo de la instructora solo respondiendo mensajes.
 
-**Problema identificado:**
-- Confusión con los horarios disponibles.
-- Sobreturnos o errores al asignar una clase.
-- Dificultad para cancelar o cambiar un turno.
-- Mucho tiempo del personal respondiendo mensajes.
-- Los alumnos no tienen una forma rápida de consultar sus próximos turnos.
-
-**Solución propuesta:**
-1. Ver los días disponibles.
-2. Consultar los horarios.
-3. Elegir una clase.
-4. Seleccionar un turno.
-5. Confirmar la reserva.
-6. Ver sus turnos reservados.
-7. Cancelar un turno si lo necesita.
-
-Del lado del centro: ver una agenda con los turnos ocupados.
+**Solución propuesta:** una plataforma web responsiva de autogestión de turnos.
+- **Vista del alumno:** registrarse, ver la grilla de días y horarios disponibles, reservar (si hay cupo y faltan más de 30 minutos para el inicio), recibir confirmación inmediata, consultar sus próximos turnos y cancelar de forma autónoma.
+- **Vista de la instructora:** panel de administración con agenda diaria automatizada, turnos ocupados, asistencia y bloqueo de horarios, sin coordinar cada reserva a mano.
 
 **Aplicando Design Thinking:**
-1. **Empatizar** — identificar las necesidades de los dos tipos de usuario: alumnos y personal del centro.
-2. **Definir** — el problema principal es que los alumnos tienen dificultades para conocer y reservar turnos disponibles, mientras que el personal debe gestionar las reservas a mano.
-3. **Idear** — alternativas consideradas: agenda digital, aplicación móvil, sistema de reservas web, bot de WhatsApp, calendario online.
-4. **Prototipar** — se elige la alternativa más conveniente: una página web de gestión de turnos, desarrollada con HTML, CSS y JavaScript.
-5. **Testear/Evaluar** — probar el prototipo con usuarios reales y observar si pueden reservar, consultar y cancelar un turno fácilmente.
+1. **Empatizar** — necesidades contrapuestas: los alumnos buscan inmediatez e independencia; la instructora necesita liberar tiempo administrativo y evitar errores de cupo.
+2. **Definir** — el problema central es que los alumnos no pueden conocer ni reservar turnos en tiempo real, y toda la carga de gestión recae en la instructora.
+3. **Idear** — alternativas consideradas: agenda digital estándar, app móvil nativa, bot de WhatsApp, calendario online compartido, sistema de reservas web propio.
+4. **Prototipar** — se elige el sistema de reservas web (HTML, CSS y JavaScript nativo). Prototipo interactivo ya construido:
 
-**⚠️ Pendiente — esto es lo que todavía falta construir para la entrega del 7/9:** la guía pide un *"conjunto de pantallas a desarrollar junto con datos estáticos que reflejen la información necesaria para procesar"*, en HTML/JS. Para PilatesFlow, eso significa armar (con datos de ejemplo, sin lógica real todavía) al menos estas pantallas:
-- Pantalla con los días disponibles.
-- Pantalla con los horarios de un día elegido.
-- Pantalla para elegir una clase dentro de ese horario.
-- Pantalla para seleccionar un turno dentro de la clase.
-- Pantalla de confirmación de la reserva.
-- Pantalla "Mis turnos reservados" (vista del alumno).
-- Opción de cancelar un turno desde esa misma pantalla.
-- Pantalla de agenda con los turnos ocupados (vista del centro).
+[![Ver prototipo](https://img.shields.io/badge/🖼️_Ver_Prototipo_Inicial-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/make/8byR1nzp40oFZ4IBhHPRX2/PilatesFlow-Mobile-Prototipo-Inicial?p=f&t=1xPRShplhbPhI3nW-0&fullscreen=1)
+[![Ver funcionamiento del sistema](https://img.shields.io/badge/🎨_Ver_Funcionamiento_del_Sistema-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/board/rzkhBlpPRQdhLmGuPYUSMO/FUNCIONAMIENTO-DEL-SISTEMA?node-id=0-1&t=MElwaXhDXPaWeIRO-1)
+
+5. **Testear** *(etapa proyectada, todavía no hecha)* — probar el prototipo con alumnos y la instructora antes de pasar a Desarrollo.
+
+**Alcance del prototipo — vista del alumno:**
+- Grilla de turnos con semaforización (verde: disponible, rojo: sin cupo, gris: bloqueado), respetando el límite de 3 alumnos.
+- Reservar: el botón se deshabilita si la clase está llena o si faltan menos de 30 minutos para el inicio.
+- Confirmación inmediata por modal, con horario, instructora y duración.
+- "Mis turnos": consultar reservas activas y cancelar hasta 30 minutos antes del inicio.
+
+**Alcance del prototipo — vista de la instructora:**
+- Dashboard con el resumen del día (turnos totales, llenos, con cupo).
+- Agenda diaria con barra de progreso por clase (1/3, 2/3, 3/3).
+- Bloquear horarios puntuales (pasan a gris para los alumnos).
+- Cancelar turnos desde el panel.
+
+**Dependencias técnicas para las próximas etapas:** base de datos simplificada (Usuarios, Clases con cupo dinámico, Reservas); autenticación con usuario/contraseña encriptada, separando roles alumno/instructora; notificaciones in-app resueltas con JavaScript (modales y alertas).
 
 #### Gestión de riesgos (Clase 3) ❌
 
