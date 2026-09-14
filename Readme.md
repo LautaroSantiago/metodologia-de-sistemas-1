@@ -22,6 +22,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 - [<font color="#8250DF"><strong>Clase 1 — 24/8 · Presentación de la materia y primeros conceptos</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-1)
 - [<font color="#8250DF"><strong>Clase 2 — 31/8 · SMART, toma de decisiones y cronograma del TP</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-2)
 - [<font color="#8250DF"><strong>Clase 3 — 7/9 · Ciclo de vida del producto, MVP y gestión de stakeholders</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-3)
+- [<font color="#8250DF"><strong>Clase 4 — 14/9 · Arquitectura de sistemas, escalabilidad y requerimientos</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-4)
 - [<font color="#8250DF"><strong>Material de referencia</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#material-de-referencia)
   - [<font color="#1A7F37">Guía TP grupal</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/00%20-%20Guria%20TP%20grupal.pdf)
   - [<font color="#1A7F37">Planificación de la materia</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/Planificaci%C3%B3n%20Metodolog%C3%ADa%20de%20Sistemas%20I.pdf)
@@ -375,6 +376,59 @@ Con un breve repaso de **Unidad 1** (objetivo, alcance y restricciones de un pro
 
 </details>
 
+<details>
+<summary><a id="clase-4"></a><font color="#1A7F37"><strong>Clase 4 — 14/9 · Arquitectura de sistemas, escalabilidad y requerimientos</strong></font></summary>
+
+### Temas vistos
+
+- Arquitectura de sistemas: modelo cliente-servidor y arquitectura monolítica
+- Servidores de aplicación y de base de datos, y selección de tecnología
+- Escalabilidad: balanceador de carga, escalado de base de datos, almacenamiento externo, distribución geográfica
+- Microservicios: cuándo se justifican y qué cuestan
+- Repaso de Design Thinking aplicado a prototipado
+- Repaso de requerimientos funcionales y no funcionales, con foco en cómo redactarlos
+
+#### Arquitectura de sistemas y selección de tecnología
+
+- El modelo básico es un cliente (por ejemplo, un navegador) que se conecta a un servidor. Ese servidor se divide, a nivel lógico, en **servidor de aplicación** y **servidor de base de datos**.
+- El servidor de aplicación depende del lenguaje elegido: PHP suele usar Apache, C#/.NET usa IIS, Java usa Tomcat, JavaScript corre sobre Node.js, y lenguajes como Go ya traen su propio servidor web incluido.
+- La elección de lenguaje y base de datos (por ejemplo, MySQL o MariaDB) es responsabilidad del arquitecto de software, balanceando criterios técnicos, funcionales y de costo.
+- **Arquitectura monolito:** cuando la aplicación y la base de datos viven en una sola máquina física. El problema aparece cuando crece la cantidad de usuarios concurrentes y el sistema no da abasto.
+
+#### Escalabilidad (sin tocar código)
+
+- **Balanceador de carga (load balancer):** software (por ejemplo, Nginx) que reparte las peticiones entrantes entre varios servidores de aplicación, para que ninguno se sature.
+- **Escalado de base de datos:** cuando el cuello de botella deja de ser la aplicación y pasa a ser la base de datos, se puede agregar un balanceador exclusivo para las bases de datos.
+- **Almacenamiento externo (storage):** para evitar inconsistencias entre varias instancias de base de datos, se centraliza el almacenamiento en un servicio externo (por ejemplo, AWS S3), y todas las instancias apuntan al mismo archivo físico.
+- **Distribución geográfica:** separar servidores físicamente según la región de los usuarios, para optimizar la conexión.
+
+#### Microservicios
+
+- Se recurre a microservicios cuando las estrategias de escalado por hardware y red ya no alcanzan.
+- Implica refactorizar fuerte el código, separándolo en servicios independientes.
+- Optimiza a gran escala, pero encarece mucho el desarrollo: programar la comunicación entre microservicios es complejo.
+
+#### Repaso: Design Thinking y prototipado
+
+- Se retomaron las etapas Empatizar → Definir → Idear → Prototipar → Evaluar.
+- Al definir un problema (por ejemplo, "el sistema dificulta el seguimiento") hace falta medir variables e indicadores concretos que muestren la situación actual (por ejemplo, tiempos de demora), no quedarse en la sensación de que algo anda mal.
+- El prototipo (wireframes, pantallas) es lo que después permite desprender los requerimientos funcionales del sistema.
+
+#### Repaso: cómo redactar requerimientos
+
+- Los requerimientos son la base del contrato con el cliente: definen qué se le va a construir.
+- **Tienen que estar escritos en el lenguaje del cliente**, evitando jerga técnica innecesaria — por ejemplo, evitar frases como "operación CRUD" o "validar con JWT" si el cliente no es técnico.
+- **Requerimiento funcional:** tiene que ser concreto. Ejemplo dado en clase: "registrar notas de alumnos por división y trimestre" es un buen requerimiento; "ayudar a los docentes" es demasiado ambiguo y no sirve como tal.
+- **Requerimiento no funcional:** afecta a todo el sistema en conjunto — performance, seguridad, tecnología a utilizar, cuestiones legales, documentación.
+
+⭐ **Conclusión útil para el TP:** al redactar los requerimientos funcionales y no funcionales de PilatesFlow para la entrega de Análisis, conviene revisar que estén en el lenguaje de la instructora (la clienta), no en jerga de desarrollo, y que cada uno sea lo bastante concreto como para poder verificarse (no quedarse en frases generales tipo "mejorar la gestión de turnos").
+
+### Material de la clase
+
+Repaso de **Unidad 2** — Design Thinking y Requerimientos (ver [Material de referencia](#material-de-referencia)). La parte de arquitectura, escalabilidad y microservicios no tiene PDF cargado en el repo todavía.
+
+</details>
+
 ---
 
 ## <a id="material-de-referencia"></a><font color="#8250DF">📎 Material de referencia</font>
@@ -564,20 +618,33 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
   - ¿Qué restricciones no funcionales aplican? (performance, seguridad, tecnología a usar, cuestiones legales, documentación)
   - ¿Quiénes son los actores de cada caso de uso?
   - ¿Hay casos de uso que incluyen o extienden a otros?
+  - ¿Está redactado en el lenguaje de la clienta, o se coló jerga técnica (CRUD, JWT, etc.)?
 
-**Aplicado a PilatesFlow — requerimientos funcionales que salen directo de los 7 pasos de la solución:**
-- El alumno puede ver los días disponibles.
-- El alumno puede consultar los horarios de cada día.
-- El alumno puede elegir una clase.
-- El alumno puede seleccionar un turno dentro de esa clase.
-- El alumno puede confirmar la reserva.
-- El alumno puede ver sus turnos reservados.
-- El alumno puede cancelar un turno.
-- El personal del centro puede ver una agenda con los turnos ocupados.
+**Aplicado a PilatesFlow — requerimientos funcionales que salen directo de la solución:**
+- La alumna o alumno puede ver la grilla de días y horarios disponibles, con semaforización por cupo.
+- Puede reservar un turno si hay cupo y faltan más de 30 minutos para el inicio.
+- Recibe una confirmación inmediata con horario, instructora y duración.
+- Puede consultar sus próximos turnos ("Mis turnos").
+- Puede cancelar un turno hasta 30 minutos antes del inicio.
+- La instructora puede ver un dashboard con el resumen del día (turnos totales, llenos, con cupo).
+- La instructora puede ver la agenda diaria con el avance de cada clase (1/3, 2/3, 3/3).
+- La instructora puede bloquear horarios puntuales y cancelar turnos desde su panel.
 
-**Actores:** alumno, personal del centro (instructora).
+**Actores:** alumno, instructora.
 
-**A definir como restricciones / reglas de negocio (no funcionales o de alcance):** cupo máximo de 3 alumnos por clase, y cómo se registra la forma de cobro (clase suelta, bono o mensual) — esto último conviene discutirlo en grupo para decidir si entra en el alcance de esta primera versión o queda fuera.
+**Restricciones / reglas de negocio (no funcionales o de alcance):** cupo máximo de 3 alumnos por clase; regla de los 30 minutos para reservar o cancelar; la forma de cobro (clase suelta, bono o mensual) queda fuera del alcance transaccional del sistema, la sigue gestionando la instructora aparte.
+
+#### Arquitectura de sistemas y escalabilidad (Clase 4) ❌
+
+- **Tema:** visto solo en la transcripción de la Clase 4, sin PDF asociado.
+- **Preguntas genéricas:**
+  - ¿Cuántos usuarios concurrentes tiene que soportar el sistema? ¿Hace falta pensar en escalabilidad desde el día uno, o alcanza con un monolito simple?
+  - ¿Qué servidor de aplicación corresponde según el lenguaje elegido?
+  - ¿Qué motor de base de datos conviene?
+- **Aplicado a PilatesFlow (a definir en la etapa de Diseño):**
+  - Por el tamaño del caso (una sola instructora, cupo de 3 alumnos por clase), un monolito simple alcanza y sobra — no hace falta balanceador de carga ni microservicios.
+  - Como el prototipo se resolvió con JavaScript, el servidor de aplicación más directo sería Node.js.
+  - Falta definir el motor de base de datos (MySQL o MariaDB son las opciones que se mencionaron en clase como default).
 
 #### Etapas 3 a 6 — Diseño, Desarrollo, Pruebas e Implementación ❌
 
