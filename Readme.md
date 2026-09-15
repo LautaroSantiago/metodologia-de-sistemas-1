@@ -476,6 +476,25 @@ Cubre además: **enfoques de gestión de proyectos** (Predictivo, Ágil e Híbri
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-UML_Dise%C3%B1o_de_Clases-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20UML-%20Dise%C3%B1o%20de%20Clases-1.pdf)
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-UML_B%C3%A1sico-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20UML_basico.pdf)
 
+### UNIDAD 4
+
+*Material subido, aún no desarrollado en clase.*
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Pruebas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%204/04%20-%20MSI-01-Pruebas.pdf)
+
+### UNIDAD 5
+
+*Material subido, aún no desarrollado en clase.*
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_5_(parte_1)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_1.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_5_(parte_2)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_2.pdf)
+
+### UNIDAD 6
+
+*Material subido, aún no desarrollado en clase.*
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_6-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%206/06%20-%20MetSis_I_U6_1.pdf)
+
 ---
 
 <details>
@@ -675,11 +694,18 @@ Metodología de Sistemas I
 │   ├── UNIDAD 2
 │   │   ├── 02 - MetSis_I_U2_1.pdf
 │   │   └── 02 - MetSis_I_U2_2.pdf
-│   └── UNIDAD 3
-│       ├── 03 -  MSI_Conceptos_Basicos _OO.pdf
-│       ├── 03 - MSI_Casos de Uso.pdf
-│       ├── 03 - Proceso Unificado..pdf
-│       ├── 03 - UML- Diseño de Clases-1.pdf
-│       └── 03 - UML_basico.pdf
+│   ├── UNIDAD 3
+│   │   ├── 03 -  MSI_Conceptos_Basicos _OO.pdf
+│   │   ├── 03 - MSI_Casos de Uso.pdf
+│   │   ├── 03 - Proceso Unificado..pdf
+│   │   ├── 03 - UML- Diseño de Clases-1.pdf
+│   │   └── 03 - UML_basico.pdf
+│   ├── UNIDAD 4
+│   │   └── 04 - MSI-01-Pruebas.pdf
+│   ├── UNIDAD 5
+│   │   ├── 05 - MetSis_I_U5_1.pdf
+│   │   └── 05 - MetSis_I_U5_2.pdf
+│   └── UNIDAD 6
+│       └── 06 - MetSis_I_U6_1.pdf
 └── Readme.md
 ```
