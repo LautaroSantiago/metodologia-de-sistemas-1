@@ -468,7 +468,13 @@ Cubre además: **enfoques de gestión de proyectos** (Predictivo, Ágil e Híbri
 
 ### UNIDAD 3
 
-Todavía sin material cargado.
+*Material subido, aún no desarrollado en clase.*
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Conceptos_B%C3%A1sicos_OO-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20%20MSI_Conceptos_Basicos%20_OO.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Casos_de_Uso-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20MSI_Casos%20de%20Uso.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proceso_Unificado-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20Proceso%20Unificado..pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-UML_Dise%C3%B1o_de_Clases-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20UML-%20Dise%C3%B1o%20de%20Clases-1.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-UML_B%C3%A1sico-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20UML_basico.pdf)
 
 ---
 
@@ -670,5 +676,10 @@ Metodología de Sistemas I
 │   │   ├── 02 - MetSis_I_U2_1.pdf
 │   │   └── 02 - MetSis_I_U2_2.pdf
 │   └── UNIDAD 3
+│       ├── 03 -  MSI_Conceptos_Basicos _OO.pdf
+│       ├── 03 - MSI_Casos de Uso.pdf
+│       ├── 03 - Proceso Unificado..pdf
+│       ├── 03 - UML- Diseño de Clases-1.pdf
+│       └── 03 - UML_basico.pdf
 └── Readme.md
 ```
