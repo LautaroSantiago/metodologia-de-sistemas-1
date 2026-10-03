@@ -23,6 +23,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 - [<font color="#8250DF"><strong>Clase 2 — 31/8 · SMART, toma de decisiones y cronograma del TP</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-2)
 - [<font color="#8250DF"><strong>Clase 3 — 7/9 · Ciclo de vida del producto, MVP y gestión de stakeholders</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-3)
 - [<font color="#8250DF"><strong>Clase 4 — 14/9 · Arquitectura de sistemas, escalabilidad y requerimientos</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-4)
+- [<font color="#8250DF"><strong>Clase 5 — 28/9 · Diagrama de clases UML, herencia y patrón MVC</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-5)
 - [<font color="#8250DF"><strong>Material de referencia</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#material-de-referencia)
   - [<font color="#1A7F37">Guía TP grupal</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/00%20-%20Guria%20TP%20grupal.pdf)
   - [<font color="#1A7F37">Planificación de la materia</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/Planificaci%C3%B3n%20Metodolog%C3%ADa%20de%20Sistemas%20I.pdf)
@@ -431,6 +432,65 @@ Repaso de **Unidad 2** — Design Thinking y Requerimientos (ver [Material de re
 
 ---
 
+<details>
+<summary><a id="clase-5"></a><font color="#1A7F37"><strong>Clase 5 — 28/9 · Diagrama de clases UML, herencia y patrón MVC</strong></font></summary>
+
+### Temas vistos
+
+- Diagrama de clases UML: atributos (público, privado, protegido), operaciones y cardinalidad
+- Tipos de asociación: simple, composición (rombo lleno) y agregación (rombo vacío)
+- Herencia vs. interfaz vs. clase abstracta, y el criterio para elegir entre una y otra
+- Evolución del modelo de clases desde Análisis hacia Diseño
+- Patrón MVC (vista, controlador, entidad) aplicado a un caso concreto
+- Logística del próximo parcial (consigna 100% práctica)
+
+#### Diagrama de clases: atributos, operaciones y cardinalidad
+
+- Cada clase se representa con tres compartimentos: nombre de la clase, atributos y operaciones.
+- Los atributos y operaciones tienen visibilidad: **público** (+), **privado** (-) y **protegido** (#), según quién puede acceder a ellos desde afuera de la clase.
+- La **cardinalidad** indica cuántas instancias de una clase se relacionan con cuántas de otra (por ejemplo, `0..1`, `1`, `*`), y se coloca en los extremos de la relación entre dos clases.
+
+#### Asociación simple, composición y agregación
+
+- **Asociación simple:** una clase conoce a otra (por ejemplo, mediante una flecha abierta), sin que haya una dependencia fuerte de existencia entre ambas.
+- **Composición (rombo lleno):** la clase "parte" no puede existir sin la clase "todo" — su ciclo de vida está completamente atado a ella. Ejemplo trabajado en clase: una `Libreta` tiene una lista de `Contacto`, y cada contacto solo existe dentro de esa libreta puntual (`class Contacto { nombre: string }`, `class Libreta { listaContacto: List<Contacto>, agregarContacto(c: Contacto) { listaContacto.push(c) } }`).
+- **Agregación (rombo vacío):** la clase "parte" puede existir de forma independiente y puede estar relacionada con más de una clase "todo" a la vez. Siguiendo el mismo ejemplo, si un mismo contacto pudiera compartirse entre varias libretas (como ocurre con los contactos de LinkedIn, que no pertenecen a una sola red), ya no alcanza con la relación directa: hace falta una clase intermedia que vincule ambos lados (por ejemplo, `LibretaContactos { idLibreta, listaContactos }`).
+- Segundo ejemplo usado para reforzar el criterio: en una `Empresa`, el vínculo con `Empleado` es composición (un empleado, en este modelo, no existe fuera de su empresa), mientras que el vínculo con `Cliente` es agregación (un cliente puede estar asociado a más de una empresa a la vez).
+- **Criterio para decidir:** la pregunta clave es si el objeto "parte" puede seguir existiendo y relacionarse con otros objetos "todo" de manera independiente. Si no puede, es composición; si puede, es agregación.
+
+#### Herencia, interfaz y clase abstracta
+
+- **Herencia (generalización, triángulo vacío):** se usa cuando una clase hija realmente *es* un tipo más específico de la clase padre. Ejemplo dado: `Usuario` (atributos nombre, contraseña, email) como clase base de `Alumno` (atributo adicional: rutina, una lista de ejercicios) y `Profesor` (atributo adicional: lista de alumnos a cargo).
+- El error típico es usar herencia solo para reutilizar código compartido, sin que exista una relación real de identidad. Ejemplo trabajado: forzar una clase abstracta `Volador` de la que heredaran tanto un `Murciélago` como un `Dron` no tiene sentido, porque un dron no *es* un animal volador — solo comparte la capacidad de volar.
+- **Solución correcta: usar una interfaz** para la capacidad compartida (`Volador`, con el método `volar()`), separada de la herencia por identidad. En el ejemplo final: `Mamífero` es una clase (con el atributo nombre); `Murciélago` hereda de `Mamífero` y además implementa la interfaz `Volador`; `Dron` no hereda de `Mamífero` (no es un mamífero), pero también implementa `Volador`, y en cambio hereda de una clase base distinta como `DispositivoElectrónico` (atributo: número de serie).
+- **Regla general:** la herencia se reserva para relaciones de identidad real ("es un/a"); el comportamiento compartido entre clases sin esa relación de identidad se modela con una interfaz.
+
+#### De Análisis a Diseño: cómo evolucionan las relaciones
+
+- En la etapa de **Análisis**, una relación de agregación suele representarse de forma simple, como un vínculo directo entre las dos clases (por ejemplo, `Libreta` – `Contacto`).
+- En la etapa de **Diseño**, esa misma relación —si efectivamente es una agregación, con la parte compartida entre varios todos— se despliega en una clase intermedia explícita que no existía en el análisis (siguiendo el ejemplo, `LibretaContactos`), encargada de gestionar el vínculo entre ambas puntas.
+- Si la relación fuera composición en lugar de agregación, no hace falta agregar una clase nueva al pasar a Diseño: alcanza con precisar los métodos ya existentes en las clases originales.
+
+#### Patrón MVC (Modelo – Vista – Controlador)
+
+- Ejemplo trabajado: una pantalla de `Usuario` se separa en tres capas. **UsuarioUI** (vista): validaciones de interfaz, como validar el formato de un email antes de enviarlo. **UsuarioControl** (controlador): aplica las reglas de negocio, sin acceder directamente a la base de datos. **UsuarioEntity** (entidad/modelo): es la única capa que accede a la base de datos.
+- **Por qué conviene separar así:** si cambia el motor de base de datos o su forma de acceso, el impacto queda acotado a la capa de entidad, sin tocar las reglas de negocio ni la vista. También facilita insertar lógica de auditoría o logging en un solo lugar, y evita sobrecargar una sola clase con demasiadas responsabilidades (validación, reglas de negocio y acceso a datos mezcladas).
+
+#### Logística del próximo parcial
+
+- El parcial va a ser 100% práctico, a partir de un caso de negocio: hay que producir la(s) pantalla(s), los requerimientos funcionales y no funcionales, el modelo de casos de uso (actores, escenario principal, escenarios de excepción), el diagrama de estados y el modelo de clases correspondiente.
+- Quedan explícitamente fuera de alcance del parcial las pantallas de login/registro, salvo que aporten valor directo al TP de cada uno.
+
+⭐ **Conclusión útil para el TP:** al armar el diagrama de clases de PilatesFlow conviene definir primero qué relaciones son composición y cuáles agregación (por ejemplo, si un turno puede existir sin una reserva asociada, o si una reserva puede moverse entre turnos), y recién en la etapa de Diseño decidir si hace falta una clase intermedia explícita para alguna de esas relaciones.
+
+### Material de la clase
+
+Relacionado con **Unidad 3** (ver [Material de referencia](#material-de-referencia)): conceptos básicos de orientación a objetos y los PDFs de UML básico y diseño de clases cubren la notación de atributos, operaciones, asociación, composición, agregación y herencia usada en esta clase.
+
+</details>
+
+---
+
 ## <a id="material-de-referencia"></a><font color="#8250DF">📎 Material de referencia</font>
 
 
@@ -468,7 +528,7 @@ Cubre además: **enfoques de gestión de proyectos** (Predictivo, Ágil e Híbri
 
 ### UNIDAD 3
 
-*Material subido, aún no desarrollado en clase.*
+Desarrollada parcialmente en la Clase 5 (diagrama de clases, atributos, operaciones, cardinalidad, asociación, composición, agregación, herencia, interfaz y clase abstracta).
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Conceptos_B%C3%A1sicos_OO-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20%20MSI_Conceptos_Basicos%20_OO.pdf)
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Casos_de_Uso-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20MSI_Casos%20de%20Uso.pdf)
@@ -671,7 +731,21 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
   - Como el prototipo se resolvió con JavaScript, el servidor de aplicación más directo sería Node.js.
   - Falta definir el motor de base de datos (MySQL o MariaDB son las opciones que se mencionaron en clase como default).
 
-#### Etapas 3 a 6 — Diseño, Desarrollo, Pruebas e Implementación ❌
+#### Diagrama de clases: asociación, composición, agregación y herencia (Clase 5 / Unidad 3) ❌
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20UML-%20Dise%C3%B1o%20de%20Clases-1.pdf" target="_blank" rel="noopener">UML — Diseño de Clases</a> y <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20UML_basico.pdf" target="_blank" rel="noopener">UML Básico</a>.
+- **Diagrama / herramienta:** diagrama de clases UML, con atributos (visibilidad pública/privada/protegida), operaciones, cardinalidad y los tres tipos de relación: asociación simple, composición (rombo lleno) y agregación (rombo vacío).
+- **Preguntas genéricas:**
+  - Para cada par de clases relacionadas, ¿el objeto "parte" puede existir y relacionarse con otros objetos "todo" de forma independiente? Si no puede, es composición; si puede, es agregación.
+  - ¿Alguna de las clases hereda de otra porque realmente *es* un tipo más específico, o solo comparte comportamiento? En el segundo caso, conviene una interfaz en lugar de herencia.
+  - ¿Qué cardinalidad corresponde en cada extremo de la relación?
+  - Al pasar de Análisis a Diseño, ¿alguna agregación necesita una clase intermedia explícita para representarse?
+- **Aplicado a PilatesFlow (a resolver en la etapa de Diseño):**
+  - Definir si la relación entre `Turno` y `Reserva` es composición (la reserva no existe sin ese turno puntual) o agregación (podría reasignarse a otro turno).
+  - Modelar la herencia entre `Usuario`, `Alumno` e `Instructora` siguiendo el mismo criterio que el ejemplo de clase (atributos compartidos en `Usuario`; rutina o historial de clases en `Alumno`; agenda y bloqueos en `Instructora`).
+  - Revisar si conviene una clase intermedia (por ejemplo, para vincular `Clase` con los `Alumno` que la reservan) si esa relación resulta ser agregación y no composición.
+
+#### Etapas 4 a 6 — Desarrollo, Pruebas e Implementación ❌
 
 Todavía no se dio en clase.
 
