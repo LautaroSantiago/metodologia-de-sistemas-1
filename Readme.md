@@ -24,6 +24,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 - [<font color="#8250DF"><strong>Clase 3 — 7/9 · Ciclo de vida del producto, MVP y gestión de stakeholders</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-3)
 - [<font color="#8250DF"><strong>Clase 4 — 14/9 · Arquitectura de sistemas, escalabilidad y requerimientos</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-4)
 - [<font color="#8250DF"><strong>Clase 5 — 28/9 · Diagrama de clases UML, herencia y patrón MVC</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-5)
+- [<font color="#8250DF"><strong>📝 Parcial</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#parcial)
 - [<font color="#8250DF"><strong>Material de referencia</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#material-de-referencia)
   - [<font color="#1A7F37">Guía TP grupal</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/00%20-%20Guria%20TP%20grupal.pdf)
   - [<font color="#1A7F37">Planificación de la materia</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/Planificaci%C3%B3n%20Metodolog%C3%ADa%20de%20Sistemas%20I.pdf)
@@ -486,6 +487,26 @@ Repaso de **Unidad 2** — Design Thinking y Requerimientos (ver [Material de re
 ### Material de la clase
 
 Relacionado con **Unidad 3** (ver [Material de referencia](#material-de-referencia)): conceptos básicos de orientación a objetos y los PDFs de UML básico y diseño de clases cubren la notación de atributos, operaciones, asociación, composición, agregación y herencia usada en esta clase.
+
+</details>
+
+---
+
+<details>
+<summary><a id="parcial"></a><font color="#8250DF"><strong>📝 Parcial</strong></font></summary>
+
+Logística y alcance anunciados en la Clase 5 (28/9) para el próximo parcial de la materia.
+
+- **Formato:** 100% práctico, a partir de un caso de negocio dado en el momento del examen (no son preguntas teóricas).
+- **Entregables a producir a partir del caso:**
+  - La o las pantallas correspondientes.
+  - Requerimientos funcionales y no funcionales.
+  - Modelo de caso de uso: actores, escenario principal y escenarios de excepción.
+  - Diagrama de estados.
+  - Modelo de clases.
+- **Fuera de alcance:** las pantallas de login/registro quedan explícitamente excluidas, salvo que aporten valor directo al TP de cada uno.
+
+⭐ **Conclusión útil para el TP:** los mismos artefactos que pide el parcial (requerimientos, caso de uso, diagrama de estados, diagrama de clases) son, en la práctica, los mismos que hay que producir para las entregas de Análisis y Diseño de PilatesFlow — conviene practicarlos sobre el caso del parcial y después reutilizar el mismo criterio sobre el caso propio.
 
 </details>
 
