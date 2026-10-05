@@ -495,7 +495,7 @@ Relacionado con **Unidad 3** (ver [Material de referencia](#material-de-referenc
 <details>
 <summary><a id="parcial"></a><font color="#8250DF"><strong>📝 Parcial</strong></font></summary>
 
-Logística y alcance anunciados en la Clase 5 (28/9) para el próximo parcial de la materia.
+Logística y alcance anunciados en la Clase 5 (28/9) y repasados en la clase de corrección del 5/10 para el próximo parcial de la materia.
 
 - **Formato:** 100% práctico, a partir de un caso de negocio dado en el momento del examen (no son preguntas teóricas).
 - **Entregables a producir a partir del caso:**
@@ -504,9 +504,44 @@ Logística y alcance anunciados en la Clase 5 (28/9) para el próximo parcial de
   - Modelo de caso de uso: actores, escenario principal y escenarios de excepción.
   - Diagrama de estados.
   - Modelo de clases.
-- **Fuera de alcance:** las pantallas de login/registro quedan explícitamente excluidas, salvo que aporten valor directo al TP de cada uno.
+- **Fuera de alcance:** no se puede tomar como requerimiento elegido ninguno de estos tres: **login, registro ni reportes**.
 
-⭐ **Conclusión útil para el TP:** los mismos artefactos que pide el parcial (requerimientos, caso de uso, diagrama de estados, diagrama de clases) son, en la práctica, los mismos que hay que producir para las entregas de Análisis y Diseño de PilatesFlow — conviene practicarlos sobre el caso del parcial y después reutilizar el mismo criterio sobre el caso propio.
+#### Mecánica del examen: del escenario al requerimiento elegido
+
+1. El profesor entrega un escenario de negocio (es el punto de partida obligatorio: "ese escenario es el que hay que tomar para desarrollar todo esto").
+2. A partir de ese escenario se arma un **listado de requerimientos**. Conviene modelar el caso de uso **por requerimiento individual**, en vez de un único modelo que cubra todo el sistema de una sola vez (se probaron las dos formas en clase y el profesor prefiere la primera).
+3. De ese listado se elige **un solo requerimiento** (que no sea login, registro ni reportes).
+4. Sobre ese requerimiento elegido se desarrolla todo el resto: interfaz de usuario, modelo de caso de uso y modelo de clases.
+
+#### Interfaz de usuario: nivel de detalle esperado
+
+- Es poco habitual que alcance con una sola pantalla para todo un caso de uso — lo normal es que haya **varias pantallas o estados** que cambian según las opciones que va eligiendo el actor.
+- Cada clic y cada paso del flujo tiene que quedar representado, porque el caso de uso describe literalmente esa navegación — el objetivo es que el programador no tenga que deducir nada por su cuenta (y lo que deduce, lo deduce mal en algún porcentaje de los casos).
+- No hace falta programar ni maquetar: alcanza con dibujarlas a mano, en Figma, o armarlas con capturas de pantalla editadas (atajo usado en clase: `Shift + Win + S`).
+- Ejemplo trabajado en clase: un requerimiento de **ABM de usuarios** se descompone en casos de uso separados (alta, baja, modificación), cada uno con su propia pantalla o secuencia de pantallas — alta parte de un formulario con botón "Agregar"; baja y modificación parten de un listado/grilla con columnas de acción por fila.
+
+#### Modelo de caso de uso: plantilla y nivel de detalle
+
+- Estructura esperada: actores, precondiciones, postcondición, escenario principal (pasos numerados) y escenarios de excepción (también numerados, referenciando el paso del camino principal al que se vuelve, ej. "vuelve a camino principal, paso 2").
+- Cada paso describe literalmente la interacción en la pantalla (ej. "ingresar correo electrónico", "presionar botón ingresar"), no una descripción abstracta de la funcionalidad.
+
+#### Modelo de clases: nivel exigido en el parcial (Análisis, no Diseño)
+
+- Alcanza el **modelo de análisis**, no el de diseño: solo poner los nombres de las clases no es suficiente, hace falta especificar **atributos, métodos y las asociaciones** entre clases.
+- En esta etapa **todavía no se especifica composición ni agregación** (rombo lleno/vacío) — esa distinción se deja para la etapa de Diseño.
+- **Regla de consistencia:** si la interfaz o el caso de uso mencionan una entidad (por ejemplo, "seleccionar alumno" o un campo "área"), esa entidad tiene que existir como clase en el modelo — si no aparece, es una inconsistencia entre pantallas, caso de uso y clases.
+
+#### Formato de entrega
+
+Todo se entrega en un único documento (Word), armado progresivamente a medida que se resuelve cada parte: capturas de pantalla de la interfaz pegadas junto con el texto del caso de uso y el modelo de clases, siguiendo la plantilla mostrada en clase pero con mayor nivel de detalle que el ejemplo.
+
+#### Qué sigue en la materia después del parcial
+
+- Sin clase la semana siguiente al parcial (feriado); la próxima clase con contenido nuevo es el 19, con una unidad distinta.
+- El resto de la cursada se enfoca en **tipos de pruebas** (unitarias, basadas justamente en las clases y métodos ya definidos), y después en DevOps, servicios en la nube y gestión de proyectos.
+- El modelo de diseño en profundidad y los modelos de implementación/despliegue no se desarrollan en detalle en esta materia — quedan para **Metodología de Sistemas II**.
+
+⭐ **Conclusión útil para el TP:** los mismos artefactos que pide el parcial (requerimientos, caso de uso, modelo de clases a nivel de análisis) son, en la práctica, los mismos que hay que producir para la entrega de Análisis de PilatesFlow — conviene modelar cada requerimiento de PilatesFlow por separado (en vez de un único modelo de todo el sistema) y revisar que toda entidad mencionada en una pantalla o caso de uso (alumno, instructora, turno, clase) tenga su clase correspondiente en el modelo.
 
 </details>
 
