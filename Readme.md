@@ -497,6 +497,17 @@ Relacionado con **Unidad 3** (ver [Material de referencia](#material-de-referenc
 
 Logística y alcance anunciados en la Clase 5 (28/9) y repasados en la clase de corrección del 5/10 para el próximo parcial de la materia.
 
+#### ⚠️ Consignas oficiales del examen — a tener muy en cuenta
+
+- **0)** Copiar estas consignas en un bloc de notas aparte, para tenerlas accesibles una vez comenzado el examen.
+- **1)** Para aprobar el examen (nota = 4) es necesario obtener el **60%** de esta evaluación, es decir, un **6** como nota en esta evaluación.
+- **2)** En las preguntas de opción múltiple se pretende que se seleccione la **"mejor"** respuesta. Si aparecen dos alternativas que parecen verdaderas, elegir solo la que se considere mejor.
+- **3)** Para la primera pregunta, sobre el "escenario a desarrollar", hay que responder adjuntando un documento con los siguientes puntos:
+  - **3.1** Alcance del sistema.
+  - **3.2** Requerimientos funcionales.
+  - **3.2** Requerimientos no funcionales.
+  - **3.3** Seleccionar un requerimiento funcional (distinto a login, registro o reportes) y realizar: interfaz de usuario, casos de uso (con la plantilla vista en clase) y diagrama de clases.
+
 - **Formato:** 100% práctico, a partir de un caso de negocio dado en el momento del examen (no son preguntas teóricas).
 - **Entregables a producir a partir del caso:**
   - La o las pantallas correspondientes.
