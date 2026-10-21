@@ -24,6 +24,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 - [<font color="#8250DF"><strong>Clase 3 — 7/9 · Ciclo de vida del producto, MVP y gestión de stakeholders</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-3)
 - [<font color="#8250DF"><strong>Clase 4 — 14/9 · Arquitectura de sistemas, escalabilidad y requerimientos</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-4)
 - [<font color="#8250DF"><strong>Clase 5 — 28/9 · Diagrama de clases UML, herencia y patrón MVC</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-5)
+- [<font color="#8250DF"><strong>Clase 6 — 19/10 · Corrección del TP, ambientes de software y pruebas</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-6)
 - [<font color="#8250DF"><strong>📝 Parcial</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#parcial)
 - [<font color="#8250DF"><strong>Material de referencia</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#material-de-referencia)
   - [<font color="#1A7F37">Guía TP grupal</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/00%20-%20Guria%20TP%20grupal.pdf)
@@ -493,6 +494,65 @@ Relacionado con **Unidad 3** (ver [Material de referencia](#material-de-referenc
 ---
 
 <details>
+<summary><a id="clase-6"></a><font color="#1A7F37"><strong>Clase 6 — 19/10 · Corrección del TP, ambientes de software y pruebas</strong></font></summary>
+
+### Temas vistos
+
+- Corrección grupal del TP: nivel de desagregación de los requerimientos
+- Interfaz de usuario: validación cruzada con el caso de uso
+- Diagrama de clases: dirección correcta de la composición/agregación
+- Diagrama de estados: cuándo conviene modelarlo
+- Alcance del sistema: cómo redactarlo
+- Introducción a Unidad 4 — Pruebas: entornos virtuales de Python, pytest, ambientes de software y priorización de testing
+
+#### Corrección grupal del TP: nivel de desagregación de los requerimientos
+
+- Un error común detectado en varios grupos fue separar en distintos requerimientos cosas que, de cara al cliente, forman parte de una misma conversación (por ejemplo, "agregar foto al carrito" y "eliminar foto del carrito" no son requerimientos propios, sino detalles de cómo se arma un pedido).
+- **Criterio para decidir si algo es un requerimiento funcional propio:** tiene que ser algo que efectivamente se charla con el cliente al mismo nivel que el resto — los detalles de implementación (cómo se ve el carrito, si una imagen se agranda al hacer clic, etc.) no se conversan con el cliente de esa forma y no deberían figurar como requerimientos separados.
+- Un mismo requerimiento (por ejemplo, "registrar pedido") puede derivar en varios casos de uso (mostrar pedidos existentes, crear un pedido, filtrar y ampliar imágenes), sin que eso implique que sean requerimientos distintos.
+
+#### Interfaz de usuario: validación cruzada con el caso de uso
+
+- Es raro que un caso de uso completo se resuelva con una sola pantalla — lo normal es que haya varias pantallas o estados que reflejen las distintas interacciones (filtros, selección de un estado, agregar un comentario, etc.).
+- Cada elemento que aparece en la pantalla tiene que quedar explicado paso a paso en el caso de uso: de dónde sale cada dato, qué pasa al hacer clic en cada botón, cuál es el comportamiento por defecto al abrir la pantalla. El objetivo sigue siendo el mismo que en la Clase 5: que el programador no tenga que inferir nada.
+- Ejemplo corregido en clase: una pantalla de administración de pedidos con filtros (por cobrar, pagados, etc.) que no explicaba cómo se llegaba a cada estado mostrado — se pidió agregar el detalle paso a paso de esa navegación.
+
+#### Diagrama de clases: dirección correcta de la composición/agregación
+
+- Repaso de la notación: el rombo se dibuja del lado de la clase que actúa como el "todo", no del lado de la "parte". Ejemplo corregido en clase: en la relación entre `Pedido` y `Foto` (un pedido está compuesto por muchas fotos), el rombo lleno va del lado de `Pedido`, no del lado de `Foto`.
+- Regla de consistencia (ya vista en la Clase 5, reforzada acá): si una pantalla o un caso de uso menciona una entidad (por ejemplo, "categoría"), esa entidad tiene que existir como clase en el diagrama — si falta, hay una inconsistencia que corregir.
+
+#### Diagrama de estados: cuándo conviene modelarlo
+
+- No es obligatorio para todos los requerimientos — conviene para aquellos que tengan un ciclo de vida real, con varios estados bien diferenciados y transiciones que aporten valor al programador (ejemplo dado en clase: el estado de un pedido — generado, confirmado, pagado, cancelado, entregado).
+- Un diagrama de estados sin una razón clara de por qué un objeto pasa de un estado a otro no aporta valor. Ejemplo cuestionado en clase: una categoría que pasaba de "creada" a "publicada" sin que quedara claro qué diferenciaba a una de otra — en ese caso conviene simplificarlo o directamente no modelarlo.
+
+#### Alcance del sistema: cómo redactarlo
+
+- Formato esperado: **"desde [el primer paso del proceso] hasta [el último paso que cubre el sistema]"**, seguido de una aclaración de qué queda explícitamente fuera.
+- El alcance condiciona directamente los requerimientos funcionales: todo lo que esté dentro del rango declarado tiene que tener su requerimiento correspondiente, y lo que quede fuera no debería aparecer como funcionalidad del sistema (ni, al mismo tiempo, generar una inconsistencia con algo que el sistema sí necesita para funcionar).
+- Ejemplo trabajado en clase: "desde la carga de fotos por evento y categoría hasta la distribución al cliente", excluyendo explícitamente el diseño de imágenes y la impresión física (aunque el sistema sí haga seguimiento del pedido que se manda a imprimir).
+
+#### Introducción a Unidad 4 — Pruebas: entornos y herramientas de testing
+
+- **Entornos virtuales de Python (`venv`):** aíslan los paquetes instalados por proyecto, evitando conflictos de versiones entre los integrantes de un mismo equipo. Se documentan en un archivo `requirements.txt` (generado con `pip freeze`) que se sube al repositorio para que todo el equipo trabaje con las mismas versiones de las mismas dependencias.
+- **pytest** como ejemplo de framework de testing: se separan las funciones a probar (por ejemplo, en `operaciones.py`) de los archivos de test (`test_operaciones.py`), y la herramienta ejecuta automáticamente las funciones de test, indicando cuáles pasan y cuáles fallan.
+- **Ambientes de software:** desarrollo (la máquina local de cada integrante), testing (entorno aparte al que accede el equipo de QA), UAT — *User Acceptance Testing* (entorno de validación con el cliente o usuario final) y producción (entorno público, al que accede el cliente real).
+- **Regla básica:** el ambiente de desarrollo nunca accede directamente a producción. El pase de un ambiente a otro lo gestiona el administrador de sistemas (y, cuando hace falta modificar la estructura de datos, el administrador de base de datos), que es quien tiene las credenciales de conexión a cada ambiente — ni los desarrolladores ni el equipo de testing tienen permisos para saltearse ese paso.
+- **Motivo de esta separación:** evitar que un error de desarrollo llegue directo al cliente real, lo que generaría pérdida de confianza y, en casos extremos, pérdida del cliente.
+- **Priorización de qué testear:** no es viable (ni necesario) testear absolutamente todas las pantallas y casos posibles, porque el tiempo de testing tiene un costo. El criterio de priorización es testear primero el flujo principal (lo que siempre tiene que funcionar sin falla) y después lo que sea más relevante para el cliente, en vez de intentar cubrir el 100% de las alternativas posibles.
+
+⭐ **Conclusión útil para el TP:** para PilatesFlow conviene revisar si el agrupamiento de requerimientos está bien hecho (por ejemplo, si "reservar turno" y "cancelar turno" deberían ser casos de uso de un mismo requerimiento de gestión de turnos, en vez de dos requerimientos separados), confirmar que el rombo de composición en la relación `Clase`–`Reserva` (o la que corresponda) esté del lado correcto, y redactar el alcance con el mismo formato "desde X hasta Y" — por ejemplo, desde que la alumna ve la grilla de turnos disponibles hasta que recibe la confirmación de la reserva, dejando explícitamente afuera el cobro de la clase.
+
+### Material de la clase
+
+No hay un PDF específico cargado para la parte de corrección del TP. La introducción a Pruebas se apoya en **Unidad 4** (ver [Material de referencia](#material-de-referencia)), que profundiza lo visto en esta clase sobre ambientes de prueba.
+
+</details>
+
+---
+
+<details>
 <summary><a id="parcial"></a><font color="#8250DF"><strong>📝 Parcial</strong></font></summary>
 
 Logística y alcance anunciados en la Clase 5 (28/9) y repasados en la clase de corrección del 5/10 para el próximo parcial de la materia.
@@ -605,7 +665,7 @@ Desarrollada parcialmente en la Clase 5 (diagrama de clases, atributos, operacio
 
 ### UNIDAD 4
 
-*Material subido, aún no desarrollado en clase.*
+Introducida en la Clase 6 (entornos virtuales de Python, pytest, ambientes de software — desarrollo, testing, UAT, producción — y priorización de testing).
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Pruebas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%204/04%20-%20MSI-01-Pruebas.pdf)
 
@@ -812,7 +872,33 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
   - Modelar la herencia entre `Usuario`, `Alumno` e `Instructora` siguiendo el mismo criterio que el ejemplo de clase (atributos compartidos en `Usuario`; rutina o historial de clases en `Alumno`; agenda y bloqueos en `Instructora`).
   - Revisar si conviene una clase intermedia (por ejemplo, para vincular `Clase` con los `Alumno` que la reservan) si esa relación resulta ser agregación y no composición.
 
-#### Etapas 4 a 6 — Desarrollo, Pruebas e Implementación ❌
+#### Agrupamiento de requerimientos y validación cruzada pantalla/caso de uso/clases (Clase 6) ❌
+
+- **Tema:** visto en la corrección grupal de la Clase 6, sin PDF asociado.
+- **Preguntas genéricas:**
+  - ¿Cada requerimiento es algo que realmente se charlaría con la clienta tal cual está redactado, o es en realidad un detalle de implementación de otro requerimiento más amplio?
+  - ¿Cada entidad que aparece en una pantalla o en un caso de uso (alumno, instructora, turno, clase) tiene su clase correspondiente en el diagrama?
+  - En las relaciones de composición, ¿el rombo está del lado de la clase que es el "todo"?
+  - ¿El alcance está redactado como "desde X hasta Y", y cada requerimiento funcional cae dentro de ese rango?
+- **Aplicado a PilatesFlow (a revisar antes de la entrega de Análisis):**
+  - Confirmar que "reservar turno" y "cancelar turno" estén agrupados como casos de uso de un mismo requerimiento de gestión de turnos, y no como requerimientos separados.
+  - Revisar que las clases `Alumno`, `Instructora`, `Clase`, `Turno` y `Reserva` estén todas presentes en el diagrama, en línea con lo que muestran las pantallas del prototipo.
+  - Redactar el alcance como "desde que la alumna visualiza la grilla de turnos disponibles hasta que recibe la confirmación de la reserva", dejando fuera de alcance el cobro de la clase.
+
+#### Pruebas: entornos, ambientes de software y priorización (Clase 6 / Unidad 4) ❌
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%204/04%20-%20MSI-01-Pruebas.pdf" target="_blank" rel="noopener">Unidad 4 — Pruebas</a>.
+- **Diagrama / herramienta:** entornos virtuales de Python (`venv`, `requirements.txt`) y un framework de testing (por ejemplo, pytest) para automatizar pruebas unitarias sobre las clases y métodos definidos en el modelo de análisis.
+- **Preguntas genéricas:**
+  - ¿Qué parte del flujo principal tiene que estar "hipertesteada" porque no puede fallar nunca?
+  - ¿Cómo se van a aislar las dependencias del proyecto entre los integrantes del equipo?
+  - ¿En qué ambiente (desarrollo, testing, UAT, producción) corresponde probar cada cosa, y quién tiene permiso para pasar algo de un ambiente a otro?
+- **Aplicado a PilatesFlow (a definir en la etapa de Pruebas):**
+  - El flujo principal a priorizar en el testing es reservar un turno con cupo disponible y recibir la confirmación — tiene que funcionar siempre.
+  - Falta definir si el equipo va a usar un entorno virtual de Python y un archivo `requirements.txt` desde ahora, para evitar problemas de versiones entre los tres integrantes.
+  - Por el tamaño del proyecto, probablemente alcance con distinguir solo ambiente de desarrollo (local) y uno de prueba con la instructora antes de pasar a producción, sin necesidad de un ambiente de UAT separado.
+
+#### Etapas 5 y 6 — Desarrollo e Implementación ❌
 
 Todavía no se dio en clase.
 
