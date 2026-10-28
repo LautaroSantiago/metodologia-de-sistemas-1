@@ -25,6 +25,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 - [<font color="#8250DF"><strong>Clase 4 — 14/9 · Arquitectura de sistemas, escalabilidad y requerimientos</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-4)
 - [<font color="#8250DF"><strong>Clase 5 — 28/9 · Diagrama de clases UML, herencia y patrón MVC</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-5)
 - [<font color="#8250DF"><strong>Clase 6 — 19/10 · Corrección del TP, ambientes de software y pruebas</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-6)
+- [<font color="#8250DF"><strong>Clase 7 — 26/10 · Corrección del TP y tipos de pruebas</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-7)
 - [<font color="#8250DF"><strong>📝 Parcial</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#parcial)
 - [<font color="#8250DF"><strong>Material de referencia</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#material-de-referencia)
   - [<font color="#1A7F37">Guía TP grupal</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/00%20-%20Guria%20TP%20grupal.pdf)
@@ -547,6 +548,78 @@ Relacionado con **Unidad 3** (ver [Material de referencia](#material-de-referenc
 ### Material de la clase
 
 No hay un PDF específico cargado para la parte de corrección del TP. La introducción a Pruebas se apoya en **Unidad 4** (ver [Material de referencia](#material-de-referencia)), que profundiza lo visto en esta clase sobre ambientes de prueba.
+
+</details>
+
+---
+
+<details>
+<summary><a id="clase-7"></a><font color="#1A7F37"><strong>Clase 7 — 26/10 · Corrección del TP y tipos de pruebas</strong></font></summary>
+
+### Temas vistos
+
+- Corrección grupal del TP: estructura esperada del documento final, de punta a punta
+- Repaso de las etapas de Design Thinking y su lugar en el documento
+- Nivel de detalle exigido en los casos de uso y en los diagramas de estados
+- Repaso de asociación simple, composición y agregación con casos nuevos
+- Fechas confirmadas de entrega del TP
+- Profundización de Unidad 4 — Pruebas: *shift left/shift right*, tipos de prueba (unidad, integración, sistema, aceptación) y pruebas de caja blanca vs. caja negra
+
+#### Estructura esperada del documento del TP
+
+- El documento tiene que seguir un orden de punta a punta: primero la aplicación del **Design Thinking** completo (empatizar → definir → idear → prototipar → evaluar), después las **pantallas** resultantes de esa etapa de prototipado, luego los **requerimientos** (con su responsable asignado), y recién ahí el **modelo de casos de uso**, el **modelo de análisis** y el **modelo de pruebas**.
+- Las pantallas son, literalmente, el resultado de la etapa de prototipar de Design Thinking — puede que después se mejoren o cambien, pero tiene que quedar una versión inicial fruto de ese proceso, no pantallas armadas sin pasar por las etapas anteriores.
+- Repaso de las etapas de Design Thinking: **empatizar** (entender los problemas reales del cliente), **definir** (de todos los problemas detectados, elegir el más importante para atacar), **idear** (pensar alternativas sin restricciones económicas, técnicas ni sociales, y después elegir la que tenga mayor viabilidad), **prototipar** (armar una primera versión) y **evaluar** (mostrarle el prototipo al usuario; si no está conforme, se vuelve a idear o incluso a empatizar de nuevo).
+
+#### Nivel de detalle en los casos de uso
+
+- Repaso del criterio ya visto en clases anteriores, reforzado con nuevos ejemplos: los pasos de un caso de uso no describen el objetivo general del usuario, sino **literalmente qué botón presiona y en qué orden** — por ejemplo: "1. Presionar crear torneo. 2. Completar título. 3. Poner día y horario. 4. Presionar agregar." Si hay que completar un formulario, cada campo del formulario tiene que figurar como un paso.
+- Mostrar las pantallas junto con el modelo de análisis es una buena práctica (no obligatoria) porque facilita leer, testear y verificar el documento, aunque las pantallas en sí mismas siempre tienen que estar presentes en el documento como resultado del prototipado.
+
+#### Diagrama de estados: repaso con ejemplos corregidos
+
+- El diagrama de estados es siempre el de una **entidad concreta** — hay que aclarar explícitamente de qué entidad se está hablando (por ejemplo, "Diagrama de estados: Pedido").
+- Los nombres de los estados tienen que ser claros y no solaparse entre sí. Ejemplo corregido en clase: un grupo había definido para una imagen los estados "subida" y "visible" sin que hubiera ninguna diferencia real entre ambos (una foto subida ya queda visible); se corrigió unificando en un solo estado ("publicada") y dejando "categorizada" y "elegida" como los estados que sí aportan información distinta.
+- **Es raro un diagrama de estados que solo avance hacia adelante, sin posibilidad de volver atrás** — un ciclo de vida real casi siempre tiene caminos de excepción (por ejemplo, un pedido puede ir de "pendiente" a "cancelado", de "pagado" a "devuelto", de "entregado" a "reclamado"). Un diagrama de estados que termina siempre en el mismo estado final, sin alternativas, probablemente esté incompleto.
+- Si un estado depende de otro proceso para poder avanzar (por ejemplo, un pedido no puede pasar a "entregado" sin haber pasado antes por "pagado"), esa restricción tiene que quedar reflejada en el diagrama, aunque el requerimiento de pago lo haya resuelto otro integrante del equipo — es información que el programador necesita igual.
+
+#### Asociación, composición y agregación: casos nuevos
+
+- Repaso de la regla de decisión vista en la Clase 5: si al eliminar el objeto "todo" hay que eliminar también los objetos "parte", es composición; si los objetos "parte" pueden seguir existiendo de forma independiente, es agregación.
+- Ejemplo trabajado en clase: la relación `Torneo`–`Categoría` (un torneo puede tener de cero a muchas categorías) se definió como agregación, mientras que una relación similar entre `Pedido` y `Foto` se evaluó como composición, porque al eliminar el pedido las fotos asociadas a él también se eliminan.
+- Se corrigió el uso de una lista como atributo (por ejemplo, `listaFotos: List<Foto>` dentro de la clase `Pedido`) para representar una relación entre clases: la lista es un detalle de **implementación**, no reemplaza a la flecha de asociación (con su cardinalidad y su tipo: simple, composición o agregación) en el diagrama de clases — ambas cosas tienen que estar presentes y ser consistentes entre sí.
+
+#### Fechas confirmadas de entrega del TP
+
+- **Presentación preliminar:** 1/11, hasta las 23:30.
+- En la clase siguiente (2/11) se hace una devolución breve sobre esa presentación preliminar, antes de pasar a la entrega final.
+- **Entrega final:** en la última clase de la cursada.
+
+#### Pruebas: *shift left* y *shift right*
+
+- La práctica ágil recomienda hacer las pruebas lo antes posible dentro del ciclo de desarrollo (**shift left**): cuanto antes aparece un error, más rápido se puede corregir y más se aprende para no repetirlo en pantallas o funcionalidades posteriores.
+- No todas las pruebas se pueden adelantar: las pruebas de capacidad o de carga (por ejemplo, simular muchos usuarios concurrentes) necesitan tener los recursos y el entorno de pruebas completo, así que naturalmente quedan más hacia el final del ciclo (**shift right**).
+
+#### Tipos de prueba: unidad, integración, sistema y aceptación
+
+- **Pruebas de unidad (unit test):** validan que la unidad más pequeña de software (en nuestro caso, una función) funcione como se espera. Son responsabilidad de cada programador sobre su propio código — alguien externo no podría testear una función aislada sin conocer el contexto.
+- **Pruebas de integración:** garantizan que varios componentes (funciones de distintos programadores) funcionen bien en conjunto. Ejemplo trabajado en clase: un flujo de "crear pedido → pagar → entregar" hecho por tres programadores distintos, donde ninguno individualmente puede probar el flujo completo — hace falta una prueba de integración que llame a los tres componentes en secuencia.
+  - Diseñar la prueba de integración **antes** de programar condiciona cómo se tienen que programar las clases: si la prueba espera poder llamar a `pedido.pagar()` y `pedido.entregar()` de forma simple, el programador tiene que exponer esos métodos así, en vez de obligar a quien testea a conocer la estructura interna de cada clase.
+- **Pruebas de sistema:** miden el rendimiento integral de todo el sistema (por ejemplo, cuánto tarda en resolver una cierta cantidad de operaciones de forma concurrente), más allá de si el resultado es simplemente correcto o no.
+- **Pruebas de aceptación (UAT):** verifican que todo el sistema funcione bien desde el punto de vista del usuario final — las hace el propio usuario, en el ambiente de UAT (ver Clase 6).
+
+#### Caja blanca vs. caja negra
+
+- **Prueba de caja blanca:** quien testea conoce la lógica interna de la función (qué cálculos hace, qué pasos sigue), generalmente porque es la misma persona que la programó o tiene acceso a su código.
+- **Prueba de caja negra:** quien testea no tiene ninguna información del funcionamiento interno, solo conoce la documentación de la función (qué recibe, qué devuelve) y tiene que inferir y validar el comportamiento desde afuera.
+- Ejemplo trabajado en clase: una función `obtenerCotización` que recibe moneda base, moneda destino y, sin que estuviera documentado al principio, también una fecha — quien testea en caja negra tuvo que ir descubriendo parámetros ocultos y reglas no explícitas (por ejemplo, que toda conversión pasa internamente por dólares, con una comisión en cada paso) a partir de comparar resultados contra una fuente externa (la cotización del Banco Nación), en vez de poder revisar el código directamente.
+- **Conclusión del ejercicio:** cuanto mejor documentada esté una función (parámetros, reglas de negocio, casos borde), más fácil es testearla en caja negra sin tener que adivinar su comportamiento.
+
+⭐ **Conclusión útil para el TP:** para PilatesFlow conviene ordenar el documento final exactamente en esa secuencia (Design Thinking → pantallas → requerimientos → casos de uso → modelo de análisis → modelo de pruebas), prever una prueba de integración para el flujo completo de reservar un turno (verificar cupo → crear la reserva → confirmar), y documentar bien cualquier función que calcule disponibilidad de cupo para que se pueda testear en caja negra sin conocer su implementación interna.
+
+### Material de la clase
+
+No hay un PDF específico cargado para la corrección del TP. La profundización de Pruebas sigue apoyándose en **Unidad 4** (ver [Material de referencia](#material-de-referencia)).
 
 </details>
 
