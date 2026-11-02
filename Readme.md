@@ -26,6 +26,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 - [<font color="#8250DF"><strong>Clase 5 — 28/9 · Diagrama de clases UML, herencia y patrón MVC</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-5)
 - [<font color="#8250DF"><strong>Clase 6 — 19/10 · Corrección del TP, ambientes de software y pruebas</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-6)
 - [<font color="#8250DF"><strong>Clase 7 — 26/10 · Corrección del TP y tipos de pruebas</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-7)
+- [<font color="#8250DF"><strong>Clase 8 — 2/11 · Gestión de proyectos: PMI vs. Scrum</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-8)
 - [<font color="#8250DF"><strong>📝 Parcial</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#parcial)
 - [<font color="#8250DF"><strong>Material de referencia</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#material-de-referencia)
   - [<font color="#1A7F37">Guía TP grupal</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/00%20-%20Guria%20TP%20grupal.pdf)
@@ -626,6 +627,105 @@ No hay un PDF específico cargado para la corrección del TP. La profundización
 ---
 
 <details>
+<summary><a id="clase-8"></a><font color="#1A7F37"><strong>Clase 8 — 2/11 · Gestión de proyectos: PMI vs. Scrum</strong></font></summary>
+
+### Temas vistos
+
+- Áreas de gestión de un proyecto según el PMI: alcance, tiempo, costos, calidad, recursos, comunicación, riesgos, adquisiciones e interesados
+- Matriz de influencia e interés para gestionar stakeholders, y plan de comunicación según cada uno
+- Modelo RACI para asignar responsabilidades
+- Scrum: roles, backlog, sprints y eventos, comparado con el enfoque predictivo del PMI
+- Cómo se baja un requerimiento a tareas dentro de GitHub Projects: historias de usuario, criterios de aceptación y circuito desarrollo → QA
+
+> La grabación de esta clase arranca con la gestión del alcance ya comenzada, por lo que el inicio del tema (introducción a la Unidad 6) no figura en estos apuntes.
+
+#### Áreas de gestión de un proyecto (enfoque PMI)
+
+- **Alcance:** hacer solo lo que está autorizado. Si hay que hacer algo distinto, se comunica y se pide autorización a quien financia el proyecto, y se alertan los problemas que puedan aparecer. En el PMI el alcance se define de forma detallada en la planificación y se monitorea durante la ejecución; los cambios llegan como pedidos de cambio. En Scrum, en cambio, se parte de un backlog inicial que está previsto que cambie según los pedidos del dueño del producto (ver tabla más abajo).
+- **Tiempo:** mide si se avanza adelantado o atrasado, por qué, y qué consecuencias tiene a futuro. Ejemplo dado en clase: un videojuego navideño que tiene que salir antes de Navidad — dedicar horas extra a un detalle menor puede hacer que llegue tarde y pierda sentido. A veces el plazo lo marca el negocio y otras veces la competencia.
+- **Costos:** si el tiempo no se puede mover, la salida puede ser sumar gente (por ejemplo, dos perfiles senior), y entonces hay que ver cómo se financia.
+- **Calidad:** si tiempo y costos están fijos, el tercer factor que termina moviéndose es la calidad, por lo que hay que definir qué estándares se manejan.
+- **Recursos:** entrada y salida de personas, licencias y máquinas.
+- **Comunicación:** a quién se informa, y cómo, sobre el avance.
+- **Riesgos:** identificarlos, evaluarlos y mitigarlos.
+- **Adquisiciones:** contratos con proveedores.
+- **Interesados (stakeholders):** gestionar las expectativas de todas las partes involucradas.
+
+**Diapositiva de Unidad 6 — Manejo del alcance, PMI vs. Agile (Scrum):**
+
+| | PMI | Scrum |
+|---|---|---|
+| **Cómo se define el alcance** | De forma detallada en la fase de planificación | Con un backlog inicial de funcionalidades, previsto para cambiar |
+| **Qué pasa durante la ejecución** | Se monitorea el proyecto; en cada proyecto se define el nivel de comunicación del avance necesario para cada grupo de participantes | Cambia según los pedidos del dueño del producto |
+| **Cómo se modifica** | Mediante pedidos de cambio sobre el alcance | El dueño del producto prioriza; es un rol necesario y con alto involucramiento |
+
+#### Matriz de influencia e interés (stakeholders)
+
+- Se arma un gráfico de dos ejes —**influencia** (más/menos) e **interés** (más/menos)— y se ubica a cada interesado en uno de los cuatro cuadrantes. Interés es cuánto le importa al interesado que el proyecto salga bien; influencia es cuánto puede hacer que se modifique o se cancele.
+- Interesados mencionados: sponsor (quien pone el dinero), cliente, usuario, competencia, ARCA, gerente financiero, líder de compras y proveedores. Según el proyecto aparecen otros.
+- **Lo único fijo:** el sponsor va con mucha influencia y mucho interés. **El resto depende del proyecto y no hay una única respuesta correcta**: lo importante es poder justificar por qué se ubicó a cada uno donde se lo ubicó.
+- Criterios discutidos en clase:
+  - **Cliente:** mucha influencia (decide sobre el proyecto), por debajo del sponsor; su interés puede ser alto si el resultado lo favorece profesionalmente.
+  - **Gerente financiero:** poca influencia y poco interés, si solo aprueba pagos una vez que el cliente da el visto bueno.
+  - **Usuario:** es quien va a usar el sistema. Cuanto más operativa y simple es su tarea, menos influencia tiene; cuanto más técnica o especializada, más influencia. En general **nadie quiere cambiar**, por lo que es un riesgo a gestionar: hay que pensar cómo motivarlo, comunicarle y tenerlo en cuenta en el diseño.
+  - **Competencia:** poca influencia; su interés puede ser que nos vaya mal o, al revés, que abramos un mercado que después aprovecha.
+  - **ARCA:** poca influencia y mucho interés (recaudación), salvo que cambie una norma que afecte al proyecto.
+- **Plan de comunicación:** a cada cuadrante se le asigna una forma (email, teléfono, presencial) y una frecuencia. Ejemplos: resúmenes diarios o semanales para quienes tienen más influencia e interés, workshops cada 15 días, emails mensuales para los de menor peso. Conviene tener identificados a los stakeholders desde el inicio, para evitar que se dé de baja el proyecto sin haber estado enterados.
+
+#### Modelo RACI
+
+La diapositiva de Unidad 6 muestra el modelo **RACI**: una matriz con las tareas en las filas y los roles en las columnas, donde en cada cruce se indica si el rol es **Responsible** (ejecuta la tarea), **Accountable** (rinde cuentas y aprueba), **Consulted** (se lo consulta) o **Informed** (se lo mantiene informado).
+
+**Diapositiva de Unidad 6 — PMI vs. Agile | RACI model** (apartado "Impacto de su implementación en la Organización"): la matriz tiene cinco tareas en las filas y cinco roles en las columnas. En cada cruce se marca una letra: **R** (Responsible), **A** (Accountable), **C** (Consulted) o **I** (Informed). En el ejemplo de la diapositiva, una tarea puede tener varios consultados e informados a la vez, y un mismo rol puede ser R y A de una tarea (Tarea 4).
+
+#### Scrum frente al enfoque predictivo
+
+- El PMI es el estándar del enfoque predictivo: se predice el trabajo de cada fase y con eso su duración; el fin de proyecto puede variar solo con la aprobación de un cambio (por cambios de funcionalidad, errores de estimación o cambios propiamente dichos).
+- En un proyecto ágil se predice lo que se va a hacer en el **sprint actual**. Scrum es un método **iterativo e incremental** con sprints de entre una semana y un mes (en la diapositiva, 1 a 4 semanas); en cada sprint se construye una porción de la aplicación.
+- **Roles:** product owner (conoce el negocio del cliente y tiene contacto diario con el equipo), Scrum Master (cuida que las actividades se hagan según el proceso Scrum) y equipo de desarrollo. El analista (business analyst) traduce lo que pide el product owner a lenguaje técnico, porque el product owner entiende para qué sirve el producto pero no siempre el lenguaje tecnológico.
+- **Backlog:** plan inicial con el listado de requerimientos, ordenado de mayor a menor valor para el negocio (lo de menos importancia, como reportes estadísticos, va al final).
+- **Calidad:** en el método predictivo está planificada de antemano; en Scrum está incluida implícitamente en los procesos, a través de las prácticas y del rol del Scrum Master.
+- **Eventos:**
+  - **Daily:** reunión de unos 15 minutos todos los días — qué se hizo, en qué se está trabado y qué se piensa hacer ese día — para detectar quién está atrasado y ofrecer ayuda.
+  - **Sprint planning:** al inicio de cada sprint, el equipo elige del backlog qué entra en ese sprint. Cada sprint se trata como un proyecto independiente: planificación, ejecución y entrega.
+  - **Sprint review:** al final, se muestra lo hecho al product owner (puede participar el cliente) para confirmar que es lo esperado.
+  - **Retrospectiva:** reunión abierta de todo el equipo para evaluar cómo salió el sprint: qué anduvo bien, qué anduvo mal y qué propuestas hay. Sin feedback casi no hay mejora, por eso Scrum la fija una vez por sprint.
+- Los equipos recomendados son de **cinco a nueve personas**; si el equipo es más grande, se arman varios equipos de ese tamaño y se coordinan, porque pasado ese número se pierde facilidad de comunicación.
+- Se mencionó la guía oficial de Scrum / SBOK, disponible gratis en español (cerca de 437 páginas).
+
+**Gráfico del proceso Scrum mostrado en clase** (fuente: ausum.cloud), de izquierda a derecha:
+
+1. El **Product Owner** arma el **Product Backlog**.
+2. En la **Sprint Planning Meeting** el equipo (**Team**) elige qué entra en el sprint y arma el **Sprint Backlog**.
+3. Se ejecuta el **Sprint** (1 a 4 semanas), con una **Daily Scrum** cada 24 horas y el **Scrum Master** cuidando el proceso.
+4. Se obtiene el **Finished Work** (trabajo terminado), que se muestra en la **Sprint Review** y se analiza en la **Sprint Retrospective**.
+
+#### Del requerimiento a la tarea: ciclo de desarrollo en GitHub Projects
+
+- Al terminar Design Thinking se llega con un **prototipo** y un listado de **requerimientos funcionales** (lo que hay que desarrollar) y **no funcionales** (lo que hay que tener en cuenta al desarrollarlos). Con eso se entra en el ciclo de vida de desarrollo de sistemas, que conviene tener memorizado: **análisis → diseño → codificación → testing → implementación**.
+- En la etapa de análisis, el analista toma cada requerimiento (un requerimiento puede asociarse a varios casos de uso) y lo carga como una tarea en GitHub Projects. En el ejemplo de clase: *"req 1: registro usuarios"*.
+- Cada tarea lleva:
+  - **Historias de usuario**, con el formato *como [rol], quiero [algo], para [objetivo]*.
+  - **Criterios de aceptación**: lo que tiene que verificar QA para dar la tarea por terminada. En el ejemplo: registrar al usuario en la base con la contraseña hasheada, validar el email antes de activarlo, ofrecer recuperación de contraseña y exigir una estructura de contraseña acorde a las políticas de la empresa.
+  - **Archivos adjuntos** con toda la documentación: casos de uso, interfaz de usuario, diagrama de clases y diagrama de transición de estados, de modo que quien desarrolla tenga todo en un solo lugar.
+- **Circuito:** cuando la tarea tiene todos los adjuntos pasa a *Ready*. El developer la toma (*In progress*) y, al terminar, la pasa a QA. Mientras tanto, si QA no tiene tareas, puede leer los criterios y **diseñar los casos de prueba antes de que esté desarrollado**; al llegar la tarea ejecuta ese plan (una columna con qué probar y otra con si funciona o no). Si todo está bien, se da por terminada; si falta resolver cosas, vuelve a *In progress* con comentarios para el developer.
+- El tablero se filtra por grupo mediante un campo *Group*.
+
+**Plantilla de tarea mostrada en GitHub Projects** (título *req 1: registro usuarios*): la descripción trae un bloque **Historias de usuario** con la plantilla *como un… / quiero… / para…* y un bloque **Criterios de aceptación** con los cuatro puntos del ejemplo (contraseña hasheada, validación del email, recupero de contraseña y estructura de contraseña según las políticas de la empresa). La tarea se asocia a los tableros de la materia y tiene un estado (*Todo*, *In Progress*) y el campo *Group*.
+
+⭐ **Conclusión útil para el TP:** conviene cargar cada requerimiento de PilatesFlow como una tarea en GitHub Projects con su historia de usuario y sus criterios de aceptación (por ejemplo, "reservar turno": validar cupo disponible, respetar la regla de los 30 minutos y mostrar confirmación), adjuntar casos de uso, pantalla, diagrama de clases y de estados, y armar la matriz de influencia e interés con la clienta (instructora) como sponsor y cliente, las alumnas como usuarias y su resistencia al cambio (hoy reservan por WhatsApp) como riesgo a gestionar.
+
+### Material de la clase
+
+Contenido de **Unidad 6 — Gestión de proyectos** (ver [Material de referencia](#material-de-referencia)): la diapositiva sobre manejo del alcance en PMI vs. Agile y la del modelo RACI se mostraron en clase.
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_6-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%206/06%20-%20MetSis_I_U6_1.pdf)
+
+</details>
+
+---
+
+<details>
 <summary><a id="parcial"></a><font color="#8250DF"><strong>📝 Parcial</strong></font></summary>
 
 Logística y alcance anunciados en la Clase 5 (28/9) y repasados en la clase de corrección del 5/10 para el próximo parcial de la materia.
@@ -738,7 +838,7 @@ Desarrollada parcialmente en la Clase 5 (diagrama de clases, atributos, operacio
 
 ### UNIDAD 4
 
-Introducida en la Clase 6 (entornos virtuales de Python, pytest, ambientes de software — desarrollo, testing, UAT, producción — y priorización de testing).
+Introducida en la Clase 6 (entornos virtuales de Python, pytest, ambientes de software — desarrollo, testing, UAT, producción — y priorización de testing). Profundizada en la Clase 7 (shift left/shift right, pruebas de unidad, integración, sistema y aceptación, y caja blanca vs. caja negra).
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Pruebas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%204/04%20-%20MSI-01-Pruebas.pdf)
 
@@ -751,7 +851,7 @@ Introducida en la Clase 6 (entornos virtuales de Python, pytest, ambientes de so
 
 ### UNIDAD 6
 
-*Material subido, aún no desarrollado en clase.*
+Introducida en la Clase 8 (PMI vs. Scrum: alcance, RACI, roles, sprints y eventos). Las diapositivas de manejo del alcance y del modelo RACI se mostraron en clase.
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_6-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%206/06%20-%20MetSis_I_U6_1.pdf)
 
@@ -970,6 +1070,50 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
   - El flujo principal a priorizar en el testing es reservar un turno con cupo disponible y recibir la confirmación — tiene que funcionar siempre.
   - Falta definir si el equipo va a usar un entorno virtual de Python y un archivo `requirements.txt` desde ahora, para evitar problemas de versiones entre los tres integrantes.
   - Por el tamaño del proyecto, probablemente alcance con distinguir solo ambiente de desarrollo (local) y uno de prueba con la instructora antes de pasar a producción, sin necesidad de un ambiente de UAT separado.
+
+#### Estructura del documento y tipos de prueba (Clase 7 / Unidad 4) ❌
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%204/04%20-%20MSI-01-Pruebas.pdf" target="_blank" rel="noopener">Unidad 4 — Pruebas</a>.
+- **Diagrama / herramienta:** diagrama de estados de una entidad concreta (con caminos de excepción), y casos de prueba de unidad, integración, sistema y aceptación.
+- **Preguntas genéricas:**
+  - ¿El documento sigue el orden Design Thinking → pantallas → requerimientos → casos de uso → modelo de análisis → modelo de pruebas?
+  - ¿Los pasos de cada caso de uso describen literalmente qué botón se presiona y en qué orden?
+  - ¿Cada diagrama de estados indica de qué entidad es, y tiene caminos de vuelta o cancelación?
+  - ¿Qué flujo atraviesa varios componentes y necesita una prueba de integración?
+  - ¿Qué funciones convendría documentar mejor para poder testearlas en caja negra?
+- **Aplicado a PilatesFlow (a resolver antes de la entrega final):**
+  - Diagrama de estados de `Reserva`: creada → confirmada → cancelada (por la alumna o por la instructora) → asistida o ausente, con vuelta atrás por cancelación hasta 30 minutos antes del inicio.
+  - Prueba de integración del flujo completo: verificar cupo disponible → crear la reserva → confirmar → reflejar el avance 1/3, 2/3, 3/3 en la agenda de la instructora.
+  - Documentar con precisión la regla de los 30 minutos y el cupo máximo de 3, para que puedan validarse como caja negra.
+  - Fechas: presentación preliminar el 1/11 hasta las 23:30; devolución en la clase del 2/11; entrega final en la última clase.
+
+#### Gestión de stakeholders: matriz y plan de comunicación (Clase 8 / Unidad 6) ❌
+
+- **Tema:** visto en la Clase 8; se apoya en <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%206/06%20-%20MetSis_I_U6_1.pdf" target="_blank" rel="noopener">Unidad 6 — Gestión de proyectos</a> (RACI y PMI vs. Agile).
+- **Diagrama / herramienta:** matriz de influencia e interés con cuatro cuadrantes, y tabla de comunicación (forma y frecuencia por interesado). Opcional: matriz RACI para asignar responsabilidades por tarea.
+- **Preguntas genéricas:**
+  - ¿Quién es el sponsor y quiénes son los demás interesados (cliente, usuarios, competencia, organismos, proveedores)?
+  - ¿Dónde se ubica cada uno y cómo se justifica esa ubicación?
+  - ¿Con qué forma (email, teléfono, presencial) y con qué frecuencia se comunica el avance a cada uno?
+  - ¿Qué interesado puede resistirse al cambio y cómo se lo involucra?
+- **Aplicado a PilatesFlow (a completar):**
+  - La clienta (instructora) es sponsor y cliente a la vez: alta influencia y alto interés.
+  - Las alumnas son usuarias: interés medio y poca influencia individual; hoy reservan por WhatsApp, por lo que la resistencia al cambio es un riesgo a gestionar con un prototipo simple de usar.
+  - Falta definir el plan de comunicación con la clienta (por ejemplo, una devolución semanal del avance) y, si se usa, la matriz RACI de los tres integrantes del equipo.
+
+#### Requerimientos como tareas: historias de usuario y criterios de aceptación (Clase 8 / Unidad 2 y 6) ❌
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf" target="_blank" rel="noopener">Unidad 2 (parte 2) — documentación en agilidad: historias de usuario y criterios de aceptación</a>.
+- **Diagrama / herramienta:** tablero de GitHub Projects con una tarea por requerimiento (historia de usuario + criterios de aceptación + adjuntos) y las columnas Ready → In progress → QA → Done.
+- **Preguntas genéricas:**
+  - ¿Cada requerimiento tiene su historia de usuario en el formato *como / quiero / para*?
+  - ¿Los criterios de aceptación son verificables por quien hace QA?
+  - ¿Están adjuntos los casos de uso, la pantalla, el diagrama de clases y el de estados?
+  - ¿Quién diseña los casos de prueba y quién desarrolla cada tarea?
+- **Aplicado a PilatesFlow (a completar):**
+  - Cargar un requerimiento por tarea, por ejemplo "reservar turno": validar cupo disponible (máximo 3), respetar la regla de los 30 minutos y mostrar la confirmación con horario, instructora y duración.
+  - Adjuntar a cada tarea el caso de uso, la pantalla del prototipo y los diagramas de clases y de estados (`Reserva`).
+  - Repartir entre los tres integrantes quién desarrolla y quién diseña las pruebas de cada requerimiento.
 
 #### Etapas 5 y 6 — Desarrollo e Implementación ❌
 
