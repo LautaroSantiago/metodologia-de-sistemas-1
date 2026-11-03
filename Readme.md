@@ -27,7 +27,8 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 - [<font color="#8250DF"><strong>Clase 6 — 19/10 · Corrección del TP, ambientes de software y pruebas</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-6)
 - [<font color="#8250DF"><strong>Clase 7 — 26/10 · Corrección del TP y tipos de pruebas</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-7)
 - [<font color="#8250DF"><strong>Clase 8 — 2/11 · Gestión de proyectos: PMI vs. Scrum</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-8)
-- [<font color="#8250DF"><strong>📝 Parcial</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#parcial)
+- [<font color="#8250DF"><strong>📝 1° Parcial</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#parcial-1)
+- [<font color="#8250DF"><strong>📝 2° Parcial</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#parcial-2)
 - [<font color="#8250DF"><strong>Material de referencia</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#material-de-referencia)
   - [<font color="#1A7F37">Guía TP grupal</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/00%20-%20Guria%20TP%20grupal.pdf)
   - [<font color="#1A7F37">Planificación de la materia</font>](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/Planificaci%C3%B3n%20Metodolog%C3%ADa%20de%20Sistemas%20I.pdf)
@@ -633,9 +634,12 @@ No hay un PDF específico cargado para la corrección del TP. La profundización
 
 - Áreas de gestión de un proyecto según el PMI: alcance, tiempo, costos, calidad, recursos, comunicación, riesgos, adquisiciones e interesados
 - Matriz de influencia e interés para gestionar stakeholders, y plan de comunicación según cada uno
-- Modelo RACI para asignar responsabilidades
+- Modelo RACI para asignar responsabilidades, con ejemplos
+- Impacto de implementar un enfoque PMI en la organización
+- Gestión de riesgos: registro con probabilidad, impacto, score, mitigación y costo
 - Scrum: roles, backlog, sprints y eventos, comparado con el enfoque predictivo del PMI
 - Cómo se baja un requerimiento a tareas dentro de GitHub Projects: historias de usuario, criterios de aceptación y circuito desarrollo → QA
+- Cronograma de lo que resta de la cursada y formato del 2° parcial
 
 > La grabación de esta clase arranca con la gestión del alcance ya comenzada, por lo que el inicio del tema (introducción a la Unidad 6) no figura en estos apuntes.
 
@@ -674,9 +678,48 @@ No hay un PDF específico cargado para la corrección del TP. La profundización
 
 #### Modelo RACI
 
-La diapositiva de Unidad 6 muestra el modelo **RACI**: una matriz con las tareas en las filas y los roles en las columnas, donde en cada cruce se indica si el rol es **Responsible** (ejecuta la tarea), **Accountable** (rinde cuentas y aprueba), **Consulted** (se lo consulta) o **Informed** (se lo mantiene informado).
+La matriz RACI es otra herramienta del coordinador de proyectos: en las filas van las **tareas**, en las columnas los **roles**, y en cada cruce se indica qué papel cumple ese rol en esa tarea.
 
-**Diapositiva de Unidad 6 — PMI vs. Agile | RACI model** (apartado "Impacto de su implementación en la Organización"): la matriz tiene cinco tareas en las filas y cinco roles en las columnas. En cada cruce se marca una letra: **R** (Responsible), **A** (Accountable), **C** (Consulted) o **I** (Informed). En el ejemplo de la diapositiva, una tarea puede tener varios consultados e informados a la vez, y un mismo rol puede ser R y A de una tarea (Tarea 4).
+- **Responsible (R):** quien ejecuta la tarea.
+- **Accountable (A):** quien responde por el responsable; normalmente quien le asignó la tarea.
+- **Consulted (C):** a quién tiene que consultar el responsable para poder terminarla.
+- **Informed (I):** quién tiene que estar al tanto de las dificultades o avances.
+
+**Reglas que se marcaron en clase:**
+- Tiene que haber **un solo responsable por tarea**; si no, no queda claro quién avanza. En cambio, puede haber **más de un informado**, e incluso ninguno.
+- Un mismo rol puede cumplir varias funciones en una tarea (por ejemplo, ser a la vez accountable y consultado), y responsible y accountable pueden coincidir cuando alguien se asigna la tarea a sí mismo.
+- El informado importa porque, si el responsable no cumple, alguien tiene que **"salir a la cancha"**. Sin nadie a quien avisar, todos se lavan las manos y se puede perder el cliente.
+- Una tarea bien definida se describe con un objetivo y no con una orden mecánica (por ejemplo, "gestionar el stock de la casa" en vez de "hacer las compras").
+
+**Ejemplo doméstico:** tarea "mantenimiento de la cocina" — responsable el hijo menor, accountable la madre (quien se la asignó), que a la vez puede ser consultada; el hijo mayor queda como informado para poder cubrir la tarea si no se hace.
+
+**Ejemplo con sistemas** (roles: analista, arquitecto, líder de proyecto, developer, QA y usuario): *definir arquitectura* → responsable el arquitecto, informado QA; *diseñar modelo de datos* → responsable el arquitecto, consultados los developers; *gestionar pantalla de pedidos* → consultados el analista y el líder de proyecto, informado QA. Se aclaró que el **líder de proyecto** es el referente técnico (el developer con más experiencia, que asigna tareas según las fortalezas de cada uno), distinto del **coordinador de proyecto**, que domina la metodología (PMI, Scrum) pero no necesariamente la tecnología.
+
+**Para qué sirve:** transparenta las responsabilidades del equipo y minimiza conflictos ("yo no estaba enterado"). Además deja claras las dependencias: quien tiene que cargar usuarios sabe a quién reclamarle si la arquitectura todavía no está definida (va al líder de proyecto, y este al responsable), en vez de quedarse trabado por miedo a preguntar.
+
+**Diapositiva de Unidad 6 — PMI vs. Agile | RACI model** (apartado "Impacto de su implementación en la Organización"): la matriz tiene cinco tareas en las filas y cinco roles en las columnas, con las letras R, A, C e I en los cruces. En el ejemplo, una tarea puede tener varios consultados e informados a la vez, y un mismo rol puede ser R y A (Tarea 4).
+
+#### Impacto de implementar PMI en la organización
+
+- El enfoque PMI dedica tiempo a planificación, monitoreo y control. El personal sin metodología de planificación incorporada (por falta de capacitación o de experiencia en proyectos) puede tomar esas actividades como pérdida de tiempo por falta de visión.
+- En proyectos muy chicos quizás no se justifican todas estas herramientas; en proyectos más grandes, con varios integrantes, ayudan a evitar o minimizar conflictos entre stakeholders y el equipo.
+- Al principio, mostrar el avance de las actividades suele generar **resistencia al cambio** (a nadie le gusta que le pregunten en qué anda y qué progreso tiene). Estas herramientas hacen **público el estado del proyecto**: la RACI ayuda a organizarse, la matriz de stakeholders define quiénes son los interesados y la estrategia de comunicación, y la lista de riesgos anticipa los problemas.
+
+#### Gestión de riesgos
+
+- **Riesgo:** factor o evento que puede afectar el proyecto o hacerlo fracasar. El coordinador de proyecto mantiene una lista de riesgos y la presenta en cada reunión de avance con los stakeholders.
+- **Cada riesgo se registra con:** el **owner** (quien se hace responsable), la **probabilidad de ocurrencia**, el **impacto**, el **score** (probabilidad × impacto), la **acción de mitigación** y su **costo**. En clase se codificó de 1 a 3 (baja, media, alta); en la vida real el impacto se traduce a pesos.
+- **Mitigar** es reducir el riesgo: o se baja la probabilidad de que ocurra o se reduce su impacto. Toda mitigación cuesta (tiempo o dinero), y alguien del lado de los stakeholders tiene que pagarla. También se puede decidir no hacer nada ante un riesgo, pero el coordinador tiene que mostrar que existe y avisar.
+
+| Riesgo | Owner | Probabilidad | Impacto | Score | Mitigación | Costo (inventado en clase) |
+|---|---|---|---|---|---|---|
+| Corte de luz de los servidores | Gerente de sistemas | Baja (1) | Alto (3) | 3 | Grupo electrógeno | Inicial más un costo anual |
+| Usuario poco participativo (no va a las reuniones de requerimientos) | — | Media (2) | Alto (3) | 6 | Validaciones periódicas, con reuniones con el jefe del usuario | — |
+| Disponibilidad de hardware / soporte técnico | — | Baja (1) | Medio (2) | 2 | Máquina de repuesto | Compra de una máquina |
+| Ausencia no programada del líder de proyecto | Líder o coordinador de proyecto | Media (2) | Media (2) | 4 | Redistribuir tareas | — |
+
+- **Ejemplo de ausencias no programadas:** con 160 horas por mes por persona y un proyecto de 320 horas (dos meses), cada ausencia atrasa el proyecto, y eso significa perder plata y perder al cliente. Una mitigación posible es contratar gente adicional (por ejemplo, un full time y un part time) a unos 500 dólares por mes. Una alternativa, el home office, también tiene costo: instalar y configurar una máquina personal con las políticas de seguridad y la VPN.
+- **Otros riesgos mencionados:** enfermedades del equipo, ciberataques (más propio de proyectos grandes) y problemas de soporte que retrasan el desarrollo.
 
 #### Scrum frente al enfoque predictivo
 
@@ -713,7 +756,13 @@ La diapositiva de Unidad 6 muestra el modelo **RACI**: una matriz con las tareas
 
 **Plantilla de tarea mostrada en GitHub Projects** (título *req 1: registro usuarios*): la descripción trae un bloque **Historias de usuario** con la plantilla *como un… / quiero… / para…* y un bloque **Criterios de aceptación** con los cuatro puntos del ejemplo (contraseña hasheada, validación del email, recupero de contraseña y estructura de contraseña según las políticas de la empresa). La tarea se asocia a los tableros de la materia y tiene un estado (*Todo*, *In Progress*) y el campo *Group*.
 
-⭐ **Conclusión útil para el TP:** conviene cargar cada requerimiento de PilatesFlow como una tarea en GitHub Projects con su historia de usuario y sus criterios de aceptación (por ejemplo, "reservar turno": validar cupo disponible, respetar la regla de los 30 minutos y mostrar confirmación), adjuntar casos de uso, pantalla, diagrama de clases y de estados, y armar la matriz de influencia e interés con la clienta (instructora) como sponsor y cliente, las alumnas como usuarias y su resistencia al cambio (hoy reservan por WhatsApp) como riesgo a gestionar.
+#### Cierre de la clase y cronograma que resta
+
+- La presentación preliminar de los TPs estaba prevista para este día. Quedan por delante una revisión de TPs y la **presentación final** de los TPs.
+- Según el profesor, la semana siguiente hay feriado y la clase posterior (**16/11**) es el **2° parcial**, que se corrige en esa misma sesión; después hay otro feriado (23/11) y el recuperatorio (30/11). Ver la pestaña **2° Parcial**.
+- Se habilitaron las notas del 1° examen.
+
+⭐ **Conclusión útil para el TP:** conviene cargar cada requerimiento de PilatesFlow como una tarea en GitHub Projects con su historia de usuario y sus criterios de aceptación (por ejemplo, "reservar turno": validar cupo disponible, respetar la regla de los 30 minutos y mostrar confirmación), adjuntar casos de uso, pantalla, diagrama de clases y de estados, y armar la matriz de influencia e interés con la clienta (instructora) como sponsor y cliente, las alumnas como usuarias y su resistencia al cambio (hoy reservan por WhatsApp) como riesgo a gestionar. También conviene armar una matriz RACI entre los tres integrantes y una lista de riesgos con owner, probabilidad, impacto, score y mitigación (por ejemplo: ausencia de un integrante, usuarias que no usan la plataforma, caída del servicio).
 
 ### Material de la clase
 
@@ -726,7 +775,7 @@ Contenido de **Unidad 6 — Gestión de proyectos** (ver [Material de referencia
 ---
 
 <details>
-<summary><a id="parcial"></a><font color="#8250DF"><strong>📝 Parcial</strong></font></summary>
+<summary><a id="parcial-1"></a><font color="#8250DF"><strong>📝 1° Parcial</strong></font></summary>
 
 Logística y alcance anunciados en la Clase 5 (28/9) y repasados en la clase de corrección del 5/10 para el próximo parcial de la materia.
 
@@ -786,6 +835,36 @@ Todo se entrega en un único documento (Word), armado progresivamente a medida q
 - El modelo de diseño en profundidad y los modelos de implementación/despliegue no se desarrollan en detalle en esta materia — quedan para **Metodología de Sistemas II**.
 
 ⭐ **Conclusión útil para el TP:** los mismos artefactos que pide el parcial (requerimientos, caso de uso, modelo de clases a nivel de análisis) son, en la práctica, los mismos que hay que producir para la entrega de Análisis de PilatesFlow — conviene modelar cada requerimiento de PilatesFlow por separado (en vez de un único modelo de todo el sistema) y revisar que toda entidad mencionada en una pantalla o caso de uso (alumno, instructora, turno, clase) tenga su clase correspondiente en el modelo.
+
+</details>
+
+---
+
+<details>
+<summary><a id="parcial-2"></a><font color="#8250DF"><strong>📝 2° Parcial</strong></font></summary>
+
+Información anunciada en la Clase 8 (2/11) y en el cronograma oficial de la cátedra.
+
+- **Fecha:** clase del **16/11** (clase 14 del cronograma: "Parcial 2 / Corrección"). Se corrige en esa misma sesión.
+- **Recuperatorio:** 30/11 (clase 16), junto con la presentación de los TPs y el cierre de notas. El 23/11 es feriado.
+- **Formato:** similar al 1° parcial: un **caso a desarrollar** y preguntas de **opción múltiple** (se consultó en clase y el profesor lo confirmó).
+- **Recomendaciones del 1° parcial que conviene tener presentes** (a confirmar si se repiten): aprobar requiere el 60% de la evaluación (un 6); en las preguntas de opción múltiple se elige la **mejor** respuesta; copiar las consignas en un bloc de notas aparte antes de empezar. Ver la pestaña **1° Parcial**.
+
+#### Temas que entran (a confirmar con el profesor)
+
+El 2° parcial corresponde a lo visto después del 1° parcial. Según lo trabajado en clase:
+
+- **Pruebas** (Unidad 4): ambientes (desarrollo, testing, UAT, producción), pruebas de unidad, integración, sistema y aceptación, caja blanca vs. caja negra, *shift left/shift right* y priorización de qué testear. El profesor ya había anticipado en la Clase 5 que el 2° parcial incluía pruebas. Ver [Clase 6](#clase-6) y [Clase 7](#clase-7).
+- **Gestión de proyectos** (Unidad 6): PMI vs. Scrum, áreas de gestión (alcance, tiempo, costos, calidad, recursos, comunicación, riesgos, adquisiciones, interesados), matriz de influencia e interés, matriz RACI, gestión de riesgos, roles y eventos de Scrum, y el circuito de tareas en GitHub Projects. Ver [Clase 8](#clase-8).
+- **DevOps y servicios en la nube** (según el cronograma oficial): qué es DevOps y cómo se vincula con las etapas del ciclo de desarrollo, y principales herramientas en la nube. Ver el [cronograma](#funcionamiento-cronograma).
+
+#### Material para repasar
+
+- [Unidad 4 — Pruebas](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%204/04%20-%20MSI-01-Pruebas.pdf)
+- [Unidad 5 (parte 1)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_1.pdf) y [Unidad 5 (parte 2)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_2.pdf)
+- [Unidad 6 — Gestión de proyectos](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%206/06%20-%20MetSis_I_U6_1.pdf)
+
+⭐ **Para tener presente en el TP:** la presentación final de los TPs es posterior al 2° parcial (30/11, según el cronograma), por lo que conviene avanzar con el modelo de pruebas de PilatesFlow y con la gestión del proyecto (tareas en GitHub Projects, RACI y lista de riesgos) en paralelo a la preparación del parcial.
 
 </details>
 
