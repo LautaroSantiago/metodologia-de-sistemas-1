@@ -930,7 +930,65 @@ Introducida en la Clase 6 (entornos virtuales de Python, pytest, ambientes de so
 
 ### UNIDAD 6
 
-Introducida en la Clase 8 (PMI vs. Scrum: alcance, RACI, roles, sprints y eventos). Las diapositivas de manejo del alcance y del modelo RACI se mostraron en clase.
+Introducida en la Clase 8 (PMI vs. Scrum: alcance, RACI, roles, sprints y eventos). Las diapositivas de manejo del alcance y del modelo RACI se mostraron en clase; el resto del material (puntos marcados como "aún no visto en clase") queda como lectura de apoyo.
+
+**Temario:** gestión predictiva, gestión ágil, comparativa, pasaje de PMI a Scrum y pasaje de Scrum a Kanban.
+
+**Cascada vs. Agile.** En cascada las fases son secuenciales (requerimientos → diseño → desarrollo → test → despliegue → mantenimiento); en Agile se repite un ciclo corto de requerimientos, diseño, desarrollo, test, despliegue y revisión.
+
+**Áreas de conocimiento del PMBOK** (Project Management Body of Knowledge): integración (coordina todos los aspectos), alcance (define y controla el trabajo requerido), tiempo (programa y asegura plazos), costos (planifica, estima y controla el presupuesto), calidad (cumplimiento de estándares), recursos (humanos y materiales), comunicación (información e intercambio entre interesados), riesgos (identificar, evaluar y mitigar), adquisiciones (compras y contratos) e interesados (expectativas e influencias).
+
+**PMI vs. Agile (Scrum), área por área:**
+
+| Área | PMI | Scrum / Agile |
+|---|---|---|
+| Ciclo de vida | Tiende a cascada con grandes fases, pero admite fases pequeñas o medianas según la situación | Ciclos iterativos e incrementales, con iteraciones de una semana a un mes |
+| Tiempos | Predice el trabajo y la duración de cada fase y un fin de proyecto, que puede variar si se aprueba un cambio | Predice lo que se hará en el sprint actual y adapta la predicción con la experiencia del sprint anterior |
+| Alcance | Se define en detalle en la planificación y se monitorea en la ejecución; los cambios llegan como pedidos de cambio | Backlog inicial que puede cambiar según los pedidos del dueño del producto, con alto involucramiento de este rol para priorizar |
+| Costos | Incluye su gestión y distintos tipos de contratos para proveedores | No los trata directamente; los contratos en entornos ágiles suelen ser complicados |
+| Calidad | Unidad específica con procesos, herramientas, monitores, gráficos e indicadores para el aseguramiento (QA) y el control (QC) | Implícita en los procesos: rol de Scrum Master, retrospectivas, iteraciones cortas, revisiones, burndown chart e indicadores de control |
+| Equipo y comunicación | Grupo de procesos propio, desde la planificación de recursos humanos hasta la evaluación final; al cierre de la fase se registran las *lecciones aprendidas* (fortalezas, mejoras y acciones preventivas y correctivas) | Normas sobre gestión de equipos y actitudes esperadas |
+
+**Normas de Scrum sobre la gestión de equipos:** equipos de 5 a 9 personas (facilita su formación); reunión diaria y revisiones (facilitan la interacción); tablero de actividades (cada persona asume ante todos sus tareas y se ve si las cumple, lo que motiva la autogestión); retrospectiva (todos proponen mejoras y se comprometen a hacerlas).
+
+**Impacto de implementar estas metodologías en la organización:**
+
+- **Nuevos roles:** puede que no haya personas con el perfil en los sectores actuales; se opta por capacitar o contratar.
+- **Nuevas actividades y entregables de gestión:** hay que capacitar al personal para que entienda su valor.
+- **Tiempo para planificar, monitorear y controlar:** quien no tiene capacitación o experiencia en proyectos puede verlo como pérdida de tiempo; además, al principio la visualización del avance genera resistencia al cambio.
+- **Generación de reportes:** también puede verse como pérdida de tiempo; hay que comunicar para qué sirve cada uno (por ejemplo, la toma de decisiones de la gerencia).
+- **Indicadores de progreso:** en tareas operativas se suele creer que los atrasos se compensan con horas extra; cuando los desvíos son de semanas, los indicadores muestran lo difícil que es.
+- **Hacer público el estado del proyecto y mostrar problemas y riesgos:** el equipo suele no querer mostrar un avance negativo ni los riesgos; sin tratamiento de riesgos, es probable que aparezcan problemas que podían evitarse o mitigarse.
+- **No estar acostumbrado a trabajar en equipo:** el trabajo en equipo no se logra al inicio sino ya iniciado el proyecto; cuanto antes se logre, antes llegan los resultados.
+- **Falta de comunicación:** falta de interés por comunicar y por detectar quiénes son afectados por los cambios de cada integrante.
+- **Proyecto vs. trabajo operativo:** hay conflicto de prioridades entre quienes están asignados a un proyecto y a soporte operativo, cuya demanda es variable.
+
+Para cualquiera de las dos formas de gestión hacen falta apoyo de la gerencia, buena capacitación, comunicación de lo que se espera de cada uno y entender la motivación para usar una metodología.
+
+**Modelo RACI:** matriz de tareas por roles donde cada celda indica *Responsible* (ejecuta), *Accountable* (responde por el resultado), *Consulted* (se lo consulta) o *Informed* (se lo informa). Una misma persona puede ser R y A en una tarea.
+
+**Criterios para elegir entre enfoque ágil o predictivo** *(aún no visto en clase)*:
+
+| Criterio | Conviene predictivo | Conviene ágil |
+|---|---|---|
+| Prioridad de los sponsors | Que se cumpla un plan | Obtener el producto que aporte más valor al negocio |
+| Volatilidad de requerimientos | Bien definidos, estables y completos | Se descubren o cambian durante el proyecto |
+| Facilidad de prototipar y modificar | La tecnología hace los cambios muy costosos | Se prototipa con poco esfuerzo y los cambios son fáciles |
+| Involucramiento del usuario | — | Es fundamental; si no puede contarse con él, se pierden beneficios |
+| Tamaño del proyecto | Muy grande, con equipos difíciles de dividir o muy acoplados (coordinación a gran escala) | Equipos cohesivos de 5 a 9 personas |
+
+**Cambiar de PMI a Scrum** *(aún no visto en clase)*:
+
+- Pasar de la predicción a la adaptación: al inicio no existe una fecha de fin de proyecto. Es el cambio más fuerte, porque el negocio suele necesitar esa fecha, aunque muchas veces no puede estimarse realmente.
+- El seguimiento pasa de semanal a diario, lo que exige mucha disciplina.
+- Se planifica por sprint con *time boxing* y el esfuerzo restante se sigue con el burndown chart.
+- El control deja de ser del líder y pasa a la autogestión de quienes hacen el trabajo.
+- Con tablero físico, cualquiera con acceso a la sala puede ver el estado del proyecto (confidencialidad).
+- En proyectos grandes puede haber varios equipos con reunión diaria propia y una reunión diaria entre referentes de cada uno: el *scrum de scrums*.
+- El pasaje suele hacerse por partes (reuniones diarias, cronograma por sprints). En esos casos híbridos conviene definir qué objetivos hay que cumplir sí o sí y qué esfuerzos pueden sumarse después. Si no hay sprint, se controla la fecha de fin de cada tarea y se actualiza el cronograma todos los días, se está usando PMI "vestido de Scrum": solo se aprovechan la reunión diaria y el tablero.
+- Suele ser más fácil en equipos sin experiencia previa en PMI, porque quienes la tienen buscan conceptos que Scrum ya no usa (fecha de cierre de cada tarea, trabajo de los próximos tres meses) y eso genera inseguridad.
+
+**Cambiar de Scrum a Kanban** *(aún no visto en clase)*: el tablero pasa a representar el flujo de trabajo (por ejemplo Pending → Analysis → Development → Test → Deploy, con subcolumnas *Doing* y *Done*), se agrega el **límite de trabajo en progreso (WIP)** por columna, se optimiza el flujo y se incorporan los indicadores de Kanban. Si solo se quieren las prácticas de Kanban, se quitan las de sprint, la selección de funcionalidades y sus indicadores; la retrospectiva sigue siendo muy útil y puede hacerse cada cierto período aunque no haya sprint.
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_6-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%206/06%20-%20MetSis_I_U6_1.pdf)
 
@@ -1193,6 +1251,21 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
   - Cargar un requerimiento por tarea, por ejemplo "reservar turno": validar cupo disponible (máximo 3), respetar la regla de los 30 minutos y mostrar la confirmación con horario, instructora y duración.
   - Adjuntar a cada tarea el caso de uso, la pantalla del prototipo y los diagramas de clases y de estados (`Reserva`).
   - Repartir entre los tres integrantes quién desarrolla y quién diseña las pruebas de cada requerimiento.
+
+#### Elección del enfoque de gestión: predictivo, ágil o Kanban (Unidad 6) ❌
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%206/06%20-%20MetSis_I_U6_1.pdf" target="_blank" rel="noopener">Unidad 6 — Gestión de proyectos</a> (criterios de elección y pasaje de PMI a Scrum y de Scrum a Kanban; gran parte aún no vista en clase).
+- **Diagrama / herramienta:** tabla de criterios (prioridad de los sponsors, volatilidad de requerimientos, facilidad de modificar, involucramiento del usuario, tamaño del proyecto) y tablero con límites de trabajo en progreso (WIP).
+- **Preguntas genéricas:**
+  - ¿Los requerimientos son estables o se van a descubrir y cambiar durante el proyecto?
+  - ¿La clienta puede involucrarse de forma continua?
+  - ¿Alcanza un equipo chico y cohesivo o hace falta coordinar varios?
+  - ¿Qué se prioriza: cumplir un plan o entregar valor temprano?
+  - ¿Cuántas tareas puede haber en progreso a la vez en cada columna del tablero?
+- **Aplicado a PilatesFlow (a completar):**
+  - Equipo de tres integrantes y requerimientos que pueden ajustarse con las devoluciones de la clienta: encaja un enfoque ágil con entregas cortas, con la fecha final de entrega ya fijada por la materia.
+  - Si se usa el tablero de GitHub Projects, definir un límite de tareas en progreso por columna (In progress, QA) para no acumular trabajo sin terminar.
+  - Dejar asentado en el documento por qué se eligió ese enfoque, con los criterios de la tabla.
 
 #### Etapas 5 y 6 — Desarrollo e Implementación ❌
 
