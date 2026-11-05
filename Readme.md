@@ -999,6 +999,66 @@ Para cualquiera de las dos formas de gestión hacen falta apoyo de la gerencia, 
 
 Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tema visto en clase, dónde buscarlo en el material, qué diagrama o herramienta corresponde, qué preguntas genéricas hacerse para cualquier caso, y cómo quedó (o falta) aplicado a nuestro caso elegido (**PilatesFlow — Sistema de Gestión de Turnos**, Grupo 5). Se completa clase a clase, a medida que se van dando los temas.
 
+#### 📌 Estado actual del TP — PilatesFlow (documento "Gestión de Turnos PilatesFlow")
+
+Resumen de lo que ya está hecho en el documento del TP a la fecha (3/11/2026). Las secciones de abajo, organizadas por tema de clase, se usan para chequear cada punto contra este avance.
+
+| Sección del documento | Estado | Contenido |
+|---|---|---|
+| 1. Objetivo | ✅ Hecho | Objetivo general y objetivo SMART (valores propuestos, a validar con la clienta), perfil del cliente y planteo del problema |
+| 2. Design Thinking | ✅ Hecho (etapa 5 proyectada) | Empatizar, Definir (Ishikawa), Idear, Prototipar (8 pantallas y tabla de interacción) y Evaluar |
+| 3. Descripción y alcance | ✅ Hecho | Descripción, alcance y qué no incluye |
+| 4. Requerimientos funcionales | ✅ Hecho | 3 requerimientos, uno por integrante (U1, U2, U3), más las reglas de negocio |
+| 5. Requerimientos no funcionales | ✅ Hecho | 7 requerimientos con su forma de verificación |
+| 6. Modelo de casos de uso | ✅ Hecho | Interfaz, diagrama de casos de uso, casos de uso, diagrama de clases y de estados por requerimiento |
+| 7. Modelo de análisis | ✅ Hecho | 7 clases, relaciones y diagrama de clases completo |
+| 8. Modelo de pruebas | ✅ Hecho | 20 casos de prueba de caja negra, incluida una prueba de integración |
+| Anexo. Arquitectura | ✅ Hecho (propuesta) | Arquitectura centralizada en la nube, hosting, backend y base de datos |
+| 2.5 Evaluar | ⏳ Pendiente | Probar el prototipo con usuarios reales |
+| Desarrollo e implementación | ⏳ Pendiente | Todavía no se dio en clase |
+
+**Problema y objetivo.** Hoy las reservas y cancelaciones se gestionan 100 % por WhatsApp. El mayor punto de dolor de la instructora es no saber quién está anotado en cada día y horario; además hay riesgo de sobreturnos, fricción en las cancelaciones y mucho tiempo dedicado a responder mensajes. El objetivo es una plataforma web de autogestión, con cupo de 3 alumnos por clase. Las metas medibles propuestas son cero sobreturnos y al menos el 80 % de las reservas y cancelaciones sin intervención de la instructora.
+
+**Design Thinking.**
+- *Empatizar:* dos actores. La instructora es clienta, sponsor y usuaria interna (interés y influencia altos); los alumnos son usuarios externos (interés alto, influencia media) y pueden resistirse al cambio.
+- *Definir:* mapa de causa raíz (Ishikawa). La causa raíz es que no existe una fuente única y en tiempo real de la disponibilidad: la agenda vive en WhatsApp, que no controla cupos ni plazos.
+- *Idear:* se compararon cinco alternativas (agenda digital estándar, app móvil nativa, bot de WhatsApp, calendario online compartido y sistema de reservas web propio). Se eligió la última.
+- *Prototipar:* página web en HTML, CSS y JavaScript, con prototipo en Figma y una pizarra del funcionamiento del sistema.
+- *Evaluar:* proyectada, con el criterio de éxito de que cada alumno complete una reserva y una cancelación sin ayuda.
+
+**Alcance.** Desde que el alumno ingresa y ve la grilla hasta que recibe la confirmación de su reserva o cancelación, y desde que la instructora abre su agenda hasta que cancela una clase avisando a los alumnos. No incluye cobros ni facturación, recordatorios automáticos por WhatsApp o correo, ni otras instructoras o sedes.
+
+**Reglas de negocio.** Cupo máximo de 3 alumnos por clase; reservar y cancelar solo hasta 30 minutos antes del inicio; un alumno no puede reservar dos veces el mismo turno; cuando cancela la instructora, el mensaje a los alumnos es obligatorio; el cobro queda fuera del sistema.
+
+**Requerimientos funcionales.**
+1. **RF01 (U1) — Ingresar al sistema:** correo y contraseña, con acceso según el rol (alumno o instructora). Caso de uso: CU 1.1 Iniciar sesión. No se modela diagrama de estados, y los casos de registro y recuperación de contraseña quedan como estándar no desarrollados.
+2. **RF02 (U2) — Reservar y cancelar turnos:** CU 2.1 Consultar horarios disponibles, CU 2.2 Reservar turno, CU 2.3 Consultar mi agenda y CU 2.4 Cancelar reserva. Incluye diagrama de estados de `Reserva`.
+3. **RF03 (U3) — Gestionar la agenda de la instructora:** CU 3.1 Consultar agenda diaria, CU 3.2 Consultar alumnos inscriptos, CU 3.3 Cancelar turno con aviso y CU 3.4 Descargar copia de seguridad. Incluye diagrama de estados de `Turno` (Disponible, Parcialmente ocupado, Completo, Cancelado, Finalizado).
+
+**Requerimientos no funcionales.**
+
+| Categoría | Compromiso | Verificación |
+|---|---|---|
+| Rendimiento | Grilla y confirmación en 3 segundos o menos en el 95 % de las operaciones | 20 reservas de prueba en testing |
+| Capacidad | Hasta 30 usuarios conectados a la vez | Prueba de carga con 30 usuarios |
+| Integridad | Ninguna clase supera las 3 reservas activas, ni con reservas simultáneas del último lugar | Dos reservas simultáneas: solo una se confirma |
+| Seguridad | Contraseñas con hash y acceso por rol | Revisar la base y probar con una cuenta de alumno |
+| Adaptabilidad | Celular y computadora, desde 360 px, en las dos últimas versiones de Chrome, Firefox, Safari y Edge | Prueba manual |
+| Disponibilidad | 99 % mensual (hasta 7 horas de caída) | Reporte del proveedor de hosting |
+| Persistencia | Las reservas se recuperan al volver a ingresar; el prototipo usa localStorage y permite descargar un backup SQLite | Reservar, cerrar y reabrir |
+
+**Modelo de análisis (clases).** `Usuario` (abstracta) con las subclases `Alumno` e `Instructora`, más `Clase`, `Turno`, `Reserva` y `Aviso`. Un alumno realiza muchas reservas (0..\*), cada reserva corresponde a un turno, un turno pertenece a una clase y admite hasta 3 reservas, y la instructora gestiona los turnos y envía avisos. Queda para Diseño decidir si la relación `Turno`–`Reserva` es composición o agregación.
+
+**Modelo de pruebas.** 20 casos de caja negra: CP01–CP04 para el ingreso, CP05–CP12 para reservar y cancelar, CP13–CP19 para la agenda de la instructora y CP20 como prueba de integración del flujo completo (el alumno reserva y se desuscribe, y la agenda de la instructora pasa de 2/3 a 1/3).
+
+**Arquitectura propuesta.** Centralizada en la nube y monolítica simple: frontend estático en Vercel, backend con Supabase, base relacional PostgreSQL (tablas Usuarios, Clases, Turnos, Reservas y Avisos) y autenticación con contraseña cifrada. El prototipo actual todavía no tiene servidor ni base compartida: guarda en localStorage.
+
+**Pendiente y a validar con la clienta.**
+- Confirmar los valores propuestos (objetivo medible, plazo de puesta en marcha, valores de los requerimientos no funcionales).
+- Realizar la etapa Evaluar con usuarios reales.
+- Definir en Diseño la relación `Turno`–`Reserva` (composición o agregación) y el plan de comunicación con la clienta.
+- Completar las etapas de desarrollo e implementación cuando se den en clase.
+
 #### Diferencia de expectativas (Clase 1) ❌
 
 - **Preguntas genéricas:**
