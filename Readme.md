@@ -852,17 +852,145 @@ Información anunciada en la Clase 8 (2/11) y en el cronograma oficial de la cá
 
 #### Temas que entran (a confirmar con el profesor)
 
-El 2° parcial corresponde a lo visto después del 1° parcial. Según lo trabajado en clase:
+El 2° parcial corresponde a lo visto después del 1° parcial. La inclusión definitiva de cada tema se confirma con el profesor; el temario de abajo reúne todo lo trabajado en clase, las diapositivas de las Unidades 4, 5 y 6 y la pizarra.
 
-- **Pruebas** (Unidad 4): ambientes (desarrollo, testing, UAT, producción), pruebas de unidad, integración, sistema y aceptación, caja blanca vs. caja negra, *shift left/shift right* y priorización de qué testear. El profesor ya había anticipado en la Clase 5 que el 2° parcial incluía pruebas. Ver [Clase 6](#clase-6) y [Clase 7](#clase-7).
-- **Gestión de proyectos** (Unidad 6): PMI vs. Scrum, áreas de gestión (alcance, tiempo, costos, calidad, recursos, comunicación, riesgos, adquisiciones, interesados), matriz de influencia e interés, matriz RACI, gestión de riesgos, roles y eventos de Scrum, y el circuito de tareas en GitHub Projects. Ver [Clase 8](#clase-8).
-- **DevOps y servicios en la nube** (según el cronograma oficial): qué es DevOps y cómo se vincula con las etapas del ciclo de desarrollo, y principales herramientas en la nube. Ver el [cronograma](#funcionamiento-cronograma).
+- **Pruebas** (Unidad 4): unidad, integración, sistema y aceptación; funcionales y no funcionales; caja blanca y negra; *shift left/shift right*; priorización de qué testear; `pytest`, `venv` y `requirements.txt`; seguridad (SQL injection, OWASP). Ver [Clase 6](#clase-6) y [Clase 7](#clase-7) y el [repaso de pruebas](#parcial-2-pruebas).
+- **Ambientes, DevOps y nube** (Unidad 5): ambientes y despliegue, DevOps, CI/CD, Git, infraestructura como código, contenedores y Docker, ITIL/CMDB, y servicios en la nube (IaaS, PaaS, SaaS). Ver el [repaso de DevOps y nube](#parcial-2-devops).
+- **Gestión de proyectos** (Unidad 6): PMI vs. Scrum, áreas de gestión (alcance, tiempo, costos, calidad, recursos, comunicación, riesgos, adquisiciones, interesados), matriz de influencia e interés, matriz RACI, gestión de riesgos, roles y eventos de Scrum, y el circuito de tareas en GitHub Projects. Ver [Clase 8](#clase-8) y el [repaso de gestión](#parcial-2-gestion).
 
 #### Material para repasar
 
 - [Unidad 4 — Pruebas](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%204/04%20-%20MSI-01-Pruebas.pdf)
 - [Unidad 5 (parte 1)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_1.pdf) y [Unidad 5 (parte 2)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_2.pdf)
 - [Unidad 6 — Gestión de proyectos](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%206/06%20-%20MetSis_I_U6_1.pdf)
+
+<a id="parcial-2-pruebas"></a>
+#### Repaso: Pruebas de software (Unidad 4)
+
+- **Idea de fondo:** se prueba para que los errores no lleguen al cliente. No se puede testear todo (el tiempo cuesta), así que se **prioriza**: se prueba a fondo el flujo principal y lo importante para el cliente, y el resto según el riesgo. Las pruebas ya no son un paso final: empiezan en la planificación y el diseño.
+- **Niveles:**
+
+| Nivel | Qué valida | Quién lo hace |
+|---|---|---|
+| Unidad | Cada unidad (en la materia, una función) funciona como se espera | Cada programador, sobre su propio código |
+| Integración | Que los componentes funcionen juntos | QA automation o alguien externo al desarrollo |
+| Sistema | El rendimiento integral: funcionales, no funcionales, interfaz, estrés y recuperación | Equipo de testing |
+| Aceptación (UAT) | Que todo funcione según lo previsto | El usuario |
+
+- **Prueba de integración (pizarra):** se crea un pedido, se paga y se entrega, y se devuelve verdadero o falso según que todo el flujo haya salido bien. Integra el trabajo de tres componentes (pedido, pago y entrega) y condiciona cómo se implementa cada uno, por eso conviene diseñar las pruebas mientras se arma la documentación.
+
+```text
+fun testPedido(){
+  estado = false
+  oPedido = Pedido(cliente1,[productos])
+  oPago = Pago(oPedido)
+  if oPago.Ok {
+    oEntrega = Entrega(oPedido)
+    if oEntrega.ok { estado = true }
+  }
+  return estado
+}
+```
+
+- **Prueba de sistema (pizarra):** se ejecuta el test de integración 10 veces en forma concurrente y se mide el tiempo total (`fin - inicio`). No solo verifica que termine bien, sino qué tan rápido y con qué concurrencia.
+- **Pruebas funcionales:** caja blanca, caja negra, *ad hoc*, de API (en clase se mostró Postman), exploratorias, de regresión (las nuevas características no rompen lo existente), de cordura o *sanity* (verificación superficial de funciones específicas) y de humo o *smoke* (verifican que las funciones básicas anden y la compilación sea estable). También aceptación del usuario (UAT).
+- **Pruebas no funcionales:** recuperación, rendimiento, carga, estrés, seguridad, usabilidad y compatibilidad. Rendimiento, carga y estrés son lo mismo con distintos niveles. Con DevOps y la automatización, las distinciones entre regresión, cordura y humo pierden relevancia, porque todo se ejecuta casi constantemente.
+- **Manuales vs. automatizadas:** las manuales sirven para pruebas exploratorias, de usabilidad y aplicaciones chicas; las automatizadas, para tareas repetitivas y sistemas grandes (más rápidas, coherentes y con menos error humano).
+- **Caja blanca vs. caja negra** (ejemplo `obtener_cotizacion(moneda_base, moneda_destino[, fecha])`):
+  - Caja negra: no se conoce la lógica interna; se compara el resultado contra una fuente externa y la documentación. Es más simple y rápida, pero limitada.
+  - Caja blanca: se conoce la lógica (por ejemplo, que pasar de pesos a yuanes implica dos conversiones vía dólar, con comisión en cada una), por lo que se diseñan casos en los bordes de las decisiones internas. Requiere más tiempo y se reserva para funciones muy importantes.
+- ***Shift left* y *shift right*:** el primero lleva las pruebas a las etapas tempranas (errores más rápidos y baratos de corregir); el segundo prueba y monitorea en producción con datos reales (*smoke tests*, *canary releases*, feedback del usuario). La secuencia del PDF es: probar nuevos requerimientos → nuevo código → cada *build* → cada despliegue → producción.
+- **Plan de pruebas (10 componentes):** introducción, alcance, enfoque, tipos de testing, herramientas, roles y responsabilidades, cronograma, gestión de riesgos, criterios de entrada y salida, y entregables.
+- **`pytest`, `venv` y `requirements.txt`:** con `pip install pytest` y el comando `pytest` se ejecutan los tests y se informa cuáles pasaron o fallaron (por ejemplo, `assert sumar(2, 3) == 5`). Sin entorno virtual los paquetes se instalan de forma global y no se sabe qué versión se usa; con `venv` se asegura la versión y se facilita el trabajo en equipo.
+
+```bash
+python -m venv mi_venv
+source mi_venv/bin/activate        # en Windows: mi_venv\Scripts\activate
+pip install requests
+pip freeze > requirements.txt      # el archivo se sube al repositorio
+```
+
+- **Seguridad: SQL injection y OWASP.** Si la consulta se arma concatenando los parámetros (`"... WHERE username = '" + param1 + "' AND password = '" + param2 + "'"`), un valor como `' OR '1'='1` devuelve muchos registros y puede autenticar a cualquiera. Se previene validando las entradas (longitud y caracteres permitidos) y con consultas parametrizadas, y se puede automatizar como prueba de seguridad. **OWASP** publica cada año el *Top Ten* de vulnerabilidades más reportadas (control de acceso, fallas criptográficas, inyección, diseño inseguro, etc.); se relaciona con **CWE** (catálogo de debilidades) y **CVE** (registro de vulnerabilidades por sistema). Se usa para elegir qué testear según la categoría.
+- **Roles:** el programador hace las pruebas de unidad; el QA automation, las de integración y sistema; el usuario, las de aceptación, que se enfocan en lo difícil de automatizar (datos que faltan, reportes lentos, experiencia de usuario).
+- **Tendencias (PDF):** *low-code/no-code*, IoT y pruebas de *edge*, 5G, sistemas predictivos y de autorreparación con IA, e IA generativa para crear casos de prueba. Las pruebas de autorreparación con IA se dejaron para una clase siguiente; no se sabe si entran en el parcial.
+
+<a id="parcial-2-devops"></a>
+#### Repaso: ambientes, DevOps y nube (Unidad 5)
+
+- **Ambientes y despliegue:** cada traslado a otro ambiente es un *deploy*.
+
+| Ambiente | Dónde corre | Para quién |
+|---|---|---|
+| Desarrollo | Máquina local del programador | Desarrolladores |
+| Testing (QA) | Servidor compartido | Testers |
+| UAT | Servidor compartido | Cliente y usuarios |
+| Producción | Servidor de producción | Todos |
+
+  - Un ambiente no accede al otro: el tester no entra a la máquina del desarrollador y el desarrollador no corrige directamente en el servidor de testing.
+  - **Regla básica: desarrollo no accede a producción** (control interno). Cada ambiente tiene sus propias claves y quien pasa los cambios de uno a otro es el **administrador de sistemas** (y el **administrador de base de datos**).
+- **DevOps:** filosofía o conjunto de prácticas que une a los equipos de desarrollo (Dev) y operaciones (Ops) para mejorar la colaboración, automatizar los procesos y optimizar el ciclo de vida del software. Combina **cultura, métodos y herramientas** (esa es la pirámide del PDF: cultura arriba, herramientas en la base). Se representa con un símbolo de infinito: Dev (code → plan → build → test) y Ops (release → deploy → operate → monitor).
+  - Claves: colaboración y comunicación, automatización de tareas repetitivas, ciclo de vida ágil y mejora continua. Valores: confianza, transparencia, comunicación, coordinación y disciplina.
+  - En clase: Dev programa y Ops pasa los cambios entre ambientes. Antes se hacía a mano; el costo en tiempo llevó a automatizar. El desarrollador debe programar de modo que el administrador pueda automatizar, por ejemplo con **variables de entorno** como `CADENA_CONEXION`, que apunta a una base distinta en desarrollo, testing y producción. **DevOps es la idea; CI/CD son las herramientas** que permiten aplicarla.
+  - Herramientas habituales: control de versiones (Git), CI/CD, infraestructura como código, contenedores y orquestación, y monitoreo.
+- **CI/CD:**
+  - **Integración continua (CI):** cada cambio en el código fuente genera automáticamente el ejecutable (por ejemplo, Maven toma el código y las dependencias y genera un `.jar`) y ejecuta tests automáticos (estáticos, dinámicos). Si dan bien se integra; si no, se devuelve.
+  - **Entrega o despliegue continuo (CD):** implementa automáticamente en los ambientes. Al pasar a cada uno se actualizan las variables de entorno y se ejecutan los tests de nuevo, hasta llegar a producción.
+  - **Pipeline:** secuencia automatizada (build → test → deploy). Herramientas mencionadas: GitHub Actions, GitLab, Jenkins.
+- **Flujo con Git:** `main` es la rama principal; cada desarrollador trabaja en su rama y al terminar hace un *pull request*. El coordinador revisa el código y ejecuta los tests; si hay problemas no integra. Una *protected branch* exige autorización para el *merge*. Al integrar en `main` se disparan los pasos hacia testing y producción.
+- **Infraestructura como código (IaC):** gestionar y automatizar servidores, redes, etc. mediante código, para replicar entornos de forma rápida y sin errores humanos.
+- **Contenedores y Docker:** un contenedor empaqueta la aplicación y sus dependencias en una unidad portátil que se ejecuta igual en cualquier entorno. El flujo es *Dockerfile → imagen → contenedor*.
+  - **Imagen:** describe cómo se compone el contenedor (se descargan de Docker Hub). **Dockerfile:** receta para construir una imagen propia. **Contenedor:** instancia en ejecución. **Docker Compose:** un archivo que define varios contenedores (imagen, puertos, variables de entorno, volúmenes y redes) y se levanta con `docker compose up`.
+  - **Máquina virtual vs. Docker:** cada VM carga un sistema operativo completo sobre un hipervisor; Docker carga un Linux base una sola vez y los contenedores solo suman las librerías necesarias, por lo que arranca mucho más rápido.
+  - **Ventaja en equipo:** con un archivo compartido en GitHub todos desarrollan con el mismo entorno, y los problemas de compatibilidad y configuración se detectan temprano y no pasan a otros ambientes.
+- **ITIL y CMDB:** ITIL es una buena práctica de gestión de tecnologías basada en documentar todo en una base compartida, la **CMDB** (*Configuration Management Database*): hardware, software, servicios, documentación, personas y sus relaciones. Permite medir uso y responder cuánto cuesta mantener una aplicación, algo cada vez más relevante porque los proveedores cloud cobran por uso.
+- **Nube (*cloud computing*):** acceso a recursos informáticos (servidores, almacenamiento, bases de datos, redes o software) por Internet, sin infraestructura física propia. Características: acceso desde cualquier lugar, escalabilidad automática, menores costos de mantenimiento y mayor disponibilidad y resiliencia. En el modelo *on premise*, en cambio, hay que resolver almacenamiento, certificado SSL, cuentas FTP, backups, capacidad de cómputo, bases de datos, correo y ancho de banda.
+
+| Modelo | Qué es | Ejemplos |
+|---|---|---|
+| IaaS | Infraestructura básica virtualizada (servidores, redes, almacenamiento) | AWS EC2 |
+| PaaS | Entorno preconfigurado para desarrollar, probar y desplegar | AWS Elastic Beanstalk, Heroku |
+| SaaS | Aplicaciones listas para usar por Internet | Gmail, Office 365, ClickUp |
+
+  - Quién gestiona cada capa (aplicaciones, datos, runtime, middleware, sistema operativo, virtualización, servidores, almacenamiento y redes): en *on premise* todo está a cargo de la empresa; en **IaaS** el proveedor se ocupa desde la virtualización hacia abajo; en **PaaS** también del runtime, el middleware y el sistema operativo (la empresa gestiona aplicación y datos); en **SaaS** se ocupa de todo.
+  - **Servidor dedicado:** servidor físico exclusivo, sin recursos compartidos; más recursos, escalabilidad y personalización, pero costos elevados y más conocimientos técnicos. **VPS** (*Virtual Private Server*): aislada, puede tener su propio sistema operativo, pero comparte recursos. El servidor cloud corre en un grupo de servidores y comparte recursos de forma distribuida, con más flexibilidad y disponibilidad pero menos aislación.
+  - **Web hosting vs. cloud servers (pizarra):** en el *web hosting* un mismo servidor (por ejemplo, 4 CPU y 4 GB de RAM) aloja del orden de mil sitios de distintos clientes, cada ruta asociada a un dominio; en un *cloud server* (por ejemplo, 16 CPU y 32 GB) se instala Docker y se levantan varios contenedores.
+  - Otros datos del cloud: se elige el software a instalar, se aumenta la CPU con pocos clics, los *snapshots* son copias exactas del servidor y la distancia al servidor cambia la latencia.
+
+<a id="parcial-2-gestion"></a>
+#### Repaso: gestión de proyectos (Unidad 6) — datos de la pizarra
+
+- **Matriz de influencia e interés (cuadrantes numerados):** 1 = alta influencia y alto interés; 2 = alta influencia y bajo interés; 3 = baja influencia y bajo interés; 4 = baja influencia y alto interés. Siempre hay que **justificar** la ubicación de cada interesado. Ejemplo de clase: el sponsor y el cliente en el cuadrante 1; los usuarios en el 2; un proveedor en el 4; la competencia y la gerencia financiera en el 3.
+- **RACI:** ejemplo de proyecto de sistemas con las columnas Analista, Arquitecto, líder de proyecto, Dev 1, Dev 2, QA y Usuarios.
+
+| Tarea | Analista | Arquitecto | LP | Dev 1 | Dev 2 | QA | Usuarios |
+|---|---|---|---|---|---|---|---|
+| Carga de usuarios | | I | A | R | C | I | |
+| Gestionar pantalla de pedidos | C | | A y C | I | R | I | |
+| Definir la arquitectura del sistema | I | R | A y C | | | I | |
+| Diseñar el modelo de datos | C | R | A y C | C | C | I | |
+
+- **Gestión de riesgos (escala de 1 a 3; score = probabilidad × impacto):**
+
+| Riesgo | Owner | Prob. | Impacto | Score | Mitigación | Costo |
+|---|---|---|---|---|---|---|
+| Corte de luz | Gte. de Sistemas | 1 | 3 | 3 | Grupo electrógeno | u$s 5000 inicial + u$s 1000 por año |
+| Ausencias no programadas | Líder de proyecto | 2 | 2 | 4 | Contratar gente adicional | u$s 500 por mes |
+| Usuario poco participativo | Analista | 2 | 3 | 6 | Validaciones periódicas | Alrededor de u$s 300 (capacitación) |
+| Disponibilidad del hardware | Soporte técnico | 1 | 2 | 2 | Máquina de repuesto | u$s 1400 (2 máquinas) + u$s 600 en componentes |
+
+- **Duración del sprint:** el PDF dice "entre una semana y un mes", la guía "1 a 4 semanas" y en clase se usó "dos semanas" como ejemplo; son equivalentes.
+
+#### Preguntas teóricas comentadas del 1° parcial
+
+- *¿Qué ocurre durante la fase de implementación?* Recoger requisitos es análisis y los diagramas son diseño; la implementación es programar. Ninguna de las opciones "puras" correspondía, y las pruebas unitarias las hace el programador, aunque la opción se discutió.
+- *En la gestión ágil, ¿cómo se asegura la P de* Product*?* Desarrollando **incrementos funcionales validados por el cliente en iteraciones**: el producto es el conjunto de requerimientos, y se asegura con feedback del cliente, no entregando todo de una vez ni sin pruebas durante el desarrollo.
+
+#### Resumen para repasar
+
+- **Pruebas:** unidad → integración → sistema → aceptación; funcionales vs. no funcionales; caja blanca vs. negra; *shift left* (temprano) y *shift right* (producción); automatizar lo repetitivo y priorizar por costo y riesgo.
+- **DevOps:** cultura + métodos + herramientas; Dev + Ops; CI/CD; ambientes (dev → testing → UAT → producción, y desarrollo no accede a producción); IaC; contenedores y Docker; ITIL y CMDB; nube (IaaS, PaaS, SaaS).
+- **Gestión:** PMI predice y planifica en detalle; Scrum adapta por sprints; RACI asigna roles por tarea; la matriz de influencia e interés ubica a los interesados; el score de riesgo es probabilidad × impacto.
+- **Para explicar con ejemplos:** qué prueba corresponde en cada caso, en qué ambiente se hace, quién la hace y cómo se relaciona con el ciclo de desarrollo. No alcanza con memorizar definiciones.
 
 ⭐ **Para tener presente en el TP:** la presentación final de los TPs es posterior al 2° parcial (30/11, según el cronograma), por lo que conviene avanzar con el modelo de pruebas de PilatesFlow y con la gestión del proyecto (tareas en GitHub Projects, RACI y lista de riesgos) en paralelo a la preparación del parcial.
 
@@ -923,7 +1051,7 @@ Introducida en la Clase 6 (entornos virtuales de Python, pytest, ambientes de so
 
 ### UNIDAD 5
 
-*Material subido, aún no desarrollado en clase.*
+Desarrollada en las Clases 6 y 7 (DevOps, CI/CD, ambientes, contenedores) y en la Clase 8 (servicios en la nube). Los puntos de detalle están en la pestaña [2° Parcial](#parcial-2).
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_5_(parte_1)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_1.pdf)
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_5_(parte_2)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_2.pdf)
@@ -1326,6 +1454,20 @@ Resumen de lo que ya está hecho en el documento del TP a la fecha (3/11/2026). 
   - Equipo de tres integrantes y requerimientos que pueden ajustarse con las devoluciones de la clienta: encaja un enfoque ágil con entregas cortas, con la fecha final de entrega ya fijada por la materia.
   - Si se usa el tablero de GitHub Projects, definir un límite de tareas en progreso por columna (In progress, QA) para no acumular trabajo sin terminar.
   - Dejar asentado en el documento por qué se eligió ese enfoque, con los criterios de la tabla.
+
+#### Ambientes, DevOps y nube (Clases 6 y 7 / Unidad 5) ❌
+
+- **Tema:** <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_1.pdf" target="_blank" rel="noopener">Unidad 5 (parte 1) — DevOps</a> y <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_2.pdf" target="_blank" rel="noopener">Unidad 5 (parte 2) — Servicios en la nube</a>.
+- **Diagrama / herramienta:** esquema de ambientes (desarrollo → testing → UAT → producción) y esquema de capas por modelo de servicio (IaaS, PaaS, SaaS). Opcional: pipeline CI/CD.
+- **Preguntas genéricas:**
+  - ¿Qué ambientes necesita el sistema y quién pasa los cambios de uno a otro?
+  - ¿Qué parte del despliegue conviene automatizar (build, pruebas, despliegue)?
+  - ¿Qué modelo de servicio en la nube se usa (IaaS, PaaS o SaaS) y qué queda a cargo del equipo?
+  - ¿Qué variables cambian según el ambiente (por ejemplo, la cadena de conexión a la base)?
+- **Aplicado a PilatesFlow (a completar):**
+  - La arquitectura propuesta en el anexo del documento usa Vercel para el frontend estático y Supabase (PostgreSQL) para el backend: ambos son servicios en la nube que el equipo no administra (más cerca de PaaS que de IaaS).
+  - Definir en el documento los ambientes: el prototipo local para desarrollo, un entorno de testing para correr los 20 casos de prueba y producción para la instructora y los alumnos.
+  - Documentar que los requerimientos de rendimiento y capacidad (3 segundos, 30 usuarios) se verifican en testing y no en producción.
 
 #### Etapas 5 y 6 — Desarrollo e Implementación ❌
 
