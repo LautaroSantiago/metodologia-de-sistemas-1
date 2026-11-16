@@ -72,17 +72,17 @@ Planificación oficial de la cátedra para el curso 132-2 (botón de acceso arri
 |---|---|---|---|
 | 1 | 17/08 | — | Feriado |
 | 2 | 24/08 | 1 | Presentación de la materia. TGS. Las organizaciones y los sistemas de información. Enfoque sistémico. |
-| 3 | 31/08 | 1 y 2 | — |
+| 3 | 31/08 | 1 y 2 | Las 4 P de proyectos (planificación, producto, personas, proceso). Alcance. Enfoque sistémico. Ciclo de vida del desarrollo de sistemas. Etapas en la gestión de proyecto ágil vs. predictivo. El "Pensamiento de diseño" y el análisis de requerimientos. Uso del "Cyber story Mapping". |
 | 4 | 07/09 | 2 | Requerimientos funcionales y no funcionales. UML: Casos de Uso. |
 | 5 | 14/09 | 3 | Diseño estructurado vs. Iterativo e incremental. UML - Diagrama de clases. |
 | 6 | 21/09 | — | Feriado |
 | 7 | 28/09 | 3 | Modelo de datos y su relación con el diagrama de clases. |
-| 8 | 05/10 | — | 1er Parcial |
+| 8 | 05/10 | — | Reto Parcial |
 | 9 | 12/10 | — | Feriado |
-| 10 | 19/10 | 4 | — |
+| 10 | 19/10 | 4 | Tipos de pruebas: unitarias, integración, aceptación, test de stress. Productos principales y su relación con las etapas clásicas. |
 | 11 | 26/10 | 5 | Qué es DevOps y cómo se vincula con las distintas etapas del ciclo de desarrollo. / Recuperatorio 1er Parcial |
-| 12 | 02/11 | 5 | Exámenes UTN |
-| 13 | 09/11 | 6 | Servicios en la Nube: principales herramientas. PMI vs. Ágiles. Roles y responsabilidades. / Presentación preliminar TPs |
+| 12 | 02/11 | 6 | Servicios en la Nube: principales herramientas. PMI vs. Ágiles. Roles y responsabilidades. / Presentación preliminar TPs |
+| 13 | 09/11 | — | Feriado |
 | 14 | 16/11 | — | Parcial 2 / Corrección |
 | 15 | 23/11 | — | Feriado |
 | 16 | 30/11 | — | Recuperatorio / Presentación de TPs y cierre de notas |
@@ -251,7 +251,14 @@ Se planteó un ejercicio (ejemplo cotidiano: sacar la basura) para mostrar cómo
 
 ### Material de la clase
 
-Repaso en base a **Unidad 1** — ver detalle y descarga en [Material de referencia](#material-de-referencia).
+Presentación de la materia, planificación y cronograma, y repaso en base a **Unidad 1**:
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Planificaci%C3%B3n_de_la_materia-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/Planificaci%C3%B3n%20Metodolog%C3%ADa%20de%20Sistemas%20I.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Cronograma_2026-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/CRONOGRAMA%202026.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Gu%C3%ADa_TP_grupal-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/00%20-%20Guria%20TP%20grupal.pdf)
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20ProyectosProcesosProductosPersonas.pptx.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Teor%C3%ADa_General_de_los_Sistemas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/02%20-%20Teor%C3%ADa%20General%20de%20los%20Sistemas.pptx.pdf)
 
 </details>
 
@@ -303,7 +310,13 @@ Al revisar en vivo los objetivos que armó cada grupo, se remarcaron dos criteri
 
 ### Material de la clase
 
-Profundización sobre **Unidad 1**, sin material nuevo — ver [Material de referencia](#material-de-referencia).
+Profundización sobre **Unidad 1**, junto con la guía del TP y el cronograma:
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Proyectos%2C_Procesos%2C_Productos%2C_Personas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/01%20-%20ProyectosProcesosProductosPersonas.pptx.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Teor%C3%ADa_General_de_los_Sistemas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%201/02%20-%20Teor%C3%ADa%20General%20de%20los%20Sistemas.pptx.pdf)
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Gu%C3%ADa_TP_grupal-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/00%20-%20Guria%20TP%20grupal.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Cronograma_2026-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/CRONOGRAMA%202026.pdf)
 
 </details>
 
@@ -431,7 +444,10 @@ Con un breve repaso de **Unidad 1** (objetivo, alcance y restricciones de un pro
 
 ### Material de la clase
 
-Repaso de **Unidad 2** — Design Thinking y Requerimientos (ver [Material de referencia](#material-de-referencia)). La parte de arquitectura, escalabilidad y microservicios no tiene PDF cargado en el repo todavía.
+Repaso de **Unidad 2** — Design Thinking y Requerimientos. La parte de arquitectura, escalabilidad y microservicios no tiene PDF cargado en el repo todavía.
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_2_(parte_1)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_1.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_2_(parte_2)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf)
 
 </details>
 
@@ -490,7 +506,11 @@ Repaso de **Unidad 2** — Design Thinking y Requerimientos (ver [Material de re
 
 ### Material de la clase
 
-Relacionado con **Unidad 3** (ver [Material de referencia](#material-de-referencia)): conceptos básicos de orientación a objetos y los PDFs de UML básico y diseño de clases cubren la notación de atributos, operaciones, asociación, composición, agregación y herencia usada en esta clase.
+Contenido de **Unidad 3**: conceptos básicos de orientación a objetos y los PDFs de UML básico y diseño de clases, que cubren la notación de atributos, operaciones, asociación, composición, agregación y herencia usada en esta clase.
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Conceptos_B%C3%A1sicos_OO-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20%20MSI_Conceptos_Basicos%20_OO.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-UML_Dise%C3%B1o_de_Clases-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20UML-%20Dise%C3%B1o%20de%20Clases-1.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-UML_B%C3%A1sico-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20UML_basico.pdf)
 
 </details>
 
@@ -549,7 +569,10 @@ Relacionado con **Unidad 3** (ver [Material de referencia](#material-de-referenc
 
 ### Material de la clase
 
-No hay un PDF específico cargado para la parte de corrección del TP. La introducción a Pruebas se apoya en **Unidad 4** (ver [Material de referencia](#material-de-referencia)), que profundiza lo visto en esta clase sobre ambientes de prueba.
+No hay un PDF específico para la corrección del TP. La introducción a Pruebas se apoya en **Unidad 4**, que profundiza lo visto sobre ambientes de prueba; el inicio de DevOps y de los ambientes de despliegue corresponde a la **Unidad 5 (parte 1)**:
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_4_%E2%80%94_Pruebas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%204/04%20-%20MSI-01-Pruebas.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_5_(parte_1)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_1.pdf)
 
 </details>
 
@@ -621,7 +644,10 @@ No hay un PDF específico cargado para la parte de corrección del TP. La introd
 
 ### Material de la clase
 
-No hay un PDF específico cargado para la corrección del TP. La profundización de Pruebas sigue apoyándose en **Unidad 4** (ver [Material de referencia](#material-de-referencia)).
+No hay un PDF específico para la corrección del TP. La profundización de Pruebas se apoya en **Unidad 4**; los temas de CI/CD, contenedores y DevOps corresponden a la **Unidad 5 (parte 1)**:
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_4_%E2%80%94_Pruebas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%204/04%20-%20MSI-01-Pruebas.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_5_(parte_1)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_1.pdf)
 
 </details>
 
@@ -766,9 +792,10 @@ La matriz RACI es otra herramienta del coordinador de proyectos: en las filas va
 
 ### Material de la clase
 
-Contenido de **Unidad 6 — Gestión de proyectos** (ver [Material de referencia](#material-de-referencia)): la diapositiva sobre manejo del alcance en PMI vs. Agile y la del modelo RACI se mostraron en clase.
+Contenido de **Unidad 6 — Gestión de proyectos**: la diapositiva sobre manejo del alcance en PMI vs. Agile y la del modelo RACI se mostraron en clase. Para web hosting vs. cloud servers, ver la **Unidad 5 (parte 2)**.
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_6-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%206/06%20-%20MetSis_I_U6_1.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_5_(parte_2)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%205/05%20-%20MetSis_I_U5_2.pdf)
 
 </details>
 
@@ -1129,7 +1156,7 @@ Guía paso a paso para usar este repo mientras se avanza con el TP: por cada tem
 
 #### 📌 Estado actual del TP — PilatesFlow (documento "Gestión de Turnos PilatesFlow")
 
-Resumen de lo que ya está hecho en el documento del TP a la fecha (3/11/2026). Las secciones de abajo, organizadas por tema de clase, se usan para chequear cada punto contra este avance.
+Resumen de lo que ya está hecho en el documento del TP entregado para la **entrega preliminar** (presentación preliminar del 1/11, con devolución en la clase del 2/11). Las secciones de abajo, organizadas por tema de clase, se usan para chequear cada punto contra este avance.
 
 | Sección del documento | Estado | Contenido |
 |---|---|---|
