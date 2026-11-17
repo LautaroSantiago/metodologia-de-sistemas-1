@@ -1025,7 +1025,8 @@ pip freeze > requirements.txt      # el archivo se sube al repositorio
 
 ---
 
-## <a id="material-de-referencia"></a><font color="#8250DF">📎 Material de referencia</font>
+<details>
+<summary><a id="material-de-referencia"></a><font color="#8250DF"><strong>📎 Material de referencia</strong></font></summary>
 
 
 ### Generales
@@ -1147,6 +1148,7 @@ Para cualquiera de las dos formas de gestión hacen falta apoyo de la gerencia, 
 
 [![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_6-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%206/06%20-%20MetSis_I_U6_1.pdf)
 
+</details>
 ---
 
 <details>
