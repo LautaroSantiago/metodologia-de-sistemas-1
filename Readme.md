@@ -27,6 +27,7 @@ Apuntes de cursada, material de clase y seguimiento del Trabajo Práctico grupal
 - [<font color="#8250DF"><strong>Clase 6 — 19/10 · Corrección del TP, ambientes de software y pruebas</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-6)
 - [<font color="#8250DF"><strong>Clase 7 — 26/10 · Corrección del TP y tipos de pruebas</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-7)
 - [<font color="#8250DF"><strong>Clase 8 — 2/11 · Gestión de proyectos: PMI vs. Scrum</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-8)
+- [<font color="#8250DF"><strong>Clase 9 — 16/11 · 2° Parcial, devolución del TP preliminar y entrega final</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#clase-9)
 - [<font color="#8250DF"><strong>📝 1° Parcial</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#parcial-1)
 - [<font color="#8250DF"><strong>📝 2° Parcial</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#parcial-2)
 - [<font color="#8250DF"><strong>Material de referencia</strong></font>](https://github.com/LautaroSantiago/metodologia-de-sistemas-1#material-de-referencia)
@@ -618,7 +619,7 @@ No hay un PDF específico para la corrección del TP. La introducción a Pruebas
 
 - **Presentación preliminar:** 1/11, hasta las 23:30.
 - En la clase siguiente (2/11) se hace una devolución breve sobre esa presentación preliminar, antes de pasar a la entrega final.
-- **Entrega final:** en la última clase de la cursada.
+- **Entrega final:** hasta el 29/11, a las 23 hs (fecha confirmada en la Clase 9; el recuperatorio y la presentación de los TPs son el 30/11).
 
 #### Pruebas: *shift left* y *shift right*
 
@@ -802,6 +803,92 @@ Contenido de **Unidad 6 — Gestión de proyectos**: la diapositiva sobre manejo
 ---
 
 <details>
+<summary><a id="clase-9"></a><font color="#1A7F37"><strong>Clase 9 — 16/11 · 2° Parcial, devolución del TP preliminar y entrega final</strong></font></summary>
+
+### Temas vistos
+
+- Rendición del 2° parcial (de 9 a 10 hs), con las consignas del examen y la fórmula de la nota
+- Devolución del TP presentado en la entrega preliminar: comentarios cargados en el campus y consultas por grupo
+- Qué se espera del documento del TP: Design Thinking, interfaz de usuario, casos de uso, diagrama de clases, diagrama de estados y modelo de pruebas
+- Fecha de la entrega final del TP y cómo se combina la nota del TP con la del 2° parcial
+
+### Plan de la clase
+
+- **9:00 a 10:00:** evaluación (2° parcial).
+- **Después:** el profesor corrige el examen y los TPs entregados.
+- **11:30:** vuelta a la clase para la entrega de notas, las consultas sobre el examen y la devolución del TP. Con las notas se sabe quiénes necesitan rendir el recuperatorio del 30/11.
+
+### Consignas del examen
+
+- Copiar las consignas en un bloc de notas antes de empezar.
+- **Primera pregunta (a desarrollar):** plantea un escenario y pide describir **tres estrategias** para mejorar el problema planteado. Se responde con un texto, escrito y pegado en el cuadro de respuesta. Vale **3 puntos**; el resto está en las preguntas de opción múltiple.
+- **Opción múltiple:** hay una sola respuesta correcta; si dentro de una oración hay algo falso, toda la oración es falsa (para que sea verdadera, todo lo que dice debe serlo). Si parece haber más de una válida, se elige la **mejor o más óptima**.
+- El formulario **se cierra y se envía automáticamente** al terminar el tiempo: conviene completar primero todas las preguntas de opción múltiple y después desarrollar la primera.
+
+### Nota del examen y combinación con el TP
+
+- La nota que aparece en el campus corresponde a los cuestionarios; la nota del parcial se obtiene con la misma cuenta que en el 1° parcial: **nota del campus × 1,5 − 5**, redondeando al entero (5,50 se redondea a 6).
+- **El TP se promedia con el 2° parcial.** El parcial debe estar aprobado; si el TP es muy distinto del examen (por ejemplo, 4 en el parcial y 10 en el TP) igual se promedia, y cualquier combinación de notas es válida.
+- Quien no entrega el TP no aprueba el 2° parcial.
+- Para quien tenga el 1° parcial desaprobado, el profesor indicó que escriba por mail y corrija el TP lo antes posible: si el TP final está bien hecho, podría evaluarse un recuperatorio; si, con todo el tiempo disponible, todavía no se resuelven la interfaz, el caso de uso o el prototipo, no tiene sentido.
+
+### Entrega final del TP
+
+- **Fecha:** hasta el **29/11, a las 23 hs** (el profesor la corrigió en el campus durante la clase; conviene verificar la hora exacta allí, porque mencionó también las 23:30).
+- La nota de la presentación preliminar **no queda como nota final**: es una devolución para mejorar el documento.
+- Los comentarios del profesor sobre cada entrega ya están cargados en el campus; el TP corregido se sube en el apartado de entrega final.
+
+### Devolución del TP preliminar
+
+Observaciones que el profesor hizo sobre varias entregas y que aplican a cualquier grupo:
+
+**Plantilla y Design Thinking**
+
+- Adecuar el documento a la plantilla de la cátedra.
+- **Empatizar:** describir con más detalle los problemas y los actores.
+- **Definir:** explicar, como mínimo, el diagrama de causa raíz (Ishikawa o "espina de pescado") para mostrar cómo se llegó al problema principal.
+- **Idear:** presentar al menos **tres alternativas** de solución al problema principal. Cada una tiene un **costo** (dinero) y un **beneficio esperado** (dinero en el tiempo); con esos datos se justifica cuál se selecciona (por ejemplo, costo 1000 y beneficio 100 no conviene frente a costo 100 y beneficio 10.000). La alternativa elegida es la que se prototipa y debe resolver alguno de los problemas planteados.
+- **Prototipar:** si hay un prototipo funcionando, mostrar las pantallas actuales y no las del inicio del cuatrimestre, que pudieron cambiar. No hace falta gastar tiempo en retocarlas.
+- Cerrar la etapa con una conclusión.
+
+**Interfaz de usuario y casos de uso**
+
+- Poner las pantallas en el **modelo de caso de uso** (no solo en otra sección), numeradas o con nombre, para que se vea el flujo principal sin tener que subir y bajar por el documento. Si la pantalla es la misma que ya está en el caso de uso, no se repite: solo va el diagrama del caso de uso.
+- En el flujo principal se indica en qué paso aparece cada pantalla (por ejemplo, "el administrador ingresa… (pantalla 1)"). Falta a veces la pantalla "por defecto" que se ve antes de las demás.
+- Cada caso de uso incluye actor, precondición, postcondición, camino principal y caminos con excepción.
+- **Escenarios alternativos:** tienen que estar de acuerdo con el flujo principal. El flujo principal **chequea algo** (que la fecha sea válida, que el título esté cargado, que tenga una cantidad mínima de letras); si la validación falla, se va a la excepción, que muestra un mensaje y **vuelve al punto que la llamó** para volver a chequear. Cada excepción es una línea distinta: no se mezclan varias en una.
+- En el diagrama de casos de uso, revisar las generalizaciones: no se generaliza si el otro caso no generaliza nada.
+
+**Diagrama de clases y de estados**
+
+- Hacer el esfuerzo de distinguir **composición o agregación** en lugar de dejar todas las relaciones como asociaciones simples, para mostrar qué relación adicional hay entre las clases.
+- Incluir en el modelo de casos de uso al menos **uno o dos diagramas de estados**.
+
+**Modelo de pruebas**
+
+- Los casos de prueba se ordenan **en función de los casos de uso**: en la tabla, la columna que dice "requerimiento" debe decir el **caso de uso** probado (por ejemplo, "consultar horarios disponibles").
+- Cada **excepción** del caso de uso se chequea con un caso de prueba.
+- Indicar el **tipo de prueba** de cada caso (unitaria, de sistema, de regresión, de estrés) y tener al menos un caso por cada tipo o nivel. La columna de estado no hace falta.
+- Una prueba unitaria posible es verificar la entrada y la salida de una función; si un requerimiento usa 30 funciones, en teoría habría 30 pruebas unitarias, pero en el documento se puede poner la más importante.
+- Cada caso de prueba parte de una **situación anterior**: para probar la cancelación de un turno hay que haber cargado antes el turno, asignado y reservado. Hay una preparación de datos asociada a cada prueba, y varios casos pueden usar el mismo conjunto de datos (uno para insertar, otro para asignar y otro para borrar).
+
+### ⭐ Conclusión útil para el TP
+
+Antes de la entrega final (29/11) conviene revisar el documento contra esta lista: Design Thinking completo (Ishikawa y tres alternativas con costo y beneficio), pantallas dentro de cada caso de uso, una excepción por línea con vuelta al paso de origen, composición o agregación en el diagrama de clases, al menos un diagrama de estados y casos de prueba por caso de uso, con tipo de prueba y datos de partida. Ver el tema "Correcciones de la entrega preliminar" en [Aplicar al TP](#aplicar-al-tp).
+
+### Material de la clase
+
+Sin PDF nuevo. La clase se apoyó en la plantilla del TP y en el material de **Unidad 2** (requerimientos y Design Thinking), **Unidad 3** (casos de uso y UML) y **Unidad 4** (pruebas):
+
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_2_(parte_2)-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%202/02%20-%20MetSis_I_U2_2.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Casos_de_Uso-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%203/03%20-%20MSI_Casos%20de%20Uso.pdf)
+[![Ver PDF](https://img.shields.io/badge/📄_Ver_PDF-Unidad_4_—_Pruebas-0A66C2?style=for-the-badge)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/LautaroSantiago/metodologia-de-sistemas-1/master/Material/UNIDAD%204/04%20-%20MSI-01-Pruebas.pdf)
+
+</details>
+
+---
+
+<details>
 <summary><a id="parcial-1"></a><font color="#8250DF"><strong>📝 1° Parcial</strong></font></summary>
 
 Logística y alcance anunciados en la Clase 5 (28/9) y repasados en la clase de corrección del 5/10 para el próximo parcial de la materia.
@@ -872,7 +959,7 @@ Todo se entrega en un único documento (Word), armado progresivamente a medida q
 
 Información anunciada en la Clase 8 (2/11) y en el cronograma oficial de la cátedra.
 
-- **Fecha:** clase del **16/11** (clase 14 del cronograma: "Parcial 2 / Corrección"). Se corrige en esa misma sesión.
+- **Fecha:** clase del **16/11** (clase 14 del cronograma: "Parcial 2 / Corrección"), de 9 a 10 hs. Las notas se entregaron a las 11:30 de ese mismo día. Ver la [Clase 9](#clase-9) para las consignas reales y la fórmula de la nota (campus × 1,5 − 5).
 - **Recuperatorio:** 30/11 (clase 16), junto con la presentación de los TPs y el cierre de notas. El 23/11 es feriado.
 - **Formato:** similar al 1° parcial: un **caso a desarrollar** y preguntas de **opción múltiple** (se consultó en clase y el profesor lo confirmó).
 - **Recomendaciones del 1° parcial que conviene tener presentes** (a confirmar si se repiten): aprobar requiere el 60% de la evaluación (un 6); en las preguntas de opción múltiple se elige la **mejor** respuesta; copiar las consignas en un bloc de notas aparte antes de empezar. Ver la pestaña **1° Parcial**.
@@ -1439,7 +1526,7 @@ Resumen de lo que ya está hecho en el documento del TP entregado para la **entr
   - Diagrama de estados de `Reserva`: creada → confirmada → cancelada (por la alumna o por la instructora) → asistida o ausente, con vuelta atrás por cancelación hasta 30 minutos antes del inicio.
   - Prueba de integración del flujo completo: verificar cupo disponible → crear la reserva → confirmar → reflejar el avance 1/3, 2/3, 3/3 en la agenda de la instructora.
   - Documentar con precisión la regla de los 30 minutos y el cupo máximo de 3, para que puedan validarse como caja negra.
-  - Fechas: presentación preliminar el 1/11 hasta las 23:30; devolución en la clase del 2/11; entrega final en la última clase.
+  - Fechas: presentación preliminar el 1/11 hasta las 23:30; devolución en la clase del 2/11; entrega final hasta el 29/11 a las 23 hs.
 
 #### Gestión de stakeholders: matriz y plan de comunicación (Clase 8 / Unidad 6) ❌
 
@@ -1483,6 +1570,24 @@ Resumen de lo que ya está hecho en el documento del TP entregado para la **entr
   - Equipo de tres integrantes y requerimientos que pueden ajustarse con las devoluciones de la clienta: encaja un enfoque ágil con entregas cortas, con la fecha final de entrega ya fijada por la materia.
   - Si se usa el tablero de GitHub Projects, definir un límite de tareas en progreso por columna (In progress, QA) para no acumular trabajo sin terminar.
   - Dejar asentado en el documento por qué se eligió ese enfoque, con los criterios de la tabla.
+
+#### Correcciones de la entrega preliminar (Clase 9) ❌
+
+- **Tema:** visto en la devolución del TP preliminar de la Clase 9, sin PDF asociado; ver el detalle en la [Clase 9](#clase-9).
+- **Diagrama / herramienta:** la plantilla del TP de la cátedra, con el flujo principal y las excepciones de cada caso de uso, y una tabla de casos de prueba por caso de uso.
+- **Preguntas genéricas:**
+  - ¿El Design Thinking incluye Ishikawa y al menos tres alternativas con costo y beneficio esperado, y justifica la elegida?
+  - ¿Las pantallas están dentro de cada caso de uso y el flujo principal indica en qué paso aparece cada una?
+  - ¿Cada excepción es una línea distinta, nace de una validación del flujo principal y vuelve al paso que la llamó?
+  - ¿El diagrama de clases distingue composición o agregación, y hay al menos un diagrama de estados?
+  - ¿Hay casos de prueba por caso de uso, con tipo de prueba y datos de partida?
+- **Aplicado a PilatesFlow (a revisar antes del 29/11):**
+  - Cada caso de uso ya tiene su flujo principal y excepciones numeradas; revisar que las excepciones (por ejemplo 4a, 4b y 4c de "Reservar turno") partan de una validación del paso 4 y vuelvan al paso 2, y que las pantallas del prototipo estén referenciadas en el escenario.
+  - Ampliar el modelo de pruebas: hoy son 20 casos de caja negra; sumar el tipo de prueba de cada uno (unitaria, de sistema, de regresión, de estrés) y asegurar al menos un caso por tipo, con la preparación de datos (por ejemplo, crear el turno y reservarlo antes de probar la cancelación).
+  - Reemplazar en la tabla de pruebas la referencia al requerimiento por el caso de uso probado y confirmar un caso para cada excepción.
+  - Completar el Design Thinking con las alternativas descartadas y elegidas con su costo y beneficio esperado (hoy figuran las ventajas y limitaciones) y mantener el Ishikawa.
+  - Definir composición o agregación entre `Turno` y `Reserva`, y conservar los diagramas de estados de `Reserva` y `Turno`.
+  - Presentar la entrega final hasta el 29/11 a las 23 hs.
 
 #### Ambientes, DevOps y nube (Clases 6 y 7 / Unidad 5) ❌
 
